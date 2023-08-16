@@ -4,45 +4,66 @@
     <meta charset="UTF-8">
     <title>Case1</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link rel="stylesheet">
+    <link rel="stylesheet"  href="assests/8.0.1_normalize.css">
     <style>
+        body>main{
+            width: 100%;
+            height: 200vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         body>main>section:first-child{
-            width: 50vw;
-            height: 50vh;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+
+        }
+        body>main>section:last-child{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+
+        }
+        body>main>section>section:first-child{
+            width: 50%;
+            height: 50%;
             background-color: red;
             display:inline-block;
             position: absolute;
             left: 0;
             top:0;
         }
-        body>main>section:nth-child(2){
-            width: 50vw;
-            height: 50vh;
+        body>main>section>section:nth-child(2){
+            width: 50%;
+            height: 50%;
             background-color: darkgreen;
             display:inline-block;
             position: absolute;
             right: 0;
             top:0;
         }
-        body>main>section:nth-child(3){
-            width: 50vw;
-            height: 50vh;
+        body>main>section>section:nth-child(3){
+            width: 50%;
+            height: 50%;
             background-color: orange;
             display:inline-block;
             position: absolute;
             left: 0;
             bottom:0;
         }
-        body>main>section:nth-child(4){
-            width: 50vw;
-            height: 50vh;
+        body>main>section>section:nth-child(4){
+            width: 50%;
+            height: 50%;
             background-color: deeppink;
             display:inline-block;
             position: absolute;
             right: 0;
             bottom:0;
         }
-        body>main>section:nth-child(5){
+        body>main>section>section:nth-child(5){
             width: 10%;
             height: 20%;
             background-color: white;
@@ -55,7 +76,7 @@
             margin: auto;
 
         }
-        body>main>section:nth-child(5)>div{
+        body>main>section>section:nth-child(5)>div{
             width: 50%;
             height: 50%;
             border-radius: 100%;
@@ -67,7 +88,7 @@
             top: 0;
             margin: auto;
         }
-        body>main>section>section:first-child{
+        body>main>section>section>section:first-child{
             width: 30%;
             height: 60%;
             border-radius: 100%;
@@ -80,7 +101,7 @@
             margin: auto;
 
         }
-        body>main>section>section:first-child>div{
+        body>main>section>section>section:first-child>div{
             width: 50%;
             height: 50%;
             background-color: red;
@@ -93,7 +114,7 @@
             margin: auto;
         }
 
-        body>main>section:first-child>section:nth-child(2){
+        body>main>section>section:first-child>section:nth-child(2){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -103,7 +124,7 @@
             left: 0;
 
         }
-        body>main>section:first-child>section:nth-child(3){
+        body>main>section>section:first-child>section:nth-child(3){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -112,7 +133,7 @@
             top: 0;
             right: 0;
         }
-        body>main>section:nth-child(2)>section:nth-child(2){
+        body>main>section>section:nth-child(2)>section:nth-child(2){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -122,7 +143,7 @@
             left: 0;
 
         }
-        body>main>section:nth-child(2)>section:nth-child(3){
+        body>main>section>section:nth-child(2)>section:nth-child(3){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -131,7 +152,7 @@
             top: 0;
             right: 0;
         }
-        body>main>section:nth-child(3)>section:nth-child(2){
+        body>main>section>section:nth-child(3)>section:nth-child(2){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -141,7 +162,7 @@
             left: 0;
 
         }
-        body>main>section:nth-child(3)>section:nth-child(3){
+        body>main>section>section:nth-child(3)>section:nth-child(3){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -150,7 +171,7 @@
             bottom: 0;
             right: 0;
         }
-        body>main>section:nth-child(4)>section:nth-child(2){
+        body>main>section>section:nth-child(4)>section:nth-child(2){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -160,7 +181,7 @@
             left: 0;
 
         }
-        body>main>section:nth-child(4)>section:nth-child(3){
+        body>main>section>section:nth-child(4)>section:nth-child(3){
             width: 15%;
             height: 30%;
             background-color: white;
@@ -177,37 +198,70 @@
     <main>
         <section>
             <section>
-                <div></div>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
             </section>
-            <section></section>
-            <section></section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
+            <section>
+               <div></div>
+            </section>
         </section>
         <section>
             <section>
-                <div></div>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
             </section>
-            <section></section>
-            <section></section>
-        </section>
-        <section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
+            <section>
+                <section>
+                    <div></div>
+                </section>
+                <section></section>
+                <section></section>
+            </section>
             <section>
                 <div></div>
             </section>
-            <section></section>
-            <section></section>
         </section>
-        <section>
-            <section>
-                <div></div>
-            </section>
-            <section></section>
-            <section></section>
-        </section>
-        <section>
-           <div></div>
-        </section>
-
     </main>
-
 </body>
 </html>

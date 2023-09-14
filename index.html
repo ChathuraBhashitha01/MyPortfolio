@@ -17,13 +17,15 @@
     <meta name="theme-color" content="red">
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="assets/css/8.0.1_normalize.css">
-
     <style>
         body{
             position: relative;
         }
         body>header{
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 70px;
             background: #131313;
             margin-bottom: 0;
@@ -36,9 +38,15 @@
         }
         body>header>nav>ul>li{
             list-style: none;
-            text-decoration: none;
             display: inline-block;
+            padding: 10px;
         }
+
+        header>nav>ul>li>a{
+            text-decoration: none;
+        }
+
+
         body>main>section:nth-child(1){
             width: 100%;
             height: 100vh;

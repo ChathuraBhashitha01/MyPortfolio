@@ -4,7 +4,7 @@
     <title>MyPortfolio</title>
     <meta charset="UTF-8">
     <link rel="icon" href="send1.png">
-    <meta name="viewport" content="width-device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <meta name="keywords" content="IJSE,GDSE,HTML">
     <meta name="description" content="Discover a captivating showcase of my diverse skills and creative journey. 
     Browse through my personal portfolio to witness a harmonious fusion of innovative design, 
@@ -15,33 +15,106 @@
     <meta name="owner" content="Chathura Bhashitha">
     <meta name="author" content="Chathura Bhashitha">
     <meta name="theme-color" content="red">
-
     <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="assets/css/8.0.1_normalize.css">
 
-    <style></style>
+    <style>
+        body{
+            position: relative;
+        }
+        body>header{
+            position: relative;
+            height: 70px;
+            background: #131313;
+            margin-bottom: 0;
+            z-index: 1;
+        }
+        body>header>nav{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        body>header>nav>ul>li{
+            list-style: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+        body>main>section:nth-child(1){
+            width: 100%;
+            height: 100vh;
+            background: #070707;
+            position: absolute;
+            top: 70px;
+            left: 0;
+        }
+        body>main>section:nth-child(1)>section>h3:nth-child(1){
+            position: absolute;
+            top: 200px;
+        }
+        body>main>section:nth-child(1)>aside{
+            background:80%;
+            position: absolute;
+            bottom:0px;
+            right: 0px;
+        }
+        body>main>section:nth-child(1)>section>div{
+            display: inline-block;
+        }
+        body>main>section:nth-child(1){
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(4){
+            position: absolute;
+            top:275px;
+            right:30px;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(5){
+            position: absolute;
+            top:350px;
+            right:30px;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(6){
+            position: absolute;
+            top:425px;
+            right:30px;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(7){
+            position: absolute;
+            top:500px;
+            right:30px;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(8){
+            position: absolute;
+            top:575px;
+            right:30px;
+        }
 
+
+    </style>
 </head>
 <body>
-<header>
-    <nev>
-        <menu>
-            <li><img width="45" src="assets/img/gmail-logo.png"> <a href="chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a></li>
-            <li>Home</li>
-            <li> <a href="#about">About</a> </li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#works">My_Works</a></li>
-            <li><a href="#assignment">Assignment</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#cotact">Contact</a></li>
+    <header>
+        <img width="45"  src="assets/img/gmail-logo.png"> <a href="chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
+        <nev>
+            <ul>
+                <li>Home</li>
+                <li> <a href="#about">About</a> </li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#works">My_Works</a></li>
+                <li><a href="#assignment">Assignment</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#cotact">Contact</a></li>
 
-        </menu>
-    </nev>
-</header>
+            </ul>
+        </nev>
+    </header>
 <main>
     <section>
         <section>
             <h3>Hello, My  Name is</h3>
-            <h2>Bhashitha <span style="color: red">Wickramasinghe</span></h2>
+            <h2>Bhashitha <span style="#881012: red">Wickramasinghe</span></h2>
             <h3>I'm Full Stack Developer from Srilanka</h3>
 
             <div>
@@ -76,7 +149,7 @@
                 </map>
             </div>
         </section>
-        <aside><img src="assets/img/ch2 (3).png"></aside>
+        <aside><img src="assets/img/ch2 (4).png" width="1044"height="981"></aside>
     </section>
     <section>
         <section>

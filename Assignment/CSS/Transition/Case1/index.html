@@ -12,51 +12,59 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            position: relative;
+            right: 250px;
         }
         section>div{
             width: 300px;
             height: 80px;
             background: purple;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0px;
+            right: 0px;
+            transition: all 2s;
+            position: relative;
+            box-shadow: 1px 2px 20px 2px black;
 
         }
-        section>div:nth-child(1):hover{
-            transition-duration: 3s;
-            transition-property: all;
+        section>div>h2,p{
+            color: white;
+            margin: 0;
+            padding: 10px;
+            font-size: 30px;
         }
-        section>div:nth-child(2):hover{
+        section>div:hover {
             transition-duration: 3s;
             transition-property: all;
-        }
-        section>div:nth-child(3):hover{
-            transition-duration: 3s;
-            transition-property: all;
-        }
-        section>div:nth-child(4):hover{
-            transition-duration: 3s;
-            transition-property: all;
-        }
-        section>div:nth-child(5):hover{
-            transition-duration: 3s;
-            transition-property: all;
+            position: relative;
+            left: 250px;
         }
     </style>
 </head>
 <body>
     <section>
         <div>
-            <p>manu one<i class="fa-solid fa-house"></i></p>
+            <h2>manu one</h2>
+            <p><i class="fa-solid fa-house"></i></p>
         </div>
         <div>
-            <p>manu two<i class="fa-solid fa-earth-americas"></i></p>
+            <h2>manu two</h2>
+            <p><i class="fa-solid fa-earth-americas"></i></p>
         </div>
         <div>
-            <p>manu three<i class="fa-solid fa-address-book"></i></p>
+            <h2>manu three</h2>
+            <p><i class="fa-solid fa-address-book"></i></p>
         </div>
         <div>
-            <p>manu four  <i class="fa-solid fa-address-card"></i></p>
+            <h2>manu four</h2>
+            <p><i class="fa-solid fa-address-card"></i></p>
         </div>
         <div>
-            <p>manu five  <i class="fa-solid fa-address-card"></i></p>
+            <h2>manu five</h2>
+            <p><i class="fa-solid fa-address-card"></i></p>
         </div>
     </section>
 </body>

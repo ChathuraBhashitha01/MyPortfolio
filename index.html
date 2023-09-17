@@ -23,27 +23,33 @@
 <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
 <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
 <!--    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Handjet:wght@100&family=Josefin+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="assets/font/css/all.css">
 
     <style>
         *{
             font-family:'Josefin+Sans:ital', "Josefin Sans";
         }
-        body>header{
+        body{
             position: relative;
+        }
+        body>header{
+            width: 100%;
             height: 60px;
             background: #131313;
             box-shadow: 5px 1px 5px 0px black;
+            position: fixed;
+            z-index: 1;
         }
         body>header>nav {
             position: absolute;
             top: 0px;
             bottom: 0;
-            right: 10px;
+            right: 0px;
             margin: auto;
         }
         body>header>nav>ul>li{
             display: inline-block;
-            padding-left: 10px;
+            padding-left: 20px;
             list-style: none;
             color: white;
         }
@@ -52,8 +58,6 @@
             font-size: 20px;
             color: white;
         }
-
-
         body>main>section:nth-child(1){
             width: 100%;
             height: 100vh;
@@ -72,10 +76,6 @@
             left: 100px;
             bottom: 25px;
         }
-        /*body>main>section:nth-child(1)>section>h3:nth-child(1){*/
-        /*    position: absolute;*/
-        /*    top: 200px;*/
-        /*}*/
         body>main>section:nth-child(1)>aside{
             display: inline-block;
             /*background:80%;*/
@@ -230,6 +230,10 @@
             top: 50px;
             left: 100px;
         }
+        body>main>section:nth-child(2)>section:nth-child(4)>div{
+            position: relative;
+            left: 120px;
+        }
         body>main>section:nth-child(2)>section:nth-child(6){
             width: 586px;
             height: 903px;
@@ -254,11 +258,12 @@
             font-size: 40px;
             position: relative;
             left: 750px;
-            bottom: 975px;
+            bottom: 1710px;
         }
         body>main>section:nth-child(2)>section:nth-child(6)>div>img{
             display: inline-block;
             position: relative;
+            left: 130px;
             /*display: flex;*/
             /*!*justify-content: space-between;*!*/
             /*align-items: center;*/
@@ -267,13 +272,24 @@
         body>main>section:nth-child(2)>section:nth-child(6)>div>p{
             display: inline-block;
             position: relative;
-            left: 10px;
+            left: 140px;
         }
-        body>main>section:nth-child(2)>section:nth-child(6)div>img{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
+        body>main>section:nth-child(2)>section:nth-child(6)>div>svg{
+            display: inline-block;
+            position: relative;
+            left: 100px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>button:last-child{
+            font-size: 20px;
+            font-weight: bold;
+            background: #881012;
+            color: black;
+            /*margin-left: 300px;*/
+            display: inline-block;
+            position: relative;
+            left: 780px;
+            bottom: 120px;
+
         }
         body>main>section:nth-child(2)>svg:nth-child(1){
             position: absolute;
@@ -285,6 +301,16 @@
             left: 60px;
             bottom: 60px;
         }
+        body>main>section:nth-child(2)>svg:nth-child(8){
+            position: relative;
+            bottom: 800px;
+            left: 55px;
+        }
+        body>main>section:nth-child(2)>svg:nth-child(9){
+            position: relative;
+            bottom: 824px;
+            left: 700px;
+        }
         body>main>section:nth-child(3){
             width: 100%;
             height: 1333px;
@@ -294,16 +320,24 @@
         }
         body>main>section:nth-child(3)>h2{
             font-size: 60px;
+            font-weight: bold;
             margin-left: 100px;
             margin-top: 0;
             position: relative;
+            top: 20px;
         }
         body>main>section:nth-child(3)>div{
             display: inline-block;
             width: 420px;
             height: 420px;
             background: #373636;
-            border-radius: 0%;
+            border-radius: 5%;
+        }
+        body>main>section:nth-child(3)>div:hover{
+            width: 420px;
+            height: 420px;
+            background: linear-gradient(0deg,#FD040A,transparent);
+            opacity: 50%;
         }
         body>main>section:nth-child(3)>div:nth-child(2){
             /*display: inline-block;*/
@@ -405,7 +439,7 @@
         }
         body>main>section:nth-child(4){
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             background-color: #070707;
             color: white;
             position: relative;
@@ -414,6 +448,8 @@
             font-size: 60px;
             margin-left: 100px;
             margin-top: 0;
+            position: relative;
+            top: 20px;
         }
         body>main>section:nth-child(4)>p{
             font-size: 30px;
@@ -428,7 +464,7 @@
             width: 450px;
             height: 510px;
             border: 2px solid black;
-            background: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
+            background: url("assets/img/Screenshot 2023-09-17 202505.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -436,25 +472,65 @@
             position: absolute;
             top: 200px;
             left: 200px;
+            border-radius: 10%;
 
         }
         body>main>section:nth-child(4)>div:nth-child(4){
-            /*display: inline-block;*/
-            /*position: relative;*/
-            /*bottom: 73px;*/
-            /*left: 230px;*/
-
             width: 450px;
             height: 510px;
             border: 2px solid black;
-            background: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+            background: url("assets/img/Screenshot 2023-09-17 202644.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             position: absolute;
             top: 200px;
             right: 200px;
+            border-radius: 10%;
 
+        }
+        body>main>section:nth-child(4)>div:nth-child(3)>h4:nth-child(1){
+            font-size: 25px;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+            left: 10px;
+
+        }
+        body>main>section:nth-child(4)>div:nth-child(4)>h4:nth-child(1){
+            font-size: 25px;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+            left: 135px;
+
+        }
+        body>main>section:nth-child(4)>div>p:nth-child(2){
+            font-size: 15px;
+            display: inline-block;
+            position: absolute;
+            top: 275px;
+            left: 123px;
+        }
+        body>main>section:nth-child(4)>div>a:nth-child(3){
+            font-size: 25px;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            bottom: 60px;
+            left: 130px;
+        }
+        body>main>section:nth-child(4)>svg:nth-child(5){
+            position: absolute;
+            right: 100px;
+            top: 25px;
+        }
+        body>main>section:nth-child(4)>svg:nth-child(6){
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
         }
         body>main>section:nth-child(5){
             width: 100%;
@@ -467,6 +543,8 @@
             font-size: 60px;
             margin-left: 100px;
             margin-top: 0;
+            position: relative;
+            top: 20px;
         }
         body>main>section:nth-child(5)>div{
             display: inline-block;
@@ -542,6 +620,8 @@
             font-size: 60px;
             margin-left: 100px;
             margin-top: 0;
+            position: relative;
+            top: 20px;
         }
         body>main>section:nth-child(6)>section{
             height: 90vh;
@@ -606,6 +686,8 @@
             font-size: 60px;
             margin-left: 100px;
             margin-top: 0;
+            position: relative;
+            top: 20px;
         }
         body>footer>address>div:nth-child(1){
             display: inline-block;
@@ -648,7 +730,7 @@
         <img width="45"  src="assets/img/gmail-logo.png"> <a href="chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
         <nav>
             <ul>
-                <li>Home</li>
+                <li><a href="#home">Home</a></li>
                 <li> <a href="#about">About</a> </li>
                 <li><a href="#service">Services</a></li>
                 <li><a href="#works">My_Works</a></li>
@@ -660,7 +742,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="home">
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
                 <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
@@ -748,20 +830,40 @@
             <h3>Education</h3>
             <section>
                 <div>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
+
                     <h4>2017 :Ordinary Level Examonation</h4>
                     <p>I was Completed My Ordinary <br>level at<b> Amarasuriya College,<br> Galle</b>.</p>
                 </div>
                 <div>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
+
                     <h4>2020 :Advance Level Examonation</h4>
                     <p>I was Completed My Advans <br>level at<b> Mahinda College ,<br> Galle</b>.</p>
                 </div>
                 <div>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
+
                     <h4>2022 :Diploma in ICT</h4>
                     <p>I was Completed IT<br> Diploma(pearson) from <b> Esoft <br>Metro Campus Galle</b>.<a href="https://esoft.lk/"  target="_blank">Go to Esoft</a> </p>
                 </div>
                 <div>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
+
                     <h4>2022 :Diploma in Computer Science</h4>
                     <p>Currently I am a computer science<br> undergraduate student. Now I am <br>doing <abbr title="Graduate Diploma in Software Engineering"><b>GDSE</b></abbr>-<b> Graduate Diploma in<br> Software Engineering </b> from <abbr title="Institute of Software Engineering"><b>IJSE</b></abbr>-<br><b> Software Engineering institute </b>as my <br>HND.<a href="https://ijse.lk" target="_blank">Go to IJSE</a></p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
+
                 </div>
 
             </section>
@@ -770,32 +872,89 @@
                 <div>
                     <img width="70" src="assets/img/java%20(1).png" alt="This is java logo png">
                     <p>The Main Language I work in is <br>JAVA. I can work with java Smoothly <br>and with Good Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
                 <div>
                     <img width="70" src="assets/img/hashtag.png" alt="This is C# logo png">
                     <p>I can Work with C# Smoothly<br> and with Good Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
                 <div>
                     <img width="70" src="assets/img/python.png" alt="This is python logo png">
                     <p>I can Work with Phython <br>Smoothly and with Good<br> Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
                 <div>
                     <img width="70" src="assets/img/html.png" alt="This is html logo png">
                     <p>I can Work with HTML<br> Smoothly and with Good<br> Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
                 <div>
                     <img width="70" src="assets/img/js.png" alt="This is Js logo png">
                     <p>I can Work with Javascript<br> Smoothly and with Good<br> Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
                 <div>
                     <img width="70" src="assets/img/css-3.png" alt="This is css logo png">
                     <p>I can Work with CSS Smoothly<br> and with Good Knowledeg</p>
+                    <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
+                    </svg>
                 </div>
             </section>
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
                 <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
             </svg>
+            <svg width="35" height="815" viewBox="0 0 35 815" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="15" y1="814.005" x2="15" y2="0.973572" stroke="url(#paint0_linear_17_64)" stroke-width="10"/>
+                <circle cx="17.5" cy="59.4998" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="59.4998" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="246.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="246.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="433.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="433.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="620.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="620.5" r="14.5" fill="#070707"/>
+                <defs>
+                    <linearGradient id="paint0_linear_17_64" x1="20" y1="407.489" x2="21" y2="407.489" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#554748"/>
+                        <stop offset="1" stop-color="#D0161A" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <svg width="35" height="814" viewBox="0 0 35 814" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="16.4688" y1="814" x2="16.4688" y2="0.963867" stroke="url(#paint0_linear_21_96)" stroke-width="10"/>
+                <circle cx="17.5" cy="63.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="198.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="198.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="329.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="329.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="462.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="462.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="596.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="596.5" r="14.5" fill="#070707"/>
+                <circle cx="17.5" cy="726.5" r="17.5" fill="#D9D9D9"/>
+                <circle cx="17.5" cy="726.5" r="14.5" fill="#070707"/>
+                <defs>
+                    <linearGradient id="paint0_linear_21_96" x1="21.4688" y1="407.482" x2="22.4688" y2="407.482" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#554748"/>
+                        <stop offset="1" stop-color="#D0161A" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+
         </section>
         <section>
             <h2><dfn id="service">Services</dfn></h2>
@@ -840,6 +999,14 @@
                 <p>This software is Chat <br>Application. The language<br> used is java.</p>
                 <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
             </div>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
+                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
+            </svg>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
+                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
+            </svg>
         </section>
         <section>
             <h2> <dfn id="assignment">Assignment</dfn></h2>

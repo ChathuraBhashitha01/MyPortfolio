@@ -17,33 +17,34 @@
     <meta name="theme-color" content="red">
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="assets/css/8.0.1_normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Handjet:wght@100&family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
     <style>
-        body{
-            position: relative;
+        *{
+            font-family:'Barlow', sans-serif;
         }
         body>header{
-            position: fixed;
-            top: 100vh;
-            left: 0;
-            right: 0;
-            height: 70px;
+            position: relative;
+            height: 60px;
             background: #131313;
-            margin-bottom: 0;
-            /*z-index: 1;*/
+            box-shadow: 5px 1px 5px 0px black;
         }
-        body>header>nav{
+        body>header>nav {
             position: absolute;
             top: 10px;
             right: 10px;
         }
         body>header>nav>ul>li{
-            list-style: none;
             display: inline-block;
-            padding: 10px;
+            margin-right:  10px;
+            margin-top: 10px;
+            list-style: none;
+            color: white;
         }
-
         header>nav>ul>li>a{
             text-decoration: none;
+            color: white;
         }
 
 
@@ -51,27 +52,49 @@
             width: 100%;
             height: 100vh;
             background-color: #070707;
+            color: white;
+            position: relative;
+        }
+        /*body>main>section:nth-child(1)>section>h3:nth-child(1){*/
+        /*    position: absolute;*/
+        /*    top: 200px;*/
+        /*}*/
+        body>main>section:nth-child(1)>aside{
+            display: inline-block;
+            /*background:80%;*/
             position: absolute;
-            top: 0;
-            left: 0;
+            right: 0;
+            bottom: 0px;
         }
         body>main>section:nth-child(1)>section>h3:nth-child(1){
+            display: inline-block;
+            font-size: 30px;
             position: absolute;
-            top: 200px;
+            top: 300px;
+            left: 200px;
         }
-        body>main>section:nth-child(1)>aside{
-            background:80%;
+        body>main>section:nth-child(1)>section>h2:nth-child(2){
+            display: inline-block;
+            font-size: 50px;
             position: absolute;
-            bottom:0px;
-            right: 0px;
+            top: 350px;
+            left: 200px;
+        }
+        body>main>section:nth-child(1)>section>h3:nth-child(3){
+            display: inline-block;
+            font-size: 30px;
+            position: absolute;
+            top: 450px;
+            left: 200px;
+            /*left: 0;*/
         }
         body>main>section:nth-child(1)>section>div{
             display: inline-block;
         }
         body>main>section:nth-child(1){
             position: absolute;
-            right: 0;
-            top: 0;
+           left: 0;
+            top: 80px;
         }
         body>main>section:nth-child(1)>section>div:nth-child(4){
             position: absolute;
@@ -98,14 +121,268 @@
             top:475px;
             right:30px;
         }
+        body>main>section:nth-child(2) {
+            width: 100%;
+            height: 1916px;
+            background-color: #070707;
+            /*border: 2px solid black;*/
+            color: white;
+            position: relative;
+            top: 100vh;
+        }
+        body>main>section:nth-child(2)>section{
+            display: inline-block;
+        }
+        body>main>section:nth-child(2)>section:first-child>p:nth-child(5){
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            right: 180px;
+            top: 0;
+        }
+        body>main>section:nth-child(2)>section:first-child>p:nth-child(6){
+            font-size: 20px;
+            position: absolute;
+            right: 220px;
+            top: 136px;
+        }
+        body>main>section:nth-child(2)>section:first-child>p:nth-child(7){
+            font-size: 20px;
+            font-weight: normal;
+            position: absolute;
+            right: 184px;
+            top: 295px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3) {
+            position: absolute;
+            right: 0;
+            top: 400px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(1)>h4:nth-child(1){
+            font-size: 40px;
+            color: #881012;
+            margin-top: 0;
+            margin-left: 100px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(1)>h3:nth-child(2){
+            font-size: 60px;
+            position: relative;
+            bottom:50px;
+            left: 100px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(1)>div:nth-child(3)>img{
+            position: relative;
+            left: 100px;
+            bottom: 80px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(1)>ul:nth-child(4){
+            list-style: none;
+            position: relative;
+            left: 100px;
+            bottom: 60px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2){
+            width: 586px;
+            background: #373636;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+            left: 100px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>h3{
+           /*margin-left: 20px;*/
+        }
+        body>main>section:nth-child(2)>section:nth-child(3){
+            width: 586px;
+            height: 903px;
+            background: #373636;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            /*position: relative;*/
+            top: 653px;
+            right: 156px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div>img{
+            display: inline-block;
+            position: relative;
+            /*display: flex;*/
+            /*!*justify-content: space-between;*!*/
+            /*align-items: center;*/
 
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div>p{
+            display: inline-block;
+            position: relative;
+            left: 10px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)div>img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(3){
+            width: 100%;
+            height: 1333px;
+            background-color: #191A19;
+            color: white;
+            position: relative;
+        }
+        body>main>section:nth-child(3)>h2{
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        body>main>section:nth-child(3)>div{
+            display: inline-block;
+            width: 420px;
+            height: 420px;
+            background: #373636;
+            border-radius: 10%;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2){
+            /*display: inline-block;*/
+            /*width: 420px;*/
+            /*height: 420px;*/
+            /*background: #373636;*/
+            border: 2px solid black;
+            position: relative;
+            top: 50px;
+            left: 165px;
+        }
+        body>main>section:nth-child(3)>div>img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 10px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2)>h4{
+            font-size: 30px;
+            position: relative;
+            top: 100px;
+            left: 90px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2)>p{
+            font-size: 20px;
+            position: relative;
+            top: 100px;
+            left: 70px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(3){
+            /*display: inline-block;*/
+            /*width: 320px;*/
+            /*height: 320px;*/
+            /*background: #373636;*/
+            border: 2px solid black;
+            position: relative;
+            top: 50px;
+            left: 420px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(3)>img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 10px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(3)>h4{
+            font-size: 30px;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(3)>p{
+            font-size: 20px;
+            position: relative;
+            top: 100px;
+            left: 70px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(4){
+            /*display: inline-block;*/
+            /*width: 320px;*/
+            /*height: 320px;*/
+            /*background: #373636;*/
+            border: 2px solid black;
+            position: relative;
+            top: 560px;
+            right: 346px
 
+        }
+        body>main>section:nth-child(3)>div:nth-child(4)>img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 10px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(4)>h4{
+            font-size: 30px;
+            position: relative;
+            top: 100px;
+            left: 115px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(4)>p{
+            font-size: 20px;
+            position: relative;
+            top: 100px;
+            left: 70px;
+        }
+        body>main>section:nth-child(4){
+            width: 100%;
+            height: 1000px;
+            background-color: #070707;
+            color: white;
+            position: relative;
+        }
+        body>main>section:nth-child(4)>div:nth-child(3){
+            display: inline-block;
+
+        }
+        body>main>section:nth-child(4)>div:nth-child(4){
+            display: inline-block;
+            position: relative;
+            bottom: 73px;
+            left: 230px;
+
+        }
+        body>main>section:nth-child(5){
+            width: 100%;
+            height: 100vh;
+            background-color: #070707;
+            color: white;
+            position: relative;
+        }
+        body>main>section:nth-child(5)>div{
+            display: inline-block;
+        }
+        body>main>section:nth-child(6)>section{
+            height: 90vh;
+            border: 1px solid black;
+            display:grid;
+            grid-template-rows:repeat(2,1fr);
+            grid-template-columns: repeat(4,1fr);
+        }
+        body>main>section:nth-child(6)>section>div{
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>footer>address>div:nth-child(1){
+           position: relative;
+            top: 50pxgit;
+            left: 300px;
+        }
     </style>
 </head>
 <body>
     <header>
         <img width="45"  src="assets/img/gmail-logo.png"> <a href="chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
-        <nev>
+        <nav>
             <ul>
                 <li>Home</li>
                 <li> <a href="#about">About</a> </li>
@@ -116,528 +393,529 @@
                 <li><a href="#cotact">Contact</a></li>
 
             </ul>
-        </nev>
+        </nav>
     </header>
-<main>
-    <section>
+    <main>
         <section>
-            <h3>Hello, My  Name is</h3>
-            <h2>Bhashitha <span style="#881012: red">Wickramasinghe</span></h2>
-            <h3>I'm Full Stack Developer from Srilanka</h3>
+            <section>
+                <h3>Hello, My  Name is</h3>
+                <h2>Bhashitha <span style="#881012: red">Wickramasinghe</span></h2>
+                <h3>I'm Full Stack Developer from Srilanka</h3>
 
-            <div>
-                <img usemap="#github" width="55" src="assets/img/github.png">
+                <div>
+                    <img usemap="#github" width="55" src="assets/img/github.png">
 
-                <map name="github">
-                    <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
-                </map>
-            </div>
-            <div>
-                <img width="55" src="assets/img/linkedin.png">
-                <map name="linkedin">
-                    <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
-                </map>
-            </div>
-            <div>
-                <img width="55" src="assets/img/facebook.png">
-                <map name="facebook">
-                    <area shape="circle" coords="27.5,27.5,20" href="https://www.facebook.com/bhashitha.wickramasinghe.52?mibextid=ZbWKwL" alt="Go to Facebook">
-                </map>
-            </div>
-            <div>
-                <img width="55" src="assets/img/instagram.png">
-                <map name="instagram">
-                    <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
-                </map>
-            </div>
-            <div>
-                <img width="55" src="assets/img/twitter.png">
-                <map name="twitter">
-                    <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
-                </map>
-            </div>
-        </section>
-        <aside><img src="assets/img/ch2 (4).png" width="800" height="430"></aside>
-    </section>
-    <section>
-        <section>
-            <h4>Read More</h4>
-            <h3><dfn id="about" >About Me</dfn></h3>
-            </hgroup>
-            <div><img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg"></div>
-            <ul>
-                <li>Date of Birth :<time datetime="2001-06-13">13/06/2001</time></li>
-                <li>City : Galle</li>
-                <li>Country : Sri Lanka</li>
-                <li>Work : Software Developer</li>
-            </ul>
-            <p>I’m Bhashitha Wickramasinghe & I’m 22 <br>Years Old. I’m a Full Stack Developer from <br>Southern Province, Srilanka</p>
-            <p>
-                I am a Full Stack Developer.A full stack developer is a software <br>engineer who is proficient in both front-end and back-end
-                <br> development.I can provide clean code and work in Databases. <br>We have the skills and knowledge to work on all layers of a web<br> application, from the user interface to the server-side logic <br>and database interactions.
-
-            </p>
-            <p>
-                Being a full stack developer allows you to work on different parts of <br>a project, from user interface to server infrastructure. I will use my
-                <br>best knowledge to carry out the work given to me in an efficient<br> manner
-            </p>
-            <button  type="submit" formaction="send message"><a  href="" download="Download CV.pdf">Download CV</a></button>
+                    <map name="github">
+                        <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
+                    </map>
+                </div>
+                <div>
+                    <img width="55" src="assets/img/linkedin.png">
+                    <map name="linkedin">
+                        <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
+                    </map>
+                </div>
+                <div>
+                    <img width="55" src="assets/img/facebook.png">
+                    <map name="facebook">
+                        <area shape="circle" coords="27.5,27.5,20" href="https://www.facebook.com/bhashitha.wickramasinghe.52?mibextid=ZbWKwL" alt="Go to Facebook">
+                    </map>
+                </div>
+                <div>
+                    <img width="55" src="assets/img/instagram.png">
+                    <map name="instagram">
+                        <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
+                    </map>
+                </div>
+                <div>
+                    <img width="55" src="assets/img/twitter.png">
+                    <map name="twitter">
+                        <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
+                    </map>
+                </div>
+            </section>
+            <aside><img src="assets/img/ch2 (4).png" width="844" height="781"></aside>
         </section>
         <section>
-            <h3>Education</h3>
+            <section>
+                <h4>Read More</h4>
+                <h3><dfn id="about" >About Me</dfn></h3>
+                <div><img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg"></div>
+                <ul>
+                    <li>Date of Birth :<time datetime="2001-06-13">13/06/2001</time></li>
+                    <li>City : Galle</li>
+                    <li>Country : Sri Lanka</li>
+                    <li>Work : Software Developer</li>
+                </ul>
+                <p>I’m Bhashitha Wickramasinghe & I’m 22 <br>Years Old. I’m a Full Stack Developer from <br>Southern Province, Srilanka</p>
+                <p>
+                    I am a Full Stack Developer.A full stack developer is a software <br>engineer who is proficient in both front-end and back-end
+                    <br> development.I can provide clean code and work in Databases. <br>We have the skills and knowledge to work on all layers of a web<br> application, from the user interface to the server-side logic <br>and database interactions.
+
+                </p>
+                <p>
+                    Being a full stack developer allows you to work on different parts of <br>a project, from user interface to server infrastructure. I will use my
+                    <br>best knowledge to carry out the work given to me in an efficient<br> manner
+                </p>
+                <button  type="submit" formaction="send message"><a  href="" download="Download CV.pdf">Download CV</a></button>
+            </section>
+            <section>
+                <h3>Education</h3>
+
+                <div>
+                    <h4>2017 :Ordinary Level Examonation</h4>
+                    <p>I was Completed My Ordinary <br>level at<b> Amarasuriya College,<br> Galle</b>.</p>
+                </div>
+                <div>
+                    <h4>2020 :Advance Level Examonation</h4>
+                    <p>I was Completed My Advans <br>level at<b> Mahinda College ,<br> Galle</b>.</p>
+                </div>
+                <div>
+                    <h4>2022 :Diploma in ICT</h4>
+                    <p>I was Completed IT<br> Diploma(pearson) from <b> Esoft <br>Metro Campus Galle</b>.<a href="https://esoft.lk/"  target="_blank">Go to Esoft</a> </p>
+                </div>
+                <div>
+                    <h4>2022 :Diploma in Computer Science</h4>
+                    <p>Currently I am a computer science<br> undergraduate student. Now I am <br>doing <abbr title="Graduate Diploma in Software Engineering"><b>GDSE</b></abbr>-<b> Graduate Diploma in<br> Software Engineering </b> from <abbr title="Institute of Software Engineering"><b>IJSE</b></abbr>-<br><b> Software Engineering institute </b>as my <br>HND.<a href="https://ijse.lk" target="_blank">Go to IJSE</a></p>
+                </div>
+
+            </section>
+            <section>
+                <h3>Skills</h3>
+
+                <div>
+                    <img width="70" src="assets/img/java%20(1).png" alt="This is java logo png">
+                    <p>The Main Language I work in is <br>JAVA. I can work with java Smoothly <br>and with Good Knowledeg</p>
+                </div>
+                <div>
+                    <img width="70" src="assets/img/hashtag.png" alt="This is C# logo png">
+                    <p>I can Work with C# Smoothly<br> and with Good Knowledeg</p>
+                </div>
+                <div>
+                    <img width="70" src="assets/img/python.png" alt="This is python logo png">
+                    <p>I can Work with Phython <br>Smoothly and with Good<br> Knowledeg</p>
+                </div>
+                <div>
+                    <img width="70" src="assets/img/html.png" alt="This is html logo png">
+                    <p>I can Work with HTML<br> Smoothly and with Good<br> Knowledeg</p>
+                </div>
+                <div>
+                    <img width="70" src="assets/img/js.png" alt="This is Js logo png">
+                    <p>I can Work with Javascript<br> Smoothly and with Good<br> Knowledeg</p>
+                </div>
+                <div>
+                    <img width="70" src="assets/img/css-3.png" alt="This is css logo png">
+                    <p>I can Work with CSS Smoothly<br> and with Good Knowledeg</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2><dfn id="service">Services</dfn></h2>
 
             <div>
-                <h4>2017 :Ordinary Level Examonation</h4>
-                <p>I was Completed My Ordinary <br>level at<b> Amarasuriya College,<br> Galle</b>.</p>
+                <img width="70" src="assets/img/software-application.png" alt="This is Software development  png">
+                <h4>Software Developer</h4>
+                <p>As a software developer, one<br> plays a critical role in <br>designing, building and <br>maintaining various software<br> applications and systems</p>
             </div>
             <div>
-                <h4>2020 :Advance Level Examonation</h4>
-                <p>I was Completed My Advans <br>level at<b> Mahinda College ,<br> Galle</b>.</p>
+                <img width="70" src="assets/img/code.png" alt="This is  web development  png">
+                <h4>Web Developer</h4>
+                <p>As a web developer, I am<br> involved in creating websites<br> and web applications that can <br>be accessed through browsers<br> on various devices.</p>
             </div>
             <div>
-                <h4>2022 :Diploma in ICT</h4>
-                <p>I was Completed IT<br> Diploma(pearson) from <b> Esoft <br>Metro Campus Galle</b>.<a href="https://esoft.lk/"  target="_blank">Go to Esoft</a> </p>
-            </div>
-            <div>
-                <h4>2022 :Diploma in Computer Science</h4>
-                <p>Currently I am a computer science<br> undergraduate student. Now I am <br>doing <abbr title="Graduate Diploma in Software Engineering"><b>GDSE</b></abbr>-<b> Graduate Diploma in<br> Software Engineering </b> from <abbr title="Institute of Software Engineering"><b>IJSE</b></abbr>-<br><b> Software Engineering institute </b>as my <br>HND.<a href="https://ijse.lk" target="_blank">Go to IJSE</a></p>
+                <img width="70" src="assets/img/web-design.png" alt="This is  web designing  png">
+                <h4>Web Design</h4>
+                <p>As a web designer, I primarily<br> focus on creating visually<br> appealing and user-friendly<br> websites.</p>
             </div>
 
         </section>
         <section>
-            <h3>Skills</h3>
+            <h2> <dfn id="works">My Works</dfn></h2>
+
+            <p>Those are my recently created Projects.These applications use software <br>architectures,design patterns, database and database connectivity.</p>
+
             <div>
-                <img width="70" src="assets/img/java%20(1).png" alt="This is java logo png">
-                <p>The Main Language I work in is <br>JAVA. I can work with java Smoothly <br>and with Good Knowledeg</p>
+                <img width="450" height="510" src="assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png">
+                <h4>Pet Care Center Management System</h4>
+                <p>This software is used to <br>manage all aspects of the pet<br> care center. The language<br> used is java and the database<br> used is mysql. Layered <br>Architecture is used in this<br> software</p>
+                <a href="https://github.com/ChathuraBhashitha01/petCareCenterLayredArchitecture">Go to Github</a>
             </div>
             <div>
-                <img width="70" src="assets/img/hashtag.png" alt="This is C# logo png">
-                <p>I can Work with C# Smoothly<br> and with Good Knowledeg</p>
-            </div>
-            <div>
-                <img width="70" src="assets/img/python.png" alt="This is python logo png">
-                <p>I can Work with Phython <br>Smoothly and with Good<br> Knowledeg</p>
-            </div>
-            <div>
-                <img width="70" src="assets/img/html.png" alt="This is html logo png">
-                <p>I can Work with HTML<br> Smoothly and with Good<br> Knowledeg</p>
-            </div>
-            <div>
-                <img width="70" src="assets/img/js.png" alt="This is Js logo png">
-                <p>I can Work with Javascript<br> Smoothly and with Good<br> Knowledeg</p>
-            </div>
-            <div>
-                <img width="70" src="assets/img/css-3.png" alt="This is css logo png">
-                <p>I can Work with CSS Smoothly<br> and with Good Knowledeg</p>
+                <img width="450" height="510" src="assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg">
+                <h4>Chat Application</h4>
+                <p>This software is Chat <br>Application. The language<br> used is java.</p>
+                <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
             </div>
         </section>
-    </section>
-    <section>
-        <h2><dfn id="service">Services</dfn></h2>
+        <section>
+            <h2> <dfn id="assignment">Assignment</dfn></h2>
 
-        <div>
-            <img width="70" src="assets/img/software-application.png" alt="This is Software development  png">
-            <h4>Software Developer</h4>
-            <p>As a software developer, one<br> plays a critical role in <br>designing, building and <br>maintaining various software<br> applications and systems</p>
-        </div>
-        <div>
-            <img width="70" src="assets/img/code.png" alt="This is  web development  png">
-            <h4>Web Developer</h4>
-            <p>As a web developer, I am<br> involved in creating websites<br> and web applications that can <br>be accessed through browsers<br> on various devices.</p>
-        </div>
-        <div>
-            <img width="70" src="assets/img/web-design.png" alt="This is  web designing  png">
-            <h4>Web Design</h4>
-            <p>As a web designer, I primarily<br> focus on creating visually<br> appealing and user-friendly<br> websites.</p>
-        </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                <h4>Assingment 01</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 02</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 03</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 04</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 05</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 06</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 07</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 08</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 09</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 10</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 11</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 12</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 13</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 14</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 15</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 16</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 17</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 18</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 19</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 20</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+            <div>
+                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                <hgroup>
+                    <h4>Assingment 21</h4>
+                    content
+                    <ul>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </hgroup>
+            </div>
+        </section>
+        <section>
+            <h2> <dfn id="gallery">Gallery</dfn></h2>
+            <section>
+            <div>
+<!--                <img width="571"  src="assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM.jpeg">-->
+            </div>
+            <div>
+<!--                <img width="422"  src="assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM (1).jpeg">-->
+            </div>
+            <div>
+<!--                <img width="448"  src="assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg">-->
+            </div>
+            <div>
+<!--                <img width="850"  src="assets/img/WhatsApp Image 2023-06-28 at 2.36.50 PM.jpeg">-->
+            </div>
+            <div>
+<!--                <img width="591" src="assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg">-->
+            </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <h2> <dfn id="cotact">Contact</dfn></h2>
+        <address>
+            <div>
+                <img width="45" src="assets/img/gmail-logo.png">
+                <h4>Email</h4>
+                <a href="mailto:chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
+            </div>
+            <div>
+                <img width="45" src="assets/img/location.png">
+                <hgroup>
+                    <h4>Location</h4>
+                    Galle
+                </hgroup>
+            </div>
+            <div>
+                <img width="45" src="assets/img/whatsapp.png">
+                <h4>Contact Us On</h4>
+                <a href="tel:+94702819765">+94702819765</a>
 
-    </section>
-    <section>
-        <h2> <dfn id="works">My Works</dfn></h2>
-
-        <p>Those are my recently created Projects.These applications use software <br>architectures,design patterns, database and database connectivity.</p>
-
-        <div>
-            <img width="450" height="510" src="assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png">
-            <h4>Pet Care Center Management System</h4>
-            <p>This software is used to <br>manage all aspects of the pet<br> care center. The language<br> used is java and the database<br> used is mysql. Layered <br>Architecture is used in this<br> software</p>
-            <a href="https://github.com/ChathuraBhashitha01/petCareCenterLayredArchitecture">Go to Github</a>
-        </div>
-        <div>
-            <img width="450" height="510" src="assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg">
-            <h4>Chat Application</h4>
-            <p>This software is Chat <br>Application. The language<br> used is java.</p>
-            <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
-        </div>
-    </section>
-    <section>
-        <h2> <dfn id="assignment">Assignment</dfn></h2>
-
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-            <h4>Assingment 01</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 02</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 03</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 04</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 05</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 06</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 07</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 08</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 09</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 10</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 11</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 12</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 13</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 14</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 15</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 16</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 17</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 18</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 19</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 20</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-        <div>
-            <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-            <hgroup>
-                <h4>Assingment 21</h4>
-                content
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </hgroup>
-        </div>
-    </section>
-    <section>
-        <h2> <dfn id="gallery">Gallery</dfn></h2>
-        <div>
-            <img width="571"  src="assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM.jpeg">
-        </div>
-        <div>
-            <img width="422"  src="assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM (1).jpeg">
-        </div>
-        <div>
-            <img width="448"  src="assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg">
-        </div>
-        <div>
-            <img width="850"  src="assets/img/WhatsApp Image 2023-06-28 at 2.36.50 PM.jpeg">
-        </div>
-        <div>
-            <img width="591" src="assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg">
-        </div>
-    </section>
-</main>
-<footer>
-    <h2> <dfn id="cotact">Contact</dfn></h2>
-    <address>
-        <div>
-            <img width="45" src="assets/img/gmail-logo.png">
-            <h4>Email</h4>
-            <a href="mailto:chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
-        </div>
-        <div>
-            <img width="45" src="assets/img/location.png">
-            <hgroup>
-                <h4>Location</h4>
-                Galle
-            </hgroup>
-        </div>
-        <div>
-            <img width="45" src="assets/img/whatsapp.png">
-            <h4>Contact Us On</h4>
-            <a href="tel:+94702819765">+94702819765</a>
-
-        </div>
-        <hgroup>
+            </div>
             <h4>SEND ME AN EMAIL</h4>
-            I’M VERY RESPONSIVE TO MESSAGES
-        </hgroup>
+            <h3>I’M VERY RESPONSIVE TO MESSAGES</h3>
 
-        <form >
-            <fieldset>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <br>
-                <input type="text" placeholder="Subjet">
-                <br>
-                <textarea placeholder="Message"></textarea>
-                <br>
 
-                <button type="submit" formaction="send message">Send Message</button>
-            </fieldset>
-        </form>
+            <form >
+                <fieldset>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <br>
+                    <input type="text" placeholder="Subjet">
+                    <br>
+                    <textarea placeholder="Message"></textarea>
+                    <br>
 
-    </address>
-    <div>
-        <img usemap="#github" width="55" src="assets/img/github.png">
+                    <button type="submit" formaction="send message">Send Message</button>
+                </fieldset>
+            </form>
 
-        <map name="github">
-            <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
-        </map>
-    </div>
-    <div>
-        <img width="55" src="assets/img/linkedin.png">
-        <map name="linkedin">
-            <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
-        </map>
-    </div>
-    <div>
-        <img width="55" src="assets/img/facebook.png">
-        <map name="facebook">
-            <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Facebook">
-        </map>
-    </div>
-    <div>
-        <img width="55" src="assets/img/instagram.png">
-        <map name="instagram">
-            <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
-        </map>
-    </div>
-    <div>
-        <img width="55" src="assets/img/twitter.png">
-        <map name="twitter">
-            <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
-        </map>
-    </div>
-</footer>
+        </address>
+        <div>
+            <img usemap="#github" width="55" src="assets/img/github.png">
+
+            <map name="github">
+                <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
+            </map>
+        </div>
+        <div>
+            <img width="55" src="assets/img/linkedin.png">
+            <map name="linkedin">
+                <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
+            </map>
+        </div>
+        <div>
+            <img width="55" src="assets/img/facebook.png">
+            <map name="facebook">
+                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Facebook">
+            </map>
+        </div>
+        <div>
+            <img width="55" src="assets/img/instagram.png">
+            <map name="instagram">
+                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
+            </map>
+        </div>
+        <div>
+            <img width="55" src="assets/img/twitter.png">
+            <map name="twitter">
+                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
+            </map>
+        </div>
+    </footer>
 </body>
 </html>

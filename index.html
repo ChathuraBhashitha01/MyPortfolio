@@ -20,9 +20,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Handjet:wght@100&family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Handjet:wght@100&family=Josefin+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet">-->
+
     <style>
         *{
-            font-family:'Barlow', sans-serif;
+            font-family:'Josefin+Sans:ital', "Josefin Sans";
         }
         body>header{
             position: relative;
@@ -32,18 +36,20 @@
         }
         body>header>nav {
             position: absolute;
-            top: 10px;
+            top: 0px;
+            bottom: 0;
             right: 10px;
+            margin: auto;
         }
         body>header>nav>ul>li{
             display: inline-block;
-            margin-right:  10px;
-            margin-top: 10px;
+            padding-left: 10px;
             list-style: none;
             color: white;
         }
         header>nav>ul>li>a{
             text-decoration: none;
+            font-size: 20px;
             color: white;
         }
 
@@ -52,8 +58,19 @@
             width: 100%;
             height: 100vh;
             background-color: #070707;
-            color: white;
+            /*color: white;*/
+            /*color: #881012;*/
             position: relative;
+        }
+        body>main>section:nth-child(1)>svg:nth-child(1){
+            position: absolute;
+            right: 100px;
+            top: 25px;
+        }
+        body>main>section:nth-child(1)>svg:nth-child(4){
+            position: absolute;
+            left: 100px;
+            bottom: 25px;
         }
         /*body>main>section:nth-child(1)>section>h3:nth-child(1){*/
         /*    position: absolute;*/
@@ -63,17 +80,24 @@
             display: inline-block;
             /*background:80%;*/
             position: absolute;
-            right: 0;
+            left: 550px;
             bottom: 0px;
         }
         body>main>section:nth-child(1)>section>h3:nth-child(1){
+            color: white;
             display: inline-block;
             font-size: 30px;
             position: absolute;
             top: 300px;
             left: 200px;
         }
+        body>main>section:nth-child(1)>section>h2:nth-child(2)>span{
+            font-weight: bold;
+            color: #881012;
+        }
         body>main>section:nth-child(1)>section>h2:nth-child(2){
+            font-weight: bold;
+            color: white;
             display: inline-block;
             font-size: 50px;
             position: absolute;
@@ -81,6 +105,7 @@
             left: 200px;
         }
         body>main>section:nth-child(1)>section>h3:nth-child(3){
+            color: white;
             display: inline-block;
             font-size: 30px;
             position: absolute;
@@ -92,108 +117,120 @@
             display: inline-block;
         }
         body>main>section:nth-child(1){
-            position: absolute;
-           left: 0;
-            top: 80px;
+           /* position: absolute;*/
+           /*left: 0px;*/
+           /* top: 80px;*/
         }
         body>main>section:nth-child(1)>section>div:nth-child(4){
             position: absolute;
             top:175px;
-            right:30px;
+            right:100px;
         }
         body>main>section:nth-child(1)>section>div:nth-child(5){
             position: absolute;
             top:250px;
-            right:30px;
+            right:100px;
         }
         body>main>section:nth-child(1)>section>div:nth-child(6){
             position: absolute;
             top:325px;
-            right:30px;
+            right:100px;
         }
         body>main>section:nth-child(1)>section>div:nth-child(7){
             position: absolute;
             top:400px;
-            right:30px;
+            right:100px;
         }
         body>main>section:nth-child(1)>section>div:nth-child(8){
             position: absolute;
             top:475px;
-            right:30px;
+            right:100px;
         }
         body>main>section:nth-child(2) {
             width: 100%;
-            height: 1916px;
+            height:1916px;
             background-color: #070707;
             /*border: 2px solid black;*/
             color: white;
             position: relative;
-            top: 100vh;
+            /*top: 100vh;*/
         }
         body>main>section:nth-child(2)>section{
             display: inline-block;
         }
-        body>main>section:nth-child(2)>section:first-child>p:nth-child(5){
+        body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(5){
             font-weight: bold;
             font-size: 30px;
             position: absolute;
-            right: 180px;
-            top: 0;
+            right: 216px;
+            top: 153px;
         }
-        body>main>section:nth-child(2)>section:first-child>p:nth-child(6){
+        body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(6){
             font-size: 20px;
             position: absolute;
             right: 220px;
-            top: 136px;
+            top: 284px;
         }
-        body>main>section:nth-child(2)>section:first-child>p:nth-child(7){
+        body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(7){
             font-size: 20px;
             font-weight: normal;
             position: absolute;
-            right: 184px;
-            top: 295px;
+            right: 192px;
+            top: 442px;
         }
-        body>main>section:nth-child(2)>section:nth-child(3) {
+        body>main>section:nth-child(2)>section:nth-child(6) {
             position: absolute;
             right: 0;
             top: 400px;
         }
-        body>main>section:nth-child(2)>section:nth-child(1)>h4:nth-child(1){
+        body>main>section:nth-child(2)>section:nth-child(2)>h4:nth-child(1){
             font-size: 40px;
             color: #881012;
-            margin-top: 0;
-            margin-left: 100px;
+            /*margin-top: 0;*/
+            margin-left: 133px;
         }
-        body>main>section:nth-child(2)>section:nth-child(1)>h3:nth-child(2){
+        body>main>section:nth-child(2)>section:nth-child(2)>h3:nth-child(2){
             font-size: 60px;
+            font-weight: bold;
             position: relative;
             bottom:50px;
             left: 100px;
         }
-        body>main>section:nth-child(2)>section:nth-child(1)>div:nth-child(3)>img{
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
             position: relative;
             left: 100px;
             bottom: 80px;
         }
-        body>main>section:nth-child(2)>section:nth-child(1)>ul:nth-child(4){
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
+            position: relative;
+            bottom: 300px;
+            left: 400px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(3){
+            position: relative;
+            bottom: 50px;
+            right: 200px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
             list-style: none;
             position: relative;
-            left: 100px;
+            left: 170px;
             bottom: 60px;
+            font-size: 20px;
+            font-weight: bold;
         }
-        body>main>section:nth-child(2)>section:nth-child(2){
+        body>main>section:nth-child(2)>section:nth-child(4){
             width: 586px;
+            height: 903px;
             background: #373636;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             position: relative;
+            top: 50px;
             left: 100px;
         }
-        body>main>section:nth-child(2)>section:nth-child(2)>h3{
-           /*margin-left: 20px;*/
-        }
-        body>main>section:nth-child(2)>section:nth-child(3){
+        body>main>section:nth-child(2)>section:nth-child(6){
             width: 586px;
             height: 903px;
             background: #373636;
@@ -201,10 +238,25 @@
             flex-direction: column;
             justify-content: space-evenly;
             /*position: relative;*/
-            top: 653px;
+            top: 844px;
             right: 156px;
         }
-        body>main>section:nth-child(2)>section:nth-child(3)>div>img{
+        body>main>section:nth-child(2)>h3:nth-child(3){
+            display: inline-block;
+            font-size: 40px;
+            position: relative;
+            right: 400px;
+            top: 50px;
+
+        }
+        body>main>section:nth-child(2)>h3:nth-child(5){
+            display: inline-block;
+            font-size: 40px;
+            position: relative;
+            left: 750px;
+            bottom: 975px;
+        }
+        body>main>section:nth-child(2)>section:nth-child(6)>div>img{
             display: inline-block;
             position: relative;
             /*display: flex;*/
@@ -212,16 +264,26 @@
             /*align-items: center;*/
 
         }
-        body>main>section:nth-child(2)>section:nth-child(3)>div>p{
+        body>main>section:nth-child(2)>section:nth-child(6)>div>p{
             display: inline-block;
             position: relative;
             left: 10px;
         }
-        body>main>section:nth-child(2)>section:nth-child(3)div>img{
+        body>main>section:nth-child(2)>section:nth-child(6)div>img{
             position: absolute;
             top: 0;
             bottom: 0;
             margin: auto;
+        }
+        body>main>section:nth-child(2)>svg:nth-child(1){
+            position: absolute;
+            right: 100px;
+            top: 25px;
+        }
+        body>main>section:nth-child(2)>svg:nth-child(7){
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
         }
         body>main>section:nth-child(3){
             width: 100%;
@@ -233,14 +295,15 @@
         body>main>section:nth-child(3)>h2{
             font-size: 60px;
             margin-left: 100px;
-            margin-top: 100px;
+            margin-top: 0;
+            position: relative;
         }
         body>main>section:nth-child(3)>div{
             display: inline-block;
             width: 420px;
             height: 420px;
             background: #373636;
-            border-radius: 10%;
+            border-radius: 0%;
         }
         body>main>section:nth-child(3)>div:nth-child(2){
             /*display: inline-block;*/
@@ -330,33 +393,155 @@
             top: 100px;
             left: 70px;
         }
+        body>main>section:nth-child(3)>svg:nth-child(5){
+            position: absolute;
+            right: 100px;
+            top: 25px;
+        }
+        body>main>section:nth-child(3)>svg:nth-child(6){
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
+        }
         body>main>section:nth-child(4){
-            width: 100%;
-            height: 1000px;
-            background-color: #070707;
-            color: white;
-            position: relative;
-        }
-        body>main>section:nth-child(4)>div:nth-child(3){
-            display: inline-block;
-
-        }
-        body>main>section:nth-child(4)>div:nth-child(4){
-            display: inline-block;
-            position: relative;
-            bottom: 73px;
-            left: 230px;
-
-        }
-        body>main>section:nth-child(5){
             width: 100%;
             height: 100vh;
             background-color: #070707;
             color: white;
             position: relative;
         }
+        body>main>section:nth-child(4)>h2{
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 0;
+        }
+        body>main>section:nth-child(4)>p{
+            font-size: 30px;
+            margin-left: 100px;
+            margin-top: -15px;
+        }
+        body>main>section:nth-child(4)>div{
+            display: inline-block;
+        }
+        body>main>section:nth-child(4)>div:nth-child(3){
+            /*display: inline-block;*/
+            width: 450px;
+            height: 510px;
+            border: 2px solid black;
+            background: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /*background: #881012 ;*/
+            position: absolute;
+            top: 200px;
+            left: 200px;
+
+        }
+        body>main>section:nth-child(4)>div:nth-child(4){
+            /*display: inline-block;*/
+            /*position: relative;*/
+            /*bottom: 73px;*/
+            /*left: 230px;*/
+
+            width: 450px;
+            height: 510px;
+            border: 2px solid black;
+            background: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 200px;
+            right: 200px;
+
+        }
+        body>main>section:nth-child(5){
+            width: 100%;
+            height: 120vh;
+            background-color: #191A19;
+            color: white;
+            position: relative;
+        }
+        body>main>section:nth-child(5)>h2{
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 0;
+        }
         body>main>section:nth-child(5)>div{
             display: inline-block;
+            width: 300px;
+            height: 300px;
+            background: #373636;
+            position: relative;
+        }
+        body>main>section:nth-child(5)>div>img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
+            margin: auto;
+        }
+        body>main>section:nth-child(5)>div>hgroup{
+            position: relative;
+            top: 110px;
+            left: 26px
+        }
+        body>main>section:nth-child(5)>div:nth-child(2){
+            position: absolute;
+            top: 120px;
+            left: 200px;
+        }
+        body>main>section:nth-child(5)>div:nth-child(3){
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            right: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(5)>div:nth-child(4){
+            position: absolute;
+            top: 120px;
+            right: 200px;
+        }
+        body>main>section:nth-child(5)>div:nth-child(5){
+            position: absolute;
+            bottom: 120px;
+            left: 200px;
+        }
+        body>main>section:nth-child(5)>div:nth-child(6){
+            position: absolute;
+            bottom: 120px;
+            left: 0px;
+            right: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(5)>div:nth-child(7){
+            position: absolute;
+            bottom: 120px;
+            right: 200px;
+        }
+        body>main>section:nth-child(5)>svg:nth-child(8){
+            position: absolute;
+            right: 100px;
+            top: 25px;
+        }
+        body>main>section:nth-child(5)>svg:nth-child(9){
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
+        }
+        body>main>section:nth-child(6){
+            width: 100%;
+            height: 120vh;
+            position: relative;
+            background: #070707;
+            color: white;
+        }
+        body>main>section:nth-child(6)>h2{
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 0;
         }
         body>main>section:nth-child(6)>section{
             height: 90vh;
@@ -365,17 +550,96 @@
             grid-template-rows:repeat(2,1fr);
             grid-template-columns: repeat(4,1fr);
         }
-        body>main>section:nth-child(6)>section>div{
+        body>main>section:nth-child(6)>section>div:nth-child(1){
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+        body>main>section:nth-child(6)>section>div:nth-child(2){
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM (1).jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>main>section:nth-child(6)>section>div:nth-child(3){
             border: 2px solid black;
             background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
+        body>main>section:nth-child(6)>section>div:nth-child(4){
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>main>section:nth-child(6)>section>div:nth-child(5){
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>main>section:nth-child(6)>section>div:nth-child(6){
+            border: 2px solid black;
+            background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.50 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            grid-row: 2/3;
+            grid-column: 3/5;
+        }
+        body>footer{
+            height: 100vh;
+            background: #191A19;
+            position: relative;
+            color: white;
+        }
+        body>footer>h2{
+            font-size: 60px;
+            margin-left: 100px;
+            margin-top: 0;
+        }
         body>footer>address>div:nth-child(1){
+            display: inline-block;
            position: relative;
-            top: 50pxgit;
-            left: 300px;
+            top: 50px;
+            left: 200px;
+        }
+        body>footer>address>div:nth-child(2){
+            display: inline-block;
+            position: relative;
+            top: 53px;
+            left: 425px;
+        }
+        body>footer>address>div:nth-child(3){
+            display: inline-block;
+            position: relative;
+            top: 52px;
+            left: 813px;
+        }
+        body>footer>address>h4:nth-child(4){
+            margin-top: 100px;
+            margin-left: 625px;
+        }
+        body>footer>address>h5:nth-child(5){
+            margin-left: 590px;
+        }
+        body>footer>section{
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            position: relative;
+            left: 500px;
+            top: 30px;
         }
     </style>
 </head>
@@ -397,9 +661,13 @@
     </header>
     <main>
         <section>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
+                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
+            </svg>
             <section>
                 <h3>Hello, My  Name is</h3>
-                <h2>Bhashitha <span style="#881012: red">Wickramasinghe</span></h2>
+                <h2>Bhashitha<span style="#881012: red">Wickramasinghe</span></h2>
                 <h3>I'm Full Stack Developer from Srilanka</h3>
 
                 <div>
@@ -435,12 +703,30 @@
                 </div>
             </section>
             <aside><img src="assets/img/ch2 (4).png" width="844" height="781"></aside>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
+                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
+            </svg>
         </section>
         <section>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
+                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
+            </svg>
             <section>
                 <h4>Read More</h4>
                 <h3><dfn id="about" >About Me</dfn></h3>
-                <div><img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg"></div>
+                <div>
+                    <svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0.671875C3.85787 0.671875 0.500004 4.02974 0.500004 8.17188C0.500004 12.314 3.85787 15.6719 8 15.6719V0.671875ZM108 0.671875L8 0.671875V15.6719L108 15.6719V0.671875Z" fill="#881012"/>
+                        <path d="M92.7568 100.895C92.7568 105.037 96.1147 108.395 100.257 108.395C104.399 108.395 107.757 105.037 107.757 100.895H92.7568ZM92.7568 0.894531L92.7568 100.895H107.757L107.757 0.894531L92.7568 0.894531Z" fill="#881012"/>
+                    </svg>
+                    <img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg">
+                    <svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 108.223C104.142 108.223 107.5 104.865 107.5 100.723C107.5 96.5805 104.142 93.2227 100 93.2227V108.223ZM0 108.223L100 108.223V93.2227L0 93.2227L0 108.223Z" fill="#881012"/>
+                        <path d="M15.2432 8C15.2432 3.85787 11.8853 0.500004 7.74316 0.500004C3.60103 0.500004 0.243164 3.85787 0.243164 8H15.2432ZM15.2432 108L15.2432 8H0.243164L0.243164 108H15.2432Z" fill="#881012"/>
+                    </svg>
+                </div>
                 <ul>
                     <li>Date of Birth :<time datetime="2001-06-13">13/06/2001</time></li>
                     <li>City : Galle</li>
@@ -459,9 +745,8 @@
                 </p>
                 <button  type="submit" formaction="send message"><a  href="" download="Download CV.pdf">Download CV</a></button>
             </section>
+            <h3>Education</h3>
             <section>
-                <h3>Education</h3>
-
                 <div>
                     <h4>2017 :Ordinary Level Examonation</h4>
                     <p>I was Completed My Ordinary <br>level at<b> Amarasuriya College,<br> Galle</b>.</p>
@@ -480,9 +765,8 @@
                 </div>
 
             </section>
+            <h3>Skills</h3>
             <section>
-                <h3>Skills</h3>
-
                 <div>
                     <img width="70" src="assets/img/java%20(1).png" alt="This is java logo png">
                     <p>The Main Language I work in is <br>JAVA. I can work with java Smoothly <br>and with Good Knowledeg</p>
@@ -508,10 +792,13 @@
                     <p>I can Work with CSS Smoothly<br> and with Good Knowledeg</p>
                 </div>
             </section>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
+                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
+            </svg>
         </section>
         <section>
             <h2><dfn id="service">Services</dfn></h2>
-
             <div>
                 <img width="70" src="assets/img/software-application.png" alt="This is Software development  png">
                 <h4>Software Developer</h4>
@@ -527,7 +814,14 @@
                 <h4>Web Design</h4>
                 <p>As a web designer, I primarily<br> focus on creating visually<br> appealing and user-friendly<br> websites.</p>
             </div>
-
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
+                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
+            </svg>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
+                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
+            </svg>
         </section>
         <section>
             <h2> <dfn id="works">My Works</dfn></h2>
@@ -535,13 +829,13 @@
             <p>Those are my recently created Projects.These applications use software <br>architectures,design patterns, database and database connectivity.</p>
 
             <div>
-                <img width="450" height="510" src="assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png">
+<!--                <img width="450" height="510" src="assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png">-->
                 <h4>Pet Care Center Management System</h4>
                 <p>This software is used to <br>manage all aspects of the pet<br> care center. The language<br> used is java and the database<br> used is mysql. Layered <br>Architecture is used in this<br> software</p>
                 <a href="https://github.com/ChathuraBhashitha01/petCareCenterLayredArchitecture">Go to Github</a>
             </div>
             <div>
-                <img width="450" height="510" src="assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg">
+<!--                <img width="450" height="510" src="assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg">-->
                 <h4>Chat Application</h4>
                 <p>This software is Chat <br>Application. The language<br> used is java.</p>
                 <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
@@ -553,14 +847,14 @@
             <div>
                 <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                 <hgroup>
-                <h4>Assingment 01</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
+                    <h4>Assingment 01</h4>
+                        content
+                        <ul>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                        </ul>
                 </hgroup>
             </div>
             <div>
@@ -628,201 +922,210 @@
                     </ul>
                 </hgroup>
             </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 07</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 08</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 09</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 10</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 11</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 12</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 13</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 14</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 15</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 16</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 17</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 18</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 19</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 20</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 21</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                </hgroup>
-            </div>
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 07</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 08</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 09</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 10</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 11</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 12</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 13</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 14</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 15</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 16</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 17</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 18</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 19</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 20</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                <hgroup>-->
+<!--                    <h4>Assingment 21</h4>-->
+<!--                    content-->
+<!--                    <ul>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                        <li> </li>-->
+<!--                    </ul>-->
+<!--                </hgroup>-->
+<!--            </div>-->
+
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
+                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
+            </svg>
+            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
+                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
+            </svg>
         </section>
         <section>
             <h2> <dfn id="gallery">Gallery</dfn></h2>
@@ -841,6 +1144,9 @@
             </div>
             <div>
 <!--                <img width="591" src="assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg">-->
+            </div>
+            <div>
+<!--                    <img width="591" src="assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg">-->
             </div>
             </section>
         </section>
@@ -867,7 +1173,7 @@
 
             </div>
             <h4>SEND ME AN EMAIL</h4>
-            <h3>I’M VERY RESPONSIVE TO MESSAGES</h3>
+            <h5>I’M VERY RESPONSIVE TO MESSAGES</h5>
 
 
             <form >
@@ -885,37 +1191,39 @@
             </form>
 
         </address>
-        <div>
-            <img usemap="#github" width="55" src="assets/img/github.png">
+        <section>
+            <div>
+                <img usemap="#github" width="55" src="assets/img/github.png">
 
-            <map name="github">
-                <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
-            </map>
-        </div>
-        <div>
-            <img width="55" src="assets/img/linkedin.png">
-            <map name="linkedin">
-                <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
-            </map>
-        </div>
-        <div>
-            <img width="55" src="assets/img/facebook.png">
-            <map name="facebook">
-                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Facebook">
-            </map>
-        </div>
-        <div>
-            <img width="55" src="assets/img/instagram.png">
-            <map name="instagram">
-                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
-            </map>
-        </div>
-        <div>
-            <img width="55" src="assets/img/twitter.png">
-            <map name="twitter">
-                <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
-            </map>
-        </div>
+                <map name="github">
+                    <area shape="circle" coords="27.5,27.5,20" href="https://github.com/ChathuraBhashitha01" alt="Go to Github">
+                </map>
+            </div>
+            <div>
+                <img width="55" src="assets/img/linkedin.png">
+                <map name="linkedin">
+                    <area shape="circle" coords="27.5,27.5,20" href="https://www.linkedin.com/feed/" alt="Go to Linkedin">
+                </map>
+            </div>
+            <div>
+                <img width="55" src="assets/img/facebook.png">
+                <map name="facebook">
+                    <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Facebook">
+                </map>
+            </div>
+            <div>
+                <img width="55" src="assets/img/instagram.png">
+                <map name="instagram">
+                    <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Instagram">
+                </map>
+            </div>
+            <div>
+                <img width="55" src="assets/img/twitter.png">
+                <map name="twitter">
+                    <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to twitter">
+                </map>
+            </div>
+        </section>
     </footer>
 </body>
 </html>

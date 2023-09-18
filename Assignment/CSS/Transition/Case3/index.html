@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Case 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../../../assets/css/8.0.1_normalize.css">
+    <link rel="stylesheet" href="../../../../assets/font/css/all.min.css">
+    <style>
+        main{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: lightblue;
+        }
+        main>section{
+            width: 500px;
+            height: 400px;
+            background: url("assest/tesla-model-iii-confirmed-coming-in-2016-83948_1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 1px 2px 20px 2px black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+        main>section>div:first-child{
+            width: 500px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            bottom: 0;
+            margin: auto;
+            background: black;
+            transition: 2s all;
+            opacity: 0.3;
+        }
+        main>section:hover div:first-child{
+            transition: 2s all;
+            top: 0;
+        }
+        main>section>i{
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            left: 45%;
+            bottom: 100%;
+            right: 0;
+            margin: auto;
+            transition: 2s all;
+        }
+        main>section:hover i{
+            transition: 2s all;
+            bottom: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div>
+
+            </div>
+            <i class="fa-solid fa-trash-can"></i>
+        </section>
+    </main>
+</body>
+</html>

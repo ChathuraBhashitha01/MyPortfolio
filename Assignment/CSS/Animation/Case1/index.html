@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Case 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../../../assets/css/8.0.1_normalize.css">
+    <style>
+        body>div{
+            width: 200px;
+            height: 100px;
+            background: red;
+            border-radius: 5%;
+            animation-name: animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+            left: 0;
+        }
+        @keyframes animation {
+            0%{
+                background: orange;
+                transform: rotate(0deg);
+                left: 0vw;
+                top: 0vh;
+            }
+            25%{
+                background: purple;
+                transform: rotate(180deg);
+                left: 1200px;
+                top: 0px;
+            }
+            50%{
+                background: blue;
+                transform: rotate(360deg);
+                left: 1200px;
+                top: 600px;
+            }
+            75%{
+                background: green;
+                transform: rotate(180deg);
+                left: 0px;
+                top: 600px;
+            }
+            100%{
+                background: orange;
+                transform: rotate(360deg);
+                left: 0px;
+                top: 0px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+
+</body>
+</html>

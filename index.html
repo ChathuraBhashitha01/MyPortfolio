@@ -40,10 +40,16 @@
             position: fixed;
             z-index: 1;
         }
-        body>header>img,a{
+        body>header>a{
             text-decoration: none;
             font-size: 20px;
             color: white;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+        }
+        body>header>a>i{
+           color: #881012;
         }
         body>header>nav {
             position: absolute;
@@ -54,9 +60,13 @@
         }
         body>header>nav>ul>li{
             display: inline-block;
-            padding-left: 20px;
+            padding-left: 40px;
             list-style: none;
             color: white;
+        }
+        body>header>nav>ul>li>a>i{
+            color: #881012;
+            padding-left: 10px;
         }
         header>nav>ul>li>a{
             text-decoration: none;
@@ -73,11 +83,28 @@
             position: absolute;
             right: 100px;
             top: 60px;
+            /*animation-name: borderAnimation;*/
+            /*animation-duration: 2s;*/
+            /*animation-iteration-count: 2;*/
         }
         body>main>section:nth-child(1)>svg:nth-child(4){
             position: absolute;
             left: 100px;
             bottom: 25px;
+        }
+        @keyframes borderAnimation {
+            0%{
+                left: 100px;
+                top: 60px;
+                z-index: -1;
+            }
+            80%{
+
+                /*z-index: -1;*/
+            }
+            100%{
+
+            }
         }
         body>main>section:nth-child(1)>aside{
             display: inline-block;
@@ -493,10 +520,19 @@
             bottom: 60px;
         }
         body>main>section:nth-child(5){
-            height: 120vh;
+            height: 130vh;
             background-color: #191A19;
             color: white;
             position: relative;
+        }
+        body>main>section:nth-child(5)>section{
+            width: 80%;
+            height: 80%;
+            border: 2px solid #881012;
+            position: relative;
+            left: 10%;
+            top: 0;
+            /*overflow-y: scroll;*/
         }
         body>main>section:nth-child(5)>h2{
             font-size: 60px;
@@ -505,68 +541,87 @@
             position: relative;
             top: 20px;
         }
-        body>main>section:nth-child(5)>div{
+        body>main>section:nth-child(5)>section>div{
             display: inline-block;
-            width: 20%;
-            height: 34%;
+            width: 25%;
+            height: 315px;
             background: #373636;
             position: relative;
         }
-        body>main>section:nth-child(5)>div>img{
+        body>main>section:nth-child(5)>section>button{
+            width: 250px;
+            height: 50px;
+            background: #881012;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            left: 40%;
+            top: 93%;
+            border-radius: 50%;
+        }
+        body>main>section:nth-child(5)>section>div>img{
             position: absolute;
             left: 0;
             right: 0;
             top: 6%;
             margin: auto;
         }
-        body>main>section:nth-child(5)>div>hgroup{
+        body>main>section:nth-child(5)>section>div>hgroup{
             position: relative;
             top: 36%;
             left: 10%;
         }
-        body>main>section:nth-child(5)>div:nth-child(2){
-            position: absolute;
-            top: 13%;
-            left: 13%;
+        body>main>section:nth-child(5)>section>div>hgroup>button:nth-child(3){
+            width: 140px;
+            height: 40px;
+            background: #881012;
+            margin-left: 17%;
+            border-radius: 50%;
         }
-        body>main>section:nth-child(5)>div:nth-child(3){
+        body>main>section:nth-child(5)>section>div:nth-child(1){
             position: absolute;
-            top: 13%;
+            top: 5%;
+            left: 5%;
+        }
+        body>main>section:nth-child(5)>section>div:nth-child(2){
+            position: absolute;
+            top: 5%;
             left: 0;
             right: 0;
             margin: auto;
         }
-        body>main>section:nth-child(5)>div:nth-child(4){
+        body>main>section:nth-child(5)>section>div:nth-child(3){
             position: absolute;
-            top: 13%;
-            right: 13%;
+            top: 5%;
+            right: 5%;
         }
-        body>main>section:nth-child(5)>div:nth-child(5){
+        body>main>section:nth-child(5)>section>div:nth-child(4){
             position: absolute;
-            bottom: 13%;
-            left: 13%;
+            top: 48%;
+            left: 5%;
         }
-        body>main>section:nth-child(5)>div:nth-child(6){
+        body>main>section:nth-child(5)>section>div:nth-child(5){
             position: absolute;
-            bottom: 13%;
+            top: 48%;
             left: 0;
             right: 0;
             margin: auto;
         }
-        body>main>section:nth-child(5)>div:nth-child(7){
+        body>main>section:nth-child(5)>section>div:nth-child(6){
             position: absolute;
-            bottom: 13%;
-            right: 13%;
+            top: 48%;
+            right: 5%;
         }
-        body>main>section:nth-child(5)>svg:nth-child(8){
+
+        body>main>section:nth-child(5)>svg:nth-child(3){
             position: absolute;
             right: 100px;
             top: 25px;
         }
-        body>main>section:nth-child(5)>svg:nth-child(9){
+        body>main>section:nth-child(5)>svg:nth-child(4){
             position: absolute;
             left: 60px;
-            bottom: 60px;
+            bottom: 35px;
         }
         body>main>section:nth-child(6){
             height: 120vh;
@@ -1571,7 +1626,7 @@
             body>main>section:nth-child(1)>aside{
                 display: inline-block;
                 position: absolute;
-                left: 0;
+                left: 40px;
                 top: 43px;
                 width: 260px;
                 height: 260px;
@@ -1680,18 +1735,19 @@
             }
             body>main>section:nth-child(2)>section:nth-child(2)>h3:nth-child(2){
                 display: inline-block;
-                font-size: 20px;
+                font-size: 25px;
                 font-weight: bold;
                 position: relative;
                 bottom: 11px;
                 left: 20px;
+                margin-top: 0;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
                 width: 132px;
-                height: 144px;
+                height: 165px;
                 position: relative;
-                left: 45px;
-                bottom: 82px;
+                left: 78px;
+                bottom: 43px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
@@ -1708,10 +1764,10 @@
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
                 position: relative;
-                left: -37px;
-                bottom: 285px;
+                left: -18px;
+                bottom: 188px;
                 font-size: 13px;
-                font-weight: bold;
+                font-weight: bold
             }
             body>main>section:nth-child(2)>section:nth-child(4){
                 width: 90%;
@@ -1790,8 +1846,8 @@
                 color: black;
                 display: inline-block;
                 position: relative;
-                left: 2%;
-                bottom: 268px;
+                left: 6%;
+                bottom: 177px;
 
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
@@ -2336,7 +2392,7 @@
             body>main>section:nth-child(1)>aside{
                 display: inline-block;
                 position: absolute;
-                left: 0;
+                left: 70px;
                 top: 43px;
                 width: 260px;
                 height: 260px;
@@ -2349,7 +2405,7 @@
             body>main>section:nth-child(1)>section>h3:nth-child(1){
                 color: white;
                 display: inline-block;
-                font-size: 10px;
+                font-size: 15px;
                 position: absolute;
                 top: 62%;
                 left: 14%;
@@ -2362,7 +2418,7 @@
                 font-weight: bold;
                 color: white;
                 display: inline-block;
-                font-size: 20px;
+                font-size: 25px;
                 position: absolute;
                 top: 66%;
                 left: 14%;
@@ -2370,9 +2426,9 @@
             body>main>section:nth-child(1)>section>h3:nth-child(3){
                 color: white;
                 display: inline-block;
-                font-size: 10px;
+                font-size: 16px;
                 position: absolute;
-                top: 74%;
+                top: 75%;
                 left: 14%;
             }
             body>main>section:nth-child(1)>section>div{
@@ -2384,27 +2440,27 @@
             }
             body>main>section:nth-child(1)>section>div:nth-child(4){
                 position: absolute;
-                top: 80%;
+                top: 84%;
                 left: 22%;
             }
             body>main>section:nth-child(1)>section>div:nth-child(5){
                 position: absolute;
-                top: 80%;
+                top: 84%;
                 left: 34%;
             }
             body>main>section:nth-child(1)>section>div:nth-child(6){
                 position: absolute;
-                top:80%;
+                top:84%;
                 left:46%;
             }
             body>main>section:nth-child(1)>section>div:nth-child(7){
                 position: absolute;
-                top:80%;
+                top:84%;
                 left:58%;
             }
             body>main>section:nth-child(1)>section>div:nth-child(8){
                 position: absolute;
-                top:80%;
+                top:84%;
                 left:70%;
             }
             body>main>section:nth-child(2) {
@@ -3039,20 +3095,24 @@
                 left: 3%;
             }
         }
+        @media all and (min-width: 425px) and (max-width: 768px){
+
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <img width="45"  src="assets/img/gmail-logo.png"> <a href="chathurabhashitha01@gmail.com">chathurabhashitha01@gmail.com </a>
+        <a href="chathurabhashitha01@gmail.com"><i class="fa-solid fa-envelope"></i>chathurabhashitha01@gmail.com </a>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li> <a href="#about">About</a> </li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#works">My_Works</a></li>
-                <li><a href="#assignment">Assignment</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#cotact">Contact</a></li>
+                <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li> <a href="#about"><i class="fa-solid fa-address-card"></i>About</a> </li>
+                <li><a href="#service"><i class="fa-solid fa-earth-americas"></i>Services</a></li>
+                <li><a href="#works"><i><i class="fa-solid fa-file"></i></i>My_Works</a></li>
+                <li><a href="#assignment"><i><i class="fa-solid fa-pen-nib"></i></i>Assignment</a></li>
+                <li><a href="#gallery"><i><i class="fa-regular fa-image"></i></i>Gallery</a></li>
+                <li><a href="#cotact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
 
             </ul>
         </nav>
@@ -3331,274 +3391,277 @@
         <section>
             <h2> <dfn id="assignment">Assignment</dfn></h2>
 
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 01</h4>
-                        content
-                        <ul>
-                            <li> </li>
-                            <li> </li>
-                        </ul>
-                    <button ><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case1/index.html?_ijt=d29oh31mhkl3314q6hba08e1sl">View</a></button>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 02</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
+            <section>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 01</h4>
+                                content
+                                <ul>
+                                    <li> </li>
+                                    <li> </li>
+                                </ul>
+                            <button ><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case1/index.html?_ijt=d29oh31mhkl3314q6hba08e1sl">View</a></button>
+                        </hgroup>
+                    </div>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 02</h4>
+                            content
+                            <ul>
+                                <li> </li>
+                                <li> </li>
 
-                    </ul>
-                    <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case2/index.html?_ijt=ovse81sle76r610q4hqm2uneog ">View</a></button>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 03</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                    <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case3/index.html?_ijt=d0sj8uo8s86ps029ni15vi5vkm">View</a></button>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 04</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                    <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case4/index.html?_ijt=topq3f1k3hqnduc5lrk6eas7qj">View</a></button>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 05</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                    </ul>
-                    <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case5/index.html?_ijt=qi4ak56s57us1th2kau0dshktq">View</a></button>
-                </hgroup>
-            </div>
-            <div>
-                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
-                <hgroup>
-                    <h4>Assingment 06</h4>
-                    content
-                    <ul>
-                        <li> </li>
-                        <li> </li>
-                        <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case6/index.html?_ijt=qi4ak56s57us1th2kau0dshktq">View</a></button>
-                    </ul>
-                </hgroup>
-            </div>
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 07</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 08</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 09</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 10</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 11</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 12</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 13</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 14</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 15</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 16</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 17</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 18</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 19</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 20</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
-<!--                <hgroup>-->
-<!--                    <h4>Assingment 21</h4>-->
-<!--                    content-->
-<!--                    <ul>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                        <li> </li>-->
-<!--                    </ul>-->
-<!--                </hgroup>-->
-<!--            </div>-->
+                            </ul>
+                            <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case2/index.html?_ijt=ovse81sle76r610q4hqm2uneog ">View</a></button>
+                        </hgroup>
+                    </div>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 03</h4>
+                            content
+                            <ul>
+                                <li> </li>
+                                <li> </li>
+                            </ul>
+                            <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case3/index.html?_ijt=d0sj8uo8s86ps029ni15vi5vkm">View</a></button>
+                        </hgroup>
+                    </div>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 04</h4>
+                            content
+                            <ul>
+                                <li> </li>
+                                <li> </li>
+                            </ul>
+                            <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case4/index.html?_ijt=topq3f1k3hqnduc5lrk6eas7qj">View</a></button>
+                        </hgroup>
+                    </div>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 05</h4>
+                            content
+                            <ul>
+                                <li> </li>
+                                <li> </li>
+                            </ul>
+                            <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case5/index.html?_ijt=qi4ak56s57us1th2kau0dshktq">View</a></button>
+                        </hgroup>
+                    </div>
+                    <div>
+                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
+                        <hgroup>
+                            <h4>Assingment 06</h4>
+                            content
+                            <ul>
+                                <li> </li>
+                                <li> </li>
+                            </ul>
+                            <button><a href="http://localhost:63342/MyPortfolio/Assignment/CSS/Case6/index.html?_ijt=qi4ak56s57us1th2kau0dshktq">View</a></button>
+                        </hgroup>
+                    </div>
+<!--                    <div>-->
+<!--                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                        <hgroup>-->
+<!--                            <h4>Assingment 07</h4>-->
+<!--                            content-->
+<!--                            <ul>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                            </ul>-->
+<!--                        </hgroup>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                        <hgroup>-->
+<!--                            <h4>Assingment 08</h4>-->
+<!--                            content-->
+<!--                            <ul>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                            </ul>-->
+<!--                        </hgroup>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+<!--                        <hgroup>-->
+<!--                            <h4>Assingment 09</h4>-->
+<!--                            content-->
+<!--                            <ul>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                                <li> </li>-->
+<!--                            </ul>-->
+<!--                        </hgroup>-->
+<!--                    </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 10</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 11</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 12</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 13</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 14</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 15</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 16</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 17</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 18</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 19</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 20</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+        <!--            <div>-->
+        <!--                <img width="100" src ="assets/img/approve.png" alt="This is  Assignment  png">-->
+        <!--                <hgroup>-->
+        <!--                    <h4>Assingment 21</h4>-->
+        <!--                    content-->
+        <!--                    <ul>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                        <li> </li>-->
+        <!--                    </ul>-->
+        <!--                </hgroup>-->
+        <!--            </div>-->
+                <button><a href="Assignment_page/index.html">See More -></a></button>
+            </section>
 
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>

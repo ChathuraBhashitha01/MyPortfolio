@@ -30,9 +30,15 @@
         height: 400px;
         border-radius: 100%;
         background: rosybrown;
-        position: relative;
-        top: 180px;
-        left: 520px;
+        /*position: relative;*/
+        /*top: 180px;*/
+        /*left: 520px;*/
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
         z-index: 1;
         animation-name: animation;
         animation-duration: 5s;
@@ -40,30 +46,57 @@
         animation-timing-function: linear;
     }
 
+    /*@keyframes animation {*/
+    /*    0%{*/
+    /*        top: 180px;*/
+    /*        left: 520px;*/
+    /*        box-shadow: 0px 0px 70px 20px rosybrown;*/
+    /*    }*/
+    /*    25%{*/
+    /*        top: 135px;*/
+    /*        left: 570px;*/
+    /*        box-shadow: none;*/
+    /*    }*/
+    /*    50%{*/
+    /*        top: 180px;*/
+    /*        left: 520px;*/
+    /*        box-shadow: 0px 0px 70px 20px rosybrown;*/
+    /*    }*/
+    /*    75%{*/
+    /*        top: 225px;*/
+    /*       left: 470px;*/
+    /*        box-shadow: none;*/
+    /*    }*/
+    /*    100%{*/
+    /*        top: 180px;*/
+    /*        left: 520px;*/
+    /*        box-shadow: 0px 0px 70px 20px rosybrown;*/
+    /*    }*/
+    /*}*/
     @keyframes animation {
         0%{
-            top: 180px;
-            left: 520px;
+            left: 0;
+            bottom: 0;
             box-shadow: 0px 0px 70px 20px rosybrown;
         }
         25%{
-            top: 135px;
-            left: 570px;
+            left: 70px;
+            bottom: 70px;
             box-shadow: none;
         }
         50%{
-            top: 180px;
-            left: 520px;
+            bottom: 0;
+            left:0;
             box-shadow: 0px 0px 70px 20px rosybrown;
         }
         75%{
-            top: 225px;
-           left: 470px;
+            right: 70px;
+            top: 70px;
             box-shadow: none;
         }
         100%{
-            top: 180px;
-            left: 520px;
+            right: 0;
+            top: 0;
             box-shadow: 0px 0px 70px 20px rosybrown;
         }
     }

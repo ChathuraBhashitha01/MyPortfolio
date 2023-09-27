@@ -92,20 +92,6 @@
             left: 100px;
             bottom: 25px;
         }
-        @keyframes borderAnimation {
-            0%{
-                left: 100px;
-                top: 60px;
-                z-index: -1;
-            }
-            80%{
-
-                /*z-index: -1;*/
-            }
-            100%{
-
-            }
-        }
         body>main>section:nth-child(1)>aside{
             display: inline-block;
             /*background:80%;*/
@@ -145,9 +131,9 @@
             top: 57%;
             left: 14%;
         }
-        body>main>section:nth-child(1)>section>div{
-            display: inline-block;
-        }
+        /*body>main>section:nth-child(1)>section>div{*/
+        /*    display: inline-block;*/
+        /*}*/
         body>main>section:nth-child(1)>section>div:nth-child(4){
             position: absolute;
             top: 26%;
@@ -222,26 +208,80 @@
             bottom:50px;
             left: 100px;
         }
-        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
+            width: 267px;
+            height: 297px;
+            border: 2px solid white;
             position: relative;
-            left: 100px;
-            bottom: 80px;
+            left: 185px;
+            bottom: 180px;
+            overflow: hidden;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+            width: 300%;
+            height: 100%;
+            position: relative;
+            left: 0;
+            bottom: 0px;
+            display: flex;
+            animation-name: imageAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+            flex-grow: 1;
+            height: 100%;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+            width: 267px;
+            height: 299px;
+            background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+            width: 267px;
+            height: 299px;
+            background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+            width: 267px;
+            height: 299px;
+            background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @keyframes imageAnimation {
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(calc((-100%/3)*1));
+            }
+            100%{
+                transform: translateX(calc((-100%/3)*2));
+            }
         }
         body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
             position: relative;
-            bottom: 300px;
-            left: 400px;
+            bottom: 100px;
+            left: 386px;
         }
         body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(3){
             position: relative;
-            bottom: 50px;
-            right: 200px;
+            bottom: 250px;
+            left: 145px;
         }
         body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
             list-style: none;
             position: relative;
-            left: 170px;
-            bottom: 60px;
+            left: 145px;
+            bottom: 255px;
             font-size: 20px;
             font-weight: bold;
         }
@@ -253,8 +293,8 @@
             flex-direction: column;
             justify-content: space-evenly;
             position: relative;
-            top: 2.5%;
-            left: 7%
+            bottom: 5.5%;
+            left: 7%;
         }
         body>main>section:nth-child(2)>section:nth-child(4)>div{
             position: relative;
@@ -267,15 +307,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            top: 44%;
+            top: 47.7%;
             right: 10%;
         }
         body>main>section:nth-child(2)>h3:nth-child(3){
             display: inline-block;
             font-size: 40px;
             position: relative;
-            right: 400px;
-            top: 50px;
+            right: 235px;
+            bottom: 100px;
 
         }
         body>main>section:nth-child(2)>h3:nth-child(5){
@@ -283,7 +323,7 @@
             font-size: 40px;
             position: relative;
             left: 750px;
-            bottom: 1710px;
+            bottom: 1866px;
         }
         body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(5)>span{
             font-weight: bold;
@@ -297,7 +337,6 @@
             display: inline-block;
             position: relative;
             left: 20%;
-
         }
         body>main>section:nth-child(2)>section:nth-child(6)>div>p{
             display: inline-block;
@@ -310,15 +349,14 @@
             left: 100px;
         }
         body>main>section:nth-child(2)>section:nth-child(2)>button:last-child{
-            font-size: 20px;
+            font-size: 25px;
             font-weight: bold;
             background: #881012;
             color: black;
             display: inline-block;
             position: relative;
-            left: 780px;
-            bottom: 120px;
-
+            left: 750px;
+            bottom: 319px;
         }
         body>main>section:nth-child(2)>svg:nth-child(1){
             position: absolute;
@@ -332,13 +370,13 @@
         }
         body>main>section:nth-child(2)>svg:nth-child(8){
             position: relative;
-            bottom: 42%;
+            bottom: 51%;
             left: 4%;
         }
         body>main>section:nth-child(2)>svg:nth-child(9){
             position: relative;
-            bottom: 43%;
-            left: 47%;
+            bottom: 51%;
+            left: 45%;
         }
         body>main>section:nth-child(3){
             height: 1333px;
@@ -976,12 +1014,65 @@
                 left: 20px;
                 margin-top: 0;
             }
-            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
+            /*body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{*/
+            /*    width: 132px;*/
+            /*    height: 165px;*/
+            /*    position: relative;*/
+            /*    left: 45px;*/
+            /*    bottom: 55px;*/
+            /*}*/
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
                 width: 132px;
                 height: 165px;
+                border: 2px solid white;
                 position: relative;
-                left: 45px;
-                bottom: 55px;
+                left: 153px;
+                bottom: 169px;
+                overflow: hidden;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+                width: 300%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                display: flex;
+                animation-name: imageAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+                flex-grow: 1;
+                height: 100%;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+                background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+                background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+                background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes imageAnimation {
+                0%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(calc((-100%/3)*1));
+                }
+                100%{
+                    transform: translateX(calc((-100%/3)*2));
+                }
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
@@ -997,10 +1088,11 @@
             }
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
-                position: relative;
-                left: -18px;
-                bottom: 285px;
-                font-size: 10px;
+                position: absolute;
+                left: 0px;
+                top: 100px;
+                padding-left: 15px;
+                font-size: 12px;
                 font-weight: bold;
             }
             body>main>section:nth-child(2)>section:nth-child(4){
@@ -1039,9 +1131,8 @@
             body>main>section:nth-child(2)>h3:nth-child(3){
                 font-size: 20px;
                 position: relative;
-                left: 15px;
+                right: 124px;
                 top: 30px;
-
             }
             body>main>section:nth-child(2)>h3:nth-child(5){
                 display: inline-block;
@@ -1080,8 +1171,8 @@
                 color: black;
                 display: inline-block;
                 position: relative;
-                left: 7%;
-                bottom: 268px;
+                left: 14%;
+                bottom: 315px;
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
                 width: 50px;
@@ -1767,12 +1858,65 @@
                 left: 20px;
                 margin-top: 0;
             }
-            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
+            /*body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{*/
+            /*    width: 132px;*/
+            /*    height: 165px;*/
+            /*    position: relative;*/
+            /*    left: 78px;*/
+            /*    bottom: 43px;*/
+            /*}*/
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
                 width: 132px;
                 height: 165px;
+                border: 2px solid white;
                 position: relative;
-                left: 78px;
-                bottom: 43px;
+                left: 188px;
+                bottom: 154px;
+                overflow: hidden;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+                width: 300%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                display: flex;
+                animation-name: imageAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+                flex-grow: 1;
+                height: 100%;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+                background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+                background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+                background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes imageAnimation {
+                0%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(calc((-100%/3)*1));
+                }
+                100%{
+                    transform: translateX(calc((-100%/3)*2));
+                }
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
@@ -1789,10 +1933,11 @@
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
                 position: relative;
-                left: -18px;
-                bottom: 188px;
+                left: 0px;
+                bottom: 420px;
                 font-size: 13px;
                 font-weight: bold;
+                padding-left: 30px;
             }
             body>main>section:nth-child(2)>section:nth-child(4){
                 width: 90%;
@@ -1802,7 +1947,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 position: relative;
-                top: 6.5%;
+                bottom: 2.5%;
                 left: 5%;
             }
             body>main>section:nth-child(2)>section:nth-child(4)>div{
@@ -1830,15 +1975,15 @@
             body>main>section:nth-child(2)>h3:nth-child(3){
                 font-size: 20px;
                 position: relative;
-                left: 20px;
-                top: 128px;
+                right: 149px;
+                bottom: 60px;
             }
             body>main>section:nth-child(2)>h3:nth-child(5){
                 display: inline-block;
                 font-size: 20px;
                 position: relative;
                 left: 20px;
-                top: 7%;
+                bottom: 2%;
             }
             body>main>section:nth-child(2)>section:nth-child(6)>div>img{
                 width: 42px;
@@ -1870,8 +2015,8 @@
                 color: black;
                 display: inline-block;
                 position: relative;
-                left: 6%;
-                bottom: 177px;
+                left: 18%;
+                bottom: 390px;
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
                 width: 50px;
@@ -2553,12 +2698,65 @@
                 bottom: 1px;
                 left: 35px;
             }
-            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
-                width: 141px;
-                height: 173px;
+            /*body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{*/
+            /*    width: 141px;*/
+            /*    height: 173px;*/
+            /*    position: relative;*/
+            /*    left: 120px;*/
+            /*    bottom: 52px;*/
+            /*}*/
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
+                width: 150px;
+                height: 176px;
+                border: 2px solid white;
                 position: relative;
-                left: 120px;
-                bottom: 52px;
+                left: 218px;
+                bottom: 165px;
+                overflow: hidden;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+                width: 300%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                display: flex;
+                animation-name: imageAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+                flex-grow: 1;
+                height: 100%;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+                background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+                background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+                background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes imageAnimation {
+                0%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(calc((-100%/3)*1));
+                }
+                100%{
+                    transform: translateX(calc((-100%/3)*2));
+                }
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
@@ -2575,8 +2773,8 @@
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
                 position: relative;
-                left: -5px;
-                bottom: 193px;
+                left: 0px;
+                bottom: 424px;
                 font-size: 13px;
                 font-weight: bold;
             }
@@ -2588,7 +2786,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 position: relative;
-                top: 9.5%;
+                bottom: 0%;
                 left: 5%;
             }
             body>main>section:nth-child(2)>section:nth-child(4)>div{
@@ -2616,15 +2814,15 @@
             body>main>section:nth-child(2)>h3:nth-child(3){
                 font-size: 20px;
                 position: relative;
-                left: 20px;
-                top: 197px
+                right: 170px;
+                top: 0;
             }
             body>main>section:nth-child(2)>h3:nth-child(5){
                 display: inline-block;
                 font-size: 20px;
                 position: relative;
-                left: 17px;
-                top: 10%;
+                left: 20px;
+                top: 1%;
             }
             body>main>section:nth-child(2)>section:nth-child(6)>div>img{
                 width: 42px;
@@ -2656,8 +2854,8 @@
                 color: black;
                 display: inline-block;
                 position: relative;
-                left: 10%;
-                bottom: 180px;
+                left: 24%;
+                bottom: 400px;
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
                 width: 50px;
@@ -2668,8 +2866,8 @@
             }
             body>main>section:nth-child(2)>svg:nth-child(7){
                 position: absolute;
-                left: 20px;
-                bottom: 25px;
+                left: 2%;
+                bottom: 1%;
                 width: 50px;
                 height: 50px
             }
@@ -3349,28 +3547,89 @@
                 bottom: 29px;
                 left: 57px;
             }
-            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
-                position: relative;
-                left: -50px;
-                bottom: 27px;
+            /*body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{*/
+            /*    position: relative;*/
+            /*    left: -50px;*/
+            /*    bottom: 27px;*/
+            /*    width: 190px;*/
+            /*    height: 212px;*/
+            /*}*/
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
                 width: 190px;
                 height: 212px;
+                border: 2px solid white;
+                position: relative;
+                left: 62px;
+                bottom: 140px;
+                overflow: hidden;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+                width: 300%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                display: flex;
+                animation-name: imageAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+                flex-grow: 1;
+                height: 100%;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes imageAnimation {
+                0%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(calc((-100%/3)*1));
+                }
+                100%{
+                    transform: translateX(calc((-100%/3)*2));
+                }
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
-                bottom: 154px;
-                left: 169px;
+                bottom: 55px;
+                left: 183px;
+                width: 100px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(3){
                 position: relative;
-                bottom: 1px;
-                right: 269px;
+                bottom: 220px;
+                left: 40px;
+                width: 100px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
                 position: relative;
                 left: 18px;
-                bottom: 12px;
+                bottom: 225px;
                 font-size: 15px;
                 font-weight: bold;
             }
@@ -3382,7 +3641,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 position: relative;
-                top: 2.5%;
+                bottom: 12%;
                 left: 3%;
             }
             body>main>section:nth-child(2)>section:nth-child(4)>div{
@@ -3399,6 +3658,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+                /*position: relative;*/
                 top: 35.7%;
                 right: 3%;
             }
@@ -3406,8 +3666,8 @@
                 display: inline-block;
                 font-size: 35px;
                 position: relative;
-                right: 400px;
-                top: 50px;
+                right: 190px;
+                bottom: 11%;
 
             }
             body>main>section:nth-child(2)>h3:nth-child(5){
@@ -3415,7 +3675,7 @@
                 font-size: 35px;
                 position: relative;
                 left: 390px;
-                bottom: 1696px;
+                bottom: 121%;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(5)>span{
                 font-weight: bold;
@@ -3452,7 +3712,7 @@
                 display: inline-block;
                 position: relative;
                 left: 330px;
-                bottom: 59px;
+                bottom: 275px;
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
                 position: absolute;
@@ -3473,7 +3733,7 @@
             }
             body>main>section:nth-child(2)>svg:nth-child(9){
                 position: relative;
-                bottom: 52%;
+                bottom: 65%;
                 left: 44%;
             }
             body>main>section:nth-child(3){
@@ -4081,29 +4341,90 @@
                 bottom: 29px;
                 left: 57px;
             }
-            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{
+            /*body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>img{*/
+            /*    position: relative;*/
+            /*    left: -34px;*/
+            /*    bottom: 35px;*/
+            /*    width: 200px;*/
+            /*    height: 232px;*/
+            /*}*/
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section{
+                width: 195px;
+                height: 240px;
+                border: 2px solid white;
                 position: relative;
-                left: -34px;
-                bottom: 35px;
-                width: 200px;
-                height: 232px;
+                left: 138px;
+                bottom: 145px;
+                overflow: hidden;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div{
+                width: 300%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                display: flex;
+                animation-name: imageAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div{
+                flex-grow: 1;
+                height: 100%;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(1){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-06-26 at 2.40.03 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(2){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-05-01 at 8.52.26 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>section>div>div:nth-child(3){
+                width: 267px;
+                height: 299px;
+                background: url("assets/img/WhatsApp Image 2023-06-28 at 2.36.04 PM.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes imageAnimation {
+                0%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(calc((-100%/3)*1));
+                }
+                100%{
+                    transform: translateX(calc((-100%/3)*2));
+                }
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(1){
                 position: relative;
-                bottom: 189px;
-                left: 200px;
+                bottom: 70px;
+                left: 275px;
+                width: 100px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>svg:nth-child(3){
                 position: relative;
-                bottom: 1px;
-                right: 269px;
+                bottom: 215px;
+                left: 42%;
+                width: 100px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>ul:nth-child(4){
                 list-style: none;
                 position: relative;
-                left: 20px;
-                bottom: 12px;
-                font-size: 20px;
+                left: 91px;
+                bottom: 220px;
+                font-size: 18px;
                 font-weight: bold;
             }
             body>main>section:nth-child(2)>section:nth-child(4){
@@ -4114,7 +4435,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 position: relative;
-                top: 3.5%;
+                bottom: 10%;
                 left: 3%;
             }
             body>main>section:nth-child(2)>section:nth-child(4)>div{
@@ -4138,16 +4459,15 @@
                 display: inline-block;
                 font-size: 35px;
                 position: relative;
-                right: 400px;
-                top: 50px;
-
+                right: 212px;
+                bottom: 155px;
             }
             body>main>section:nth-child(2)>h3:nth-child(5){
                 display: inline-block;
                 font-size: 35px;
                 position: relative;
                 left: 525px;
-                bottom: 1664px;
+                bottom: 1873px;
             }
             body>main>section:nth-child(2)>section:nth-child(2)>p:nth-child(5)>span{
                 font-weight: bold;
@@ -4184,7 +4504,7 @@
                 display: inline-block;
                 position: relative;
                 left: 490px;
-                bottom: 65px;
+                bottom: 280px;
             }
             body>main>section:nth-child(2)>svg:nth-child(1){
                 position: absolute;
@@ -4200,12 +4520,12 @@
             }
             body>main>section:nth-child(2)>svg:nth-child(8){
                 position: relative;
-                bottom: 49%;
+                bottom: 62%;
                 left: 0%;
             }
             body>main>section:nth-child(2)>svg:nth-child(9){
                 position: relative;
-                bottom: 48%;
+                bottom: 63%;
                 left: 43%;
             }
             body>main>section:nth-child(3){
@@ -4669,9 +4989,9 @@
                     </map>
                 </div>
                 <div>
-                    <img usemap="#facebook" width="55" src="assets/img/facebook.png">
+                    <img usemap="#facebook"width="55" src="assets/img/facebook.png">
                     <map name="facebook">
-                        <area shape="circle" coords="27.5,27.5,20" href="https://www.facebook.com/bhashitha.wickramasinghe.52?mibextid=ZbWKwL" alt="Go to Facebook">
+                        <area shape="circle" coords="27.5,27.5,20" href="" alt="Go to Facebook">
                     </map>
                 </div>
                 <div>
@@ -4706,7 +5026,14 @@
                         <path d="M8 0.671875C3.85787 0.671875 0.500004 4.02974 0.500004 8.17188C0.500004 12.314 3.85787 15.6719 8 15.6719V0.671875ZM108 0.671875L8 0.671875V15.6719L108 15.6719V0.671875Z" fill="#881012"/>
                         <path d="M92.7568 100.895C92.7568 105.037 96.1147 108.395 100.257 108.395C104.399 108.395 107.757 105.037 107.757 100.895H92.7568ZM92.7568 0.894531L92.7568 100.895H107.757L107.757 0.894531L92.7568 0.894531Z" fill="#881012"/>
                     </svg>
-                    <img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg">
+                    <section>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    </section>
+<!--                    <img width="267"height="299" src="assets/img/WhatsApp%20Image%202023-06-26%20at%202.40.03%20PM.jpeg">-->
                     <svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M100 108.223C104.142 108.223 107.5 104.865 107.5 100.723C107.5 96.5805 104.142 93.2227 100 93.2227V108.223ZM0 108.223L100 108.223V93.2227L0 93.2227L0 108.223Z" fill="#881012"/>
                         <path d="M15.2432 8C15.2432 3.85787 11.8853 0.500004 7.74316 0.500004C3.60103 0.500004 0.243164 3.85787 0.243164 8H15.2432ZM15.2432 108L15.2432 8H0.243164L0.243164 108H15.2432Z" fill="#881012"/>

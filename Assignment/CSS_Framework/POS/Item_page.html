@@ -32,8 +32,20 @@
     </div>
 </nav>
 <div class="container text-center">
-    <div class="row">
-        <div class="col-12 col-md-6 col-xxl-6">
+    <div class="row border border-4">
+        <div class="col-6 border border-4 " style="color: #0a53be">
+            <form>
+                <select class="form-select mt-4" aria-label="Default select example">
+                    <option selected>Item Code</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <button type="button" class="btn btn-success mt-4">Search</button>
+                <button type="button" class="btn btn-primary mt-4">Get All</button>
+            </form>
+        </div>
+        <div class="col-6 border border-4" style="color: #0a53be">
             <form>
                 <div class="row">
                     <div class="col<div class="mb-3>
@@ -53,44 +65,20 @@
                         <input type="text" class="form-control" id="item_qty" placeholder="Item Quantity">
                     </div>
                 </div>
+                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
             </form>
         </div>
     </div>
 </div>
-<!--<div class="container text-center">-->
-<!--    <div class="row">-->
-<!--        <div class="col<div class="mb-3>-->
-<!--            <label for="item_code" class="form-label">Item Code</label>-->
-<!--            <input type="text" class="form-control" id="item_code" placeholder="Item Code">-->
-<!--        </div>-->
-<!--        <div class="mb-3">-->
-<!--            <label for="item_name" class="form-label">Item Name</label>-->
-<!--            <input type="text" class="form-control" id="item_name" placeholder="Item Name">-->
-<!--        </div>-->
-<!--        <div class="mb-3">-->
-<!--            <label for="item_price" class="form-label">Item Price</label>-->
-<!--            <input type="text" class="form-control" id="item_price" placeholder="Item Price">-->
-<!--        </div>-->
-<!--        <div class="mb-3">-->
-<!--            <label for="item_qty" class="form-label">Item Quantity</label>-->
-<!--            <input type="text" class="form-control" id="item_qty" placeholder="Item Quantity">-->
-<!--        </div>Column-->
-<!--    </div>-->
-<!--    <div class="col">-->
-
-<!--    </div>-->
-<!--</div>-->
-<!--</div>-->
-<button type="button" class="btn btn-primary">Save</button>
-<button type="button" class="btn btn-secondary">Update</button>
-<button type="button" class="btn btn-danger">Delete</button>
 <table class="table mt-5">
     <thead>
     <tr>
-        <th scope="col" style="background: #0a58ca">ID</th>
-        <th scope="col" style="background: #0a58ca">Customer Name</th>
-        <th scope="col" style="background: #0a58ca">Customer Address</th>
-        <th scope="col" style="background: #0a58ca">Contact</th>
+        <th scope="col" style="background: #0a58ca">Item Code</th>
+        <th scope="col" style="background: #0a58ca">Item Name</th>
+        <th scope="col" style="background: #0a58ca">Item Price</th>
+        <th scope="col" style="background: #0a58ca">Item Quantity</th>
     </tr>
     </thead>
     <tbody class="table-group-divider">

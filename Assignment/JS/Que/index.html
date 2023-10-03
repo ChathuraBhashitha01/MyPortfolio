@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
+    <style>
+        section{
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section>div{
+            width: 200px;
+            height: 100px;
+            border:2px solid black;
+            display: inline-block;
+        }
+        section>div:nth-child(1){
+            position: relative;
+            bottom: 100px;
+        }
+        section>div:nth-child(5){
+            position: relative;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+<script>
+let colours=["re d","blue","purple","green","orange"];
+let divs=document.querySelectorAll("section>div");
+
+setInterval(processQue,200);
+function processQue(){
+    for (let i = 0; i < colours.length; i++) {
+        divs[i].style.background=colours[i];
+    }
+
+    let lastValue=colours.pop();
+    colours.unshift(lastValue)
+}
+
+</script>
+</body>
+</html>

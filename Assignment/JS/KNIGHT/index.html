@@ -5,52 +5,85 @@
     <title>KNIGHT</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
     <style>
-        section{
+        section:first-child{
             position: relative;
-            top: 300px;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        section>div{
+        section:first-child>div{
+            width: 250px;
+            height: 80px;
+            border:2px solid black;
+        }
+        section:nth-child(2){
+            margin-left: 600px;
+        }
+        section:nth-child(2)>button{
             width: 100px;
             height: 50px;
-            border:2px solid black;
         }
     </style>
 </head>
 <body>
 <section>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
 </section>
-<button id="btnStart">Start</button>
-<button id="btnStop">Stop</button>
+<section>
+    <button id="btnStart" class="btn btn-primary mt-2">Start</button>
+    <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
+</section>
+
+<script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 <script>
-    let btnStart=document.querySelector("#btnStart");
-    let btnStop=document.querySelector("#btnStop")
     let stopid=0;
-    let colours=["#CE4545","#EC7171","red","","","",""];
+    let colours=["","","","","","","#f79c94","#fa7266","#fa5648","#f73e2f","#fa1402"];
+    let colourReverse=["","","","","","","#fa1402","#f73e2f","#fa5648","#fa7266","#f79c94"];
     let divs=document.querySelectorAll("section>div");
-    btnStart.addEventListener("click",function (){
-        setInterval(processColour,100)
-      function processColour(){
+
+    $("#btnStart").click(function (){
+        clearInterval(stopid);
+        // processColour();
+        //stopid=setInterval(processColour,1000);
+        stopid= setInterval(processColourReverse,400);
+    });
+    function processColour(){
+        setInterval(function (){
             for (let i = 0; i < divs.length; i++) {
                 divs[i].style.background=colours[i];
             }
             let lastValue=colours.pop();
             colours.unshift(lastValue);
+        },200);
+        // setInterval(function (){
+        //     for (let i = 0; i < divs.length; i++) {
+        //         divs[i].style.background=colourReverse[i];
+        //     }
+        //     let firstValue=colourReverse.shift();
+        //     colourReverse.push(firstValue);
+        // },500);
+    }
+    function processColourReverse(){
+       // processColour();
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.background=colourReverse[i];
         }
+        let firstValue=colourReverse.shift();
+        colourReverse.push(firstValue);
+    }
+
+    $("#btnStop").click(function (){
+        clearInterval(stopid);
     });
-    btnStop.addEventListener("click",function (){
-        clearInterval(stopid)
-    });
+
 </script>
 </body>
 </html>

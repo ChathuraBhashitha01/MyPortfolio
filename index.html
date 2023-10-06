@@ -841,6 +841,32 @@
             margin-top: 0;
             margin-bottom: 0;
         }
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid white;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #loader > div {
+            width: 300px;
+            height: 300px;
+            background: url("assets/img/loader.gif");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
         @media all and (max-width: 321px) {
             *{
                 font-family:'Josefin+Sans:ital', "Josefin Sans";

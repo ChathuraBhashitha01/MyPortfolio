@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KNIGHT</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
+    <style>
+        section{
+            position: relative;
+            top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section>div{
+            width: 100px;
+            height: 50px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+<button id="btnStart">Start</button>
+<button id="btnStop">Stop</button>
+<script>
+    let btnStart=document.querySelector("#btnStart");
+    let btnStop=document.querySelector("#btnStop")
+    let stopid=0;
+    let colours=["#CE4545","#EC7171","red","","","",""];
+    let divs=document.querySelectorAll("section>div");
+    btnStart.addEventListener("click",function (){
+        setInterval(processColour,100)
+      function processColour(){
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].style.background=colours[i];
+            }
+            let lastValue=colours.pop();
+            colours.unshift(lastValue);
+        }
+    });
+    btnStop.addEventListener("click",function (){
+        clearInterval(stopid)
+    });
+</script>
+</body>
+</html>

@@ -5,27 +5,35 @@
     <title>Que</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
     <style>
-        section{
+        section:nth-child(1){
             position: relative;
-            height: 100vh;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        section>div{
+        section:nth-child(1)>div{
             width: 200px;
             height: 100px;
             border:2px solid black;
             display: inline-block;
         }
-        section>div:nth-child(1){
+        section:nth-child(1)>div:nth-child(1){
             position: relative;
             bottom: 100px;
         }
-        section>div:nth-child(5){
+        section:nth-child(1)>div:nth-child(5){
             position: relative;
             top: 100px;
+        }
+        section:nth-child(2){
+            margin-left: 550px;
+        }
+        section:nth-child(2)>button{
+            width: 100px;
+            height: 50px;
         }
     </style>
 </head>
@@ -37,11 +45,27 @@
     <div></div>
     <div></div>
   </section>
+  <section>
+      <button id="btnStart" class="btn btn-primary mt-2">Start</button>
+      <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
+  </section>
 <script>
-let colours=["re d","blue","purple","green","orange"];
+let colours=["red","blue","purple","green","orange"];
 let divs=document.querySelectorAll("section>div");
 
-setInterval(processQue,200);
+let btnStart=document.querySelector("#btnStart");
+let btnStop=document.querySelector("#btnStop");
+let colourID=0;
+
+processQue();
+btnStart.addEventListener("click",function (){
+    clearInterval(colourID);
+    colourID=setInterval(processQue,200);
+});
+
+btnStop.addEventListener("click",function (){
+    clearInterval(colourID);
+});
 function processQue(){
     for (let i = 0; i < colours.length; i++) {
         divs[i].style.background=colours[i];

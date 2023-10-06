@@ -83,7 +83,7 @@
                                 <option value="3">Three</option>
                             </select>
                             <button type="button" class="btn btn-success mt-4">Search</button>
-                            <button type="button" class="btn btn-primary mt-4">Get All</button>
+                            <button type="button" class="btn btn-primary mt-4" id="btnGetAll">Get All</button>
                         </form>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="saveCustomer">Save</button>
-                            <button type="button" class="btn btn-secondary" id="btnGetAll">Update</button>
+                            <button type="button" class="btn btn-secondary" >Update</button>
                             <button type="button" class="btn btn-danger">Delete</button>
                         </form>
                     </div>
@@ -131,7 +131,7 @@
             <th scope="col" style="background: #0a58ca">Contact</th>
         </tr>
         </thead>
-        <tbody class="table-group-divider" id="tableCustomer">
+        <tbody class="table-group-divider" id="tblCustomer">
 
         </tbody>
     </table>
@@ -395,6 +395,8 @@
         </tbody>
     </table>
 </section>
+<script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
+<script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
  <script>
     let customer=document.querySelector("#customerPage");
     let home=document.querySelector("#homePage");
@@ -436,34 +438,108 @@
         placeOrder.style.display='block';
     });
 
-    let btnSave=document.querySelector("#saveCustomer");
-    let btnGetAll=document.querySelector("#btnGetAll");
+    // let btnSave=document.querySelector("#saveCustomer");
+    // let btnGetAll=document.querySelector("#btnGetAll");
+    //
+     var customerArray=[];
+    // let cusID=document.querySelector("#cusId")
+    // let cusName=document.querySelector("#cusName")
+    // let cusAddress=document.querySelector("#cusAddress")
+    // let cusContact=document.querySelector("#cusContact")
+    //
+    // let tBody=document.querySelector("#tableCustomer");
+    //
+    // btnSave.addEventListener("click",function (){
+    //     var customer={
+    //         id:cusID.value,
+    //         name:cusName.value,
+    //         address:cusAddress.value,
+    //         contact:cusContact.value
+    //     }
+    //     customerArray.push(customer);
+    //     console.log(customerArray);
+    // });
+    //
+    // btnGetAll.addEventListener("click",function (){
+    //     for (let i = 0; i < customerArray.length; i++) {
+    //         let tr=document.createElement("tr");
+    //         let tb1=document.createElement("td");
+    //         tb1.textContent=customerArray[i].id;
+    //         let tb2=document.createElement("td");
+    //         tb2.textContent=customerArray[i].name;
+    //         let tb3=document.createElement("td");
+    //         tb3.textContent=customerArray[i].address;
+    //         let td4=document.createElement("td");
+    //         td4.textContent=customerArray[i].contact;
+    //         tr.append(tb1,tb2,tb3,td4);
+    //         tBody.append(tr)
+    //     }
+    //
+    // });
 
-    var customerArray=[];
-    let cusID=document.querySelector("#cusId")
-    let cusName=document.querySelector("#cusName")
-    let cusAddress=document.querySelector("#cusAddress")
-    let cusContact=document.querySelector("#cusContact")
+    $("#saveCustomer").click(function () {
 
-    let tBody=document.querySelector("#tableCustomer");
+        let cusID = $("#cusId").val();
+        let cusName = $("#cusName").val();
+        let cusAddress = $("#cusAddress").val();
+        let cusContact = $("#cusContact").val();
 
-    btnSave.addEventListener("click",function (){
-        var customer={
-            id:cusID.value,
-            name:cusName.value,
-            address:cusAddress.value,
-            contact:cusContact.value
+        var customer = {
+            id: cusID,
+            name: cusName,
+            address: cusAddress,
+            contact: cusContact
         }
+
         customerArray.push(customer);
+        getAllCustomer();
         console.log(customerArray);
     });
 
-    btnGetAll.addEventListener("click",function (){
-        for (let i = 0; i < customerArray.length; i++) {
-
-        }
-
+    $("#btnGetAll").click(function () {
+        getAllCustomer();
     });
+    getAllCustomer();
+    function getAllCustomer(){
+        $("#tblCustomer").empty();
+        for (let i = 0; i < customerArray.length; i++) {
+            let row = `<tr>
+                            <td>${customerArray[i].id}</td>
+                            <td>${customerArray[i].name}</td>
+                            <td>${customerArray[i].address}</td>
+                            <td>${customerArray[i].contact}</td>
+                        </tr>`;
+            $("#tblCustomer").append(row);
+            bindEvent();
+        }
+    }
+    bindEvent();
+    function bindEvent() {
+        $('#tblCustomer>tr').click(function () {
+            // console.log(this);
+            // console.log($(this));
+            //  console.log($(this).text());
+            let id = $(this).children(':nth-child(1)').text();
+            let name = $(this).children(':nth-child(2)').text();
+            let address = $(this).children(':nth-child(3)').text();
+            let contact = $(this).children(':nth-child(4)').text();
+
+            setTextFieldValues(id, name, address, contact);
+        });
+    }
+
+    function setTextFieldValues(id, name, address, contact) {
+        $("#cusId").val(id);
+        $("#cusName").val(name);
+        $("#cusAddress").val(address);
+        $("#cusContact").val(contact);
+    }
+    $('#tblCustomer>tr').click(function () {
+        this.tr.remove();
+    });
+    const validation = /^(C00-)[0-9]{3}$/;
+
+    $("#saveCustomer").attr('disable',true);
 
  </script>
 </body>

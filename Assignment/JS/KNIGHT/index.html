@@ -86,9 +86,9 @@
         <section>
             <h2>KNIGHT RIDER</h2>
             <h4>Speed</h4>
-            <h4>50</h4>
+            <h4 id="txtSpeed">50</h4>
             <h4>|Waiting Time</h4>
-            <h4>2000</h4>
+            <h4 id="txtWaitingTime">2000</h4>
         </section>
         <section>
                 <div></div>
@@ -101,50 +101,56 @@
         <section>
             <button id="btnStart" class="btn btn-primary mt-2">Start</button>
             <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
-            <input type="range" id="range" min="100" max="200">
+            <input type="range" id="range" min="0" max="100">
         </section>
         <audio id="audio" src="assest/WhatsApp Audio 2023-10-04 at 8.31.38 AM.mpeg" type="audio/mpeg" loop ></audio>
     </main>
 <script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 <script>
-    let stopid=0;
+    let stopAnimation=0;
+    let timeOutAnimation=0;
     let coloursForward=["","","","","","","#f79c94","#fa7266","#fa5648","#f73e2f","#fa1402"];
     let colourReverse=["","","","","","","#fa1402","#f73e2f","#fa5648","#fa7266","#f79c94"];
     let divs=document.querySelectorAll("section>div");
     let count=0;
     let animate=true;
-    let cou=0
-    let animationTimeout=false;
+    let frequencyCount=0;
 
     let btnStart=document.querySelector("#btnStart");
     let btnStop=document.querySelector("#btnStop");
     let range=document.querySelector("#range")
     let audio=document.querySelector("#audio");
-    let speed=100;
-    speed=range.value;
-    range.addEventListener("click",function (){
+    let txtSpeed=document.querySelector("#txtSpeed");
+    let txtWaitingTime=document.querySelector("#txtWaitingTime");
+    let speed=50;
+    let delay=2000;
+
+    range.addEventListener("input",function (){
         speed=range.value;
-        console.log(rangeNumber)
+        txtSpeed.innerText=speed;
+        delay=speed*30;
+        txtWaitingTime.innerText=delay;
     });
     btnStart.addEventListener("click",function (){
-        clearInterval(stopid);
+        clearInterval(stopAnimation);
+        clearTimeout(timeOutAnimation)
         audio.play();
-        stopid=setInterval(processColour,speed);
+        stopAnimation=setInterval(processColour,speed);
     });
 
     btnStop.addEventListener("click",function (){
-        clearInterval(stopid);
+        clearInterval(stopAnimation);
+        clearTimeout(timeOutAnimation);
         audio.pause();
     });
 
     function processColour(){
-
         if (animate == true) {
             for (let i = 0; i < divs.length; i++) {
                 divs[i].style.background = coloursForward[i];
-                console.log(count)
             }
             count++;
+            frequencyCount++;
             let lastValue = coloursForward.pop();
             coloursForward.unshift(lastValue);
             if (count == 11) {
@@ -154,17 +160,22 @@
         if (animate == false) {
             for (let i = 0; i < divs.length; i++) {
                 divs[i].style.background = colourReverse[i];
-                console.log(count)
             }
-            count--
+            count--;
             let firstValue = colourReverse.shift();
             colourReverse.push(firstValue);
             if (count == 0) {
                 animate = true;
             }
         }
+        if (frequencyCount ==22) {
+            frequencyCount = 0;
+            clearInterval(stopAnimation)
+            timeOutAnimation = setTimeout(function () {
+                stopAnimation=setInterval(processColour,speed);
+            }, delay);
+        }
     }
-
 
 </script>
 </body>

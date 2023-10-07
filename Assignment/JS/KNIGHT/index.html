@@ -7,41 +7,56 @@
     <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
     <style>
-        section:first-child{
+        main{
+            background: black;
             position: relative;
-            height: 80vh;
+        }
+        main>section:nth-child(2){
+            position: relative;
+            height: 40vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            top: 250px;
         }
-        section:first-child>div{
+        main>section:nth-child(2)>div{
             width: 250px;
             height: 80px;
-            border:2px solid black;
+            border:2px solid white;
         }
-        section:nth-child(2){
+        main>section:nth-child(3){
             margin-left: 600px;
+            margin-top: 250px;
         }
-        section:nth-child(2)>button{
+        main>section:nth-child(3)>button{
             width: 100px;
             height: 50px;
+        }
+        main>section:nth-child(3)>input{
+            width: 400px;
+            background-color: white;
         }
     </style>
 </head>
 <body>
-<section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-</section>
-<section>
-    <button id="btnStart" class="btn btn-primary mt-2">Start</button>
-    <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
-</section>
+    <main>
+        <section>
 
+        </section>
+        <section>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+        </section>
+        <section>
+            <button id="btnStart" class="btn btn-primary mt-2">Start</button>
+            <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
+            <input type="range" id="range" min="100" max="1000">
+        </section>
+    </main>
 <script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 <script>
     let stopid=0;
@@ -49,12 +64,25 @@
     let colourReverse=["","","","","","","#fa1402","#f73e2f","#fa5648","#fa7266","#f79c94"];
     let divs=document.querySelectorAll("section>div");
 
-    $("#btnStart").click(function (){
+    let btnStart=document.querySelector("#btnStart");
+    let btnStop=document.querySelector("#btnStop");
+    let range=document.querySelector("#range")
+    let rangeNumber=100;
+    range.addEventListener("click",function (){
+        rangeNumber=range.value;
+        console.log(rangeNumber)
+    });
+    btnStart.addEventListener("click",function (){
         clearInterval(stopid);
         // processColour();
         //stopid=setInterval(processColour,1000);
-        stopid= setInterval(processColourReverse,400);
+        stopid= setInterval(processColourReverse,rangeNumber);
     });
+
+    btnStop.addEventListener("click",function (){
+        clearInterval(stopid);
+    });
+
     function processColour(){
         setInterval(function (){
             for (let i = 0; i < divs.length; i++) {
@@ -80,9 +108,6 @@
         colourReverse.push(firstValue);
     }
 
-    $("#btnStop").click(function (){
-        clearInterval(stopid);
-    });
 
 </script>
 </body>

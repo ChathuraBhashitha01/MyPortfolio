@@ -103,6 +103,7 @@
             <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
             <input type="range" id="range" min="100" max="200">
         </section>
+        <audio id="audio" src="assest/WhatsApp Audio 2023-10-04 at 8.31.38 AM.mpeg" type="audio/mpeg" loop ></audio>
     </main>
 <script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 <script>
@@ -112,60 +113,58 @@
     let divs=document.querySelectorAll("section>div");
     let count=0;
     let animate=true;
+    let cou=0
+    let animationTimeout=false;
 
     let btnStart=document.querySelector("#btnStart");
     let btnStop=document.querySelector("#btnStop");
     let range=document.querySelector("#range")
-    let rangeNumber=0;
-    rangeNumber=range.value;
+    let audio=document.querySelector("#audio");
+    let speed=100;
+    speed=range.value;
     range.addEventListener("click",function (){
-        rangeNumber=range.value;
+        speed=range.value;
         console.log(rangeNumber)
     });
     btnStart.addEventListener("click",function (){
         clearInterval(stopid);
-        stopid=setInterval(processColour,100);
+        audio.play();
+        stopid=setInterval(processColour,speed);
     });
 
     btnStop.addEventListener("click",function (){
         clearInterval(stopid);
+        audio.pause();
     });
 
     function processColour(){
-        if(animate==true){
+
+        if (animate == true) {
             for (let i = 0; i < divs.length; i++) {
-                divs[i].style.background=coloursForward[i];
+                divs[i].style.background = coloursForward[i];
                 console.log(count)
             }
             count++;
-            let lastValue=coloursForward.pop();
+            let lastValue = coloursForward.pop();
             coloursForward.unshift(lastValue);
-            if (count==11){
-                animate=false;
+            if (count == 11) {
+                animate = false;
             }
         }
-        if (animate==false){
+        if (animate == false) {
             for (let i = 0; i < divs.length; i++) {
-                divs[i].style.background=colourReverse[i];
+                divs[i].style.background = colourReverse[i];
                 console.log(count)
             }
             count--
-            let firstValue=colourReverse.shift();
+            let firstValue = colourReverse.shift();
             colourReverse.push(firstValue);
-            if (count==0){
-                animate=true;
+            if (count == 0) {
+                animate = true;
             }
         }
     }
 
-    function processForward(){
-        let lastValue=coloursFoeward.pop();
-        coloursFoeward.unshift(lastValue);
-    }
-    function processReverse(){
-        let firstValue=colourReverse.shift();
-        colourReverse.push(firstValue);
-    }
 
 </script>
 </body>

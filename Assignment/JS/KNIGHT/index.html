@@ -101,29 +101,30 @@
         <section>
             <button id="btnStart" class="btn btn-primary mt-2">Start</button>
             <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
-            <input type="range" id="range" min="100" max="1000">
+            <input type="range" id="range" min="100" max="200">
         </section>
     </main>
 <script src="../../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 <script>
     let stopid=0;
-    let colours=["","","","","","","#f79c94","#fa7266","#fa5648","#f73e2f","#fa1402"];
+    let coloursForward=["","","","","","","#f79c94","#fa7266","#fa5648","#f73e2f","#fa1402"];
     let colourReverse=["","","","","","","#fa1402","#f73e2f","#fa5648","#fa7266","#f79c94"];
     let divs=document.querySelectorAll("section>div");
+    let count=0;
+    let animate=true;
 
     let btnStart=document.querySelector("#btnStart");
     let btnStop=document.querySelector("#btnStop");
     let range=document.querySelector("#range")
-    let rangeNumber=100;
+    let rangeNumber=0;
+    rangeNumber=range.value;
     range.addEventListener("click",function (){
         rangeNumber=range.value;
         console.log(rangeNumber)
     });
     btnStart.addEventListener("click",function (){
         clearInterval(stopid);
-        // processColour();
-        //stopid=setInterval(processColour,1000);
-        stopid= setInterval(processColourReverse,rangeNumber);
+        stopid=setInterval(processColour,100);
     });
 
     btnStop.addEventListener("click",function (){
@@ -131,30 +132,40 @@
     });
 
     function processColour(){
-        setInterval(function (){
+        if(animate==true){
             for (let i = 0; i < divs.length; i++) {
-                divs[i].style.background=colours[i];
+                divs[i].style.background=coloursForward[i];
+                console.log(count)
             }
-            let lastValue=colours.pop();
-            colours.unshift(lastValue);
-        },200);
-        // setInterval(function (){
-        //     for (let i = 0; i < divs.length; i++) {
-        //         divs[i].style.background=colourReverse[i];
-        //     }
-        //     let firstValue=colourReverse.shift();
-        //     colourReverse.push(firstValue);
-        // },500);
-    }
-    function processColourReverse(){
-       // processColour();
-        for (let i = 0; i < divs.length; i++) {
-            divs[i].style.background=colourReverse[i];
+            count++;
+            let lastValue=coloursForward.pop();
+            coloursForward.unshift(lastValue);
+            if (count==11){
+                animate=false;
+            }
         }
+        if (animate==false){
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].style.background=colourReverse[i];
+                console.log(count)
+            }
+            count--
+            let firstValue=colourReverse.shift();
+            colourReverse.push(firstValue);
+            if (count==0){
+                animate=true;
+            }
+        }
+    }
+
+    function processForward(){
+        let lastValue=coloursFoeward.pop();
+        coloursFoeward.unshift(lastValue);
+    }
+    function processReverse(){
         let firstValue=colourReverse.shift();
         colourReverse.push(firstValue);
     }
-
 
 </script>
 </body>

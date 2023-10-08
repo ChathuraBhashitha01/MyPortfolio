@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAL</title>
+    <meta name="viewport" content="width=device-width initial-scale=1" >
+    <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
+  <style>
+    main{
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    main>section{
+      width: 50vw;
+      height: 70vh;
+      background: black;
+      border: 2px solid black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    main>section>section:nth-child(1)>button{
+        width: 10%;
+        height: 55px;
+        background: #881012;
+        display: inline-block;
+        margin-left: 40px;
+        margin-top: 16px;
+    }
+    main>section>section:nth-child(1)>input{
+        width: 76%;
+        height: 55px;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 16px;
+    }
+    main>section>section:nth-child(2){
+        height: 80%;
+        width: 90%;
+        border: 1px solid black;
+        display:grid;
+        grid-template-rows:repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    main>section>section:nth-child(2)>button{
+        /*border: 1px solid black;*/
+        /*background: #babbbc;*/
+        /*opacity: 40%;*/
+        position: relative;
+        font-size: 40px;
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <section>
+          <button id="btnRestart">C</button>
+          <input type="text" id="txtBar">
+      </section>
+      <section>
+          <button id="btnSeven">7</button>
+          <button id="btnEight">8</button>
+          <button id="btnNine">9</button>
+          <button id="btnPlus">+</button>
+          <button id="btnFour">4</button>
+          <button id="btnFive">5</button>
+          <button id="btnSix">6</button>
+          <button id="btnMinus">-</button>
+          <button id="btnOne">1</button>
+          <button id="btnTwo">2</button>
+          <button id="btnThree">3</button>
+          <button id="btnDivition">/</button>
+          <button id="btnZero">0</button>
+          <button id="btnDote">.</button>
+          <button id="btnEqual">=</button>
+          <button id="btnIncrease">*</button>
+      </section>
+    </section>
+  </main>
+<script>
+    let count=0;
+    let btnRestart=document.querySelector("#btnRestart");
+    let txtBar=document.querySelector("#txtBar")
+    let btnSeven=document.querySelector("#btnSeven");
+    let btnEight=document.querySelector("#btnEight");
+    let btnNine=document.querySelector("#btnNine");
+    let btnPlus=document.querySelector("#btnPlus");
+    let btnFour=document.querySelector("#btnFour");
+    let btnFive=document.querySelector("#btnFive");
+    let btnSix=document.querySelector("#btnSix");
+    let btnMinus=document.querySelector("#btnMinus");
+    let btnOne=document.querySelector("#btnOne");
+    let btnTwo=document.querySelector("#btnTwo");
+    let btnThree=document.querySelector("#btnThree");
+    let btnDivition=document.querySelector("#btnDivition");
+    let btnZero=document.querySelector("#btnZero");
+    let btnDote=document.querySelector("#btnDote");
+    let btnEqual=document.querySelector("#btnEqual");
+    let btnIncrease=document.querySelector("#btnIncrease");
+
+    btnRestart.addEventListener("click",function (){
+        txtBar.innerText='';
+    });
+    btnSeven.addEventListener("click",function (){
+        txtBar.innerText='7 ';
+    });
+</script>
+</body>
+</html>

@@ -54,9 +54,6 @@
         grid-row-gap: 5px;
     }
     main>section>section:nth-child(2)>button{
-        /*border: 1px solid black;*/
-        /*background: #babbbc;*/
-        /*opacity: 40%;*/
         position: relative;
         font-size: 40px;
         color: black;
@@ -71,27 +68,28 @@
           <input type="text" id="txtBar">
       </section>
       <section>
-          <button id="btnSeven">7</button>
-          <button id="btnEight">8</button>
-          <button id="btnNine">9</button>
-          <button id="btnPlus">+</button>
-          <button id="btnFour">4</button>
-          <button id="btnFive">5</button>
-          <button id="btnSix">6</button>
-          <button id="btnMinus">-</button>
-          <button id="btnOne">1</button>
-          <button id="btnTwo">2</button>
-          <button id="btnThree">3</button>
-          <button id="btnDivition">/</button>
-          <button id="btnZero">0</button>
-          <button id="btnDote">.</button>
-          <button id="btnEqual">=</button>
-          <button id="btnIncrease">*</button>
+          <button id="btnSeven" value="7">7</button>
+          <button id="btnEight" value="8">8</button>
+          <button id="btnNine" value="9">9</button>
+          <button id="btnPlus" value="+">+</button>
+          <button id="btnFour" value="4">4</button>
+          <button id="btnFive" value="5">5</button>
+          <button id="btnSix" value="6">6</button>
+          <button id="btnMinus" value="-">-</button>
+          <button id="btnOne" value="1">1</button>
+          <button id="btnTwo" value="2">2</button>
+          <button id="btnThree" value="3">3</button>
+          <button id="btnDivition" value="/">/</button>
+          <button id="btnZero" value="0">0</button>
+          <button id="btnDote" value=".">.</button>
+          <button id="btnEqual" value="=">=</button>
+          <button id="btnIncrease" value="*">*</button>
       </section>
     </section>
   </main>
 <script>
-    let count=0;
+    let firstValue=0;
+    let secondValue=0;
     let btnRestart=document.querySelector("#btnRestart");
     let txtBar=document.querySelector("#txtBar")
     let btnSeven=document.querySelector("#btnSeven");
@@ -111,12 +109,16 @@
     let btnEqual=document.querySelector("#btnEqual");
     let btnIncrease=document.querySelector("#btnIncrease");
 
+    let btnArray=[btnSeven,btnEight,btnNine,btnPlus,btnFour,btnFive,btnSix,btnMinus,btnOne,btnTwo,btnThree,btnDivition,btnZero,btnDote,btnEqual,btnIncrease]
     btnRestart.addEventListener("click",function (){
-        txtBar.innerText='';
+        txtBar.value='';
     });
-    btnSeven.addEventListener("click",function (){
-        txtBar.innerText='7 ';
-    });
+    for (let i = 0; i < btnArray.length; i++) {
+        btnArray[i].addEventListener("click",function (){
+            firstValue=btnArray[i].value;
+            console.log(firstValue);
+        });
+    }
 </script>
 </body>
 </html>

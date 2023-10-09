@@ -149,7 +149,7 @@
                     displayValue='';
                     firstValue='';
                     secondValue='';
-                    for (let j = 0; j < a.length+1; j++) {
+                    for (let j = 0; j < values.length+1; j++) {
                         values.shift();
                     }
                     break;
@@ -203,7 +203,7 @@
                         case "Minus":
                            // total=firstValue-secondValue;
                             values.push(secondValue);
-                            for (let j = 1; j < values.length; j++) {
+                            for (let j = 1; j <values.length; j++) {
                                 let first=values[0]
                                 first -=values[j];
                                 total=first;

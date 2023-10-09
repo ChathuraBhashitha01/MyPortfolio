@@ -37,6 +37,8 @@
         display: inline-block;
         margin-left: 10px;
         margin-top: 16px;
+        font-size: 40px;
+        font-weight: bold;
     }
     main>section>section:nth-child(2){
         height: 80%;
@@ -115,58 +117,61 @@
     let btnArray=[btnSeven,btnEight,btnNine,btnPlus,btnFour,btnFive,btnSix,btnMinus,btnOne,btnTwo,btnThree,btnDivition,btnZero,btnDote,btnEqual,btnIncrease]
     btnRestart.addEventListener("click",function (){
         txtBar.value='';
+        displayValue='';
+        firstValue='';
+        secondValue='';
     });
     for (let i = 0; i < btnArray.length; i++) {
         btnArray[i].addEventListener("click",function (){
             let pressBtn=btnArray[i].value;
             switch (pressBtn){
                 case "+":
-                    //alert("+");
+                    firstValue=parseFloat(displayValue);
                     txtBar.value='';
                     displayValue='';
                     status="plus";
                     break;
                 case "-":
-                    //alert("-");
                     txtBar.value='';
                     displayValue='';
                     status="Minus";
                     break;
                 case "/":
-                    //alert("/");
                     txtBar.value='';
                     displayValue='';
                     status="Divition";
                     break;
                 case "*":
-                    //alert("");
                     txtBar.value='';
                     displayValue='';
                     status="Increase";
                     break;
                 case "=":
-                    //alert("=");
                     txtBar.value=displayValue;
                     secondValue=parseFloat(displayValue);
                     switch (status){
                         case "plus":
                             total=firstValue+secondValue;
+                            firstValue=total;
                             txtBar.value=total;
                             status="";
                             break;
                         case "Minus":
                             total=firstValue-secondValue;
                             txtBar.value=total;
+                            firstValue=total;
                             status="";
                             break;
                         case "Divition":
                             total=firstValue/secondValue;
                             txtBar.value=total;
+                            firstValue=total;
                             status="";
                             break;
                         case "Increase":
-                            total=firstValue/secondValue;
+                            total=firstValue*secondValue;
                             txtBar.value=total;
+                            firstValue=total;
                             status="";
                             break;
                     }
@@ -174,7 +179,6 @@
                 default:
                     displayValue+=pressBtn;
                     txtBar.value=displayValue;
-                    firstValue=parseFloat(displayValue);
                      break;
             }
         });

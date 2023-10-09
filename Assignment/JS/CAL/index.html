@@ -10,6 +10,10 @@
       width: 100vw;
       height: 100vh;
       position: relative;
+      background: url("assets/images (1).png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
     main>section{
       width: 50vw;
@@ -22,6 +26,7 @@
       left: 0;
       right: 0;
       margin: auto;
+      opacity: 0.5;
     }
     main>section>section:nth-child(1)>button{
         width: 10%;
@@ -35,6 +40,9 @@
         width: 76%;
         height: 55px;
         display: inline-block;
+        background: black;
+        color: white;
+        opacity: 0.5;
         margin-left: 10px;
         margin-top: 16px;
         font-size: 40px;
@@ -66,7 +74,7 @@
   <main>
     <section>
       <section>
-          <button id="btnRestart">C</button>
+          <button id="btnRestart" value="c">C</button>
           <input type="text" id="txtBar">
       </section>
       <section>
@@ -114,17 +122,18 @@
     let btnEqual=document.querySelector("#btnEqual");
     let btnIncrease=document.querySelector("#btnIncrease");
 
-    let btnArray=[btnSeven,btnEight,btnNine,btnPlus,btnFour,btnFive,btnSix,btnMinus,btnOne,btnTwo,btnThree,btnDivition,btnZero,btnDote,btnEqual,btnIncrease]
-    btnRestart.addEventListener("click",function (){
-        txtBar.value='';
-        displayValue='';
-        firstValue='';
-        secondValue='';
-    });
+    let btnArray=[btnRestart,btnSeven,btnEight,btnNine,btnPlus,btnFour,btnFive,btnSix,btnMinus,btnOne,btnTwo,btnThree,btnDivition,btnZero,btnDote,btnEqual,btnIncrease]
+
     for (let i = 0; i < btnArray.length; i++) {
         btnArray[i].addEventListener("click",function (){
             let pressBtn=btnArray[i].value;
             switch (pressBtn){
+                case "c":
+                    txtBar.value='';
+                    displayValue='';
+                    firstValue='';
+                    secondValue='';
+                    break;
                 case "+":
                     firstValue=parseFloat(displayValue);
                     txtBar.value='';
@@ -132,16 +141,19 @@
                     status="plus";
                     break;
                 case "-":
+                    firstValue=parseFloat(displayValue);
                     txtBar.value='';
                     displayValue='';
                     status="Minus";
                     break;
                 case "/":
+                    firstValue=parseFloat(displayValue);
                     txtBar.value='';
                     displayValue='';
                     status="Divition";
                     break;
                 case "*":
+                    firstValue=parseFloat(displayValue);
                     txtBar.value='';
                     displayValue='';
                     status="Increase";
@@ -152,26 +164,26 @@
                     switch (status){
                         case "plus":
                             total=firstValue+secondValue;
-                            firstValue=total;
+                            displayValue=total;
                             txtBar.value=total;
                             status="";
                             break;
                         case "Minus":
                             total=firstValue-secondValue;
                             txtBar.value=total;
-                            firstValue=total;
+                            displayValue=total;
                             status="";
                             break;
                         case "Divition":
                             total=firstValue/secondValue;
                             txtBar.value=total;
-                            firstValue=total;
+                            displayValue=total;
                             status="";
                             break;
                         case "Increase":
                             total=firstValue*secondValue;
                             txtBar.value=total;
-                            firstValue=total;
+                            displayValue=total;
                             status="";
                             break;
                     }
@@ -182,8 +194,6 @@
                      break;
             }
         });
-        firstValue=displayValue;
-        console.log(firstValue);
     }
 </script>
 </body>

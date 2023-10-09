@@ -115,8 +115,25 @@
     });
     for (let i = 0; i < btnArray.length; i++) {
         btnArray[i].addEventListener("click",function (){
-            firstValue=btnArray[i].value;
-            console.log(firstValue);
+            let pressBtn=btnArray[i].value;
+           // console.log(firstValue);
+            switch (pressBtn){
+                case "+":
+                    alert("+");
+                    break;
+                case "-":
+                    alert("-");
+                    break;
+                case "/":
+                    alert("/");
+                    break;
+                case "*":
+                    alert("*");
+                    break;
+                case "=":
+                    alert("=");
+                    break;
+            }
         });
     }
 </script>

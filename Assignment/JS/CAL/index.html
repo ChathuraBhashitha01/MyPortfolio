@@ -88,8 +88,11 @@
     </section>
   </main>
 <script>
+    let displayValue="";
     let firstValue=0;
     let secondValue=0;
+    let total=0
+    let status="";
     let btnRestart=document.querySelector("#btnRestart");
     let txtBar=document.querySelector("#txtBar")
     let btnSeven=document.querySelector("#btnSeven");
@@ -116,25 +119,67 @@
     for (let i = 0; i < btnArray.length; i++) {
         btnArray[i].addEventListener("click",function (){
             let pressBtn=btnArray[i].value;
-           // console.log(firstValue);
             switch (pressBtn){
                 case "+":
-                    alert("+");
+                    //alert("+");
+                    txtBar.value='';
+                    displayValue='';
+                    status="plus";
                     break;
                 case "-":
-                    alert("-");
+                    //alert("-");
+                    txtBar.value='';
+                    displayValue='';
+                    status="Minus";
                     break;
                 case "/":
-                    alert("/");
+                    //alert("/");
+                    txtBar.value='';
+                    displayValue='';
+                    status="Divition";
                     break;
                 case "*":
-                    alert("*");
+                    //alert("");
+                    txtBar.value='';
+                    displayValue='';
+                    status="Increase";
                     break;
                 case "=":
-                    alert("=");
+                    //alert("=");
+                    txtBar.value=displayValue;
+                    secondValue=parseFloat(displayValue);
+                    switch (status){
+                        case "plus":
+                            total=firstValue+secondValue;
+                            txtBar.value=total;
+                            status="";
+                            break;
+                        case "Minus":
+                            total=firstValue-secondValue;
+                            txtBar.value=total;
+                            status="";
+                            break;
+                        case "Divition":
+                            total=firstValue/secondValue;
+                            txtBar.value=total;
+                            status="";
+                            break;
+                        case "Increase":
+                            total=firstValue/secondValue;
+                            txtBar.value=total;
+                            status="";
+                            break;
+                    }
                     break;
+                default:
+                    displayValue+=pressBtn;
+                    txtBar.value=displayValue;
+                    firstValue=parseFloat(displayValue);
+                     break;
             }
         });
+        firstValue=displayValue;
+        console.log(firstValue);
     }
 </script>
 </body>

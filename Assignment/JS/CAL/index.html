@@ -138,6 +138,7 @@
 
     let btnArray=[btnRestart,btnSeven,btnEight,btnNine,btnPlus,btnFour,btnFive,btnSix,btnMinus,btnOne,btnTwo,btnThree,btnDivition,btnZero,btnDote,btnEqual,btnIncrease]
 
+    let a=[];
     for (let i = 0; i < btnArray.length; i++) {
         btnArray[i].addEventListener("click",function (){
             let pressBtn=btnArray[i].value;
@@ -147,27 +148,34 @@
                     displayValue='';
                     firstValue='';
                     secondValue='';
+                    for (let j = 0; j < a.length+1; j++) {
+                        a.shift();
+                    }
                     break;
                 case "+":
                     firstValue=parseFloat(displayValue);
+                    a.unshift(firstValue);
                     txtBar.value='';
                     displayValue='';
                     status="plus";
                     break;
                 case "-":
                     firstValue=parseFloat(displayValue);
+                    a.push(firstValue);
                     txtBar.value='';
                     displayValue='';
                     status="Minus";
                     break;
                 case "/":
                     firstValue=parseFloat(displayValue);
+                    a.push(firstValue);
                     txtBar.value='';
                     displayValue='';
                     status="Divition";
                     break;
                 case "*":
                     firstValue=parseFloat(displayValue);
+                    a.push(firstValue);
                     txtBar.value='';
                     displayValue='';
                     status="Increase";
@@ -177,27 +185,69 @@
                     secondValue=parseFloat(displayValue);
                     switch (status){
                         case "plus":
-                            total=firstValue+secondValue;
+                            //total=firstValue+secondValue;
+                            a.unshift(secondValue);
+                            for (let j = 0; j < a.length; j++) {
+                                total+=a[j];
+                            }
+                            for (let j = 0; j < a.length+1; j++) {
+                                let s=a.shift();
+                                console.log(s)
+                            }
                             displayValue=total;
                             txtBar.value=total;
+                            total=0;
                             status="";
                             break;
                         case "Minus":
-                            total=firstValue-secondValue;
+                           // total=firstValue-secondValue;
+                            a.push(secondValue);
+                            for (let j = 1; j < a.length; j++) {
+                                let first=a[0]
+                                first -=a[j];
+                                total=first;
+                            }
+                            for (let j = 0; j < a.length+1; j++) {
+                                let s=a.shift();
+                                console.log(s)
+                            }
                             txtBar.value=total;
                             displayValue=total;
+                            total=0;
                             status="";
                             break;
                         case "Divition":
-                            total=firstValue/secondValue;
+                            //total=firstValue/secondValue;
+                            a.push(secondValue);
+                            for (let j = 1; j < a.length; j++) {
+                                let first=a[0]
+                                first /=a[j];
+                                total=first;
+                            }
+                            for (let j = 0; j < a.length+1; j++) {
+                                let s=a.shift();
+                                console.log(s)
+                            }
                             txtBar.value=total;
                             displayValue=total;
+                            total=0;
                             status="";
                             break;
                         case "Increase":
-                            total=firstValue*secondValue;
+                            //total=firstValue*secondValue;
+                            a.push(secondValue);
+                            for (let j = 1; j < a.length; j++) {
+                                let first=a[0]
+                                first *=a[j];
+                                total=first;
+                            }
+                            for (let j = 0; j < a.length+1; j++) {
+                                let s=a.shift();
+                                console.log(s)
+                            }
                             txtBar.value=total;
                             displayValue=total;
+                            total=0;
                             status="";
                             break;
                     }

@@ -1,0 +1,1 @@
+let customerArray = new Array();

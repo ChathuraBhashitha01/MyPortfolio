@@ -14,16 +14,35 @@ function saveCustomer(){
     let customerAddress=$("#cusAddress").val();
     let customerSalary=$("#cusSalary").val();
 
-    let newCustomer=Object.assign({},customer)
+    let newCustomer=Object.assign({},customer);
     newCustomer.id=customerId;
     newCustomer.name=customerName;
     newCustomer.address=customerAddress;
     newCustomer.salary=customerSalary;
 
     customerDB.push(newCustomer);
+    getAllCustomer();
+}
+
+function deleteCustomer(id){
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id==id){
+            customerDB.splice(i,1);
+            return true;
+        }
+    }
+    return false;
+}
+
+function searchCustomer(id){
+  return customerDB.find(function (customer){
+      return customer.id==id;
+  });
 }
 
 function getAllCustomer(){
+    $("#tblCustomer").empty();
+
     for (let i = 0; i < customerDB.length; i++) {
         let customerId=customerDB[i].id;
         let customerName=customerDB[i].name;
@@ -35,7 +54,7 @@ function getAllCustomer(){
                     <td>${customerName}</td>
                     <td>${customerAddress}</td
                     <td>${customerSalary}</td>
-                </tr>`
+                </tr>`;
         $("#tblCustomer").append(row);
     }
 }

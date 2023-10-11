@@ -1,5 +1,5 @@
 getAllCustomer();
-
+loadCustomerIDs();
 $("#btnSaveCustomer").click(function (){
     if (checkAll()) {
         saveCustomer();
@@ -83,8 +83,8 @@ function getAllCustomer(){
                     <td>${customerSalary}</td>
                 </tr>`;
         $("#tblCustomer").append(row);
+        bindTrEvents();
     }
-    bindTrEvents();
 }
 function bindTrEvents() {
     $("#tblCustomer>tr").click(function (){
@@ -98,4 +98,10 @@ function bindTrEvents() {
         $("#cusAddress").val(address)
         $("#cusSalary").val(salary)
     });
+}
+function loadCustomerIDs(){
+    for (let i = 0; i <customerDB.length ; i++) {
+        let id=customerDB[i].id;
+        $("#cmbCustomerID").append("<option >"+id +"</option>");
+    }
 }

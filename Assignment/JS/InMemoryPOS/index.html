@@ -145,14 +145,10 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <select class="form-select mt-4" aria-label="Default select example">
-                                    <option selected>Item Code</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select class="form-select mt-4" aria-label="Default select example" id="cmbItemCode">
                                 </select>
-                                <button type="button" class="btn btn-success mt-4">Search</button>
-                                <button type="button" class="btn btn-primary mt-4">Get All</button>
+                                <button type="button" class="btn btn-success mt-4" id="btnItemSearch">Search</button>
+                                <button type="button" class="btn btn-primary mt-4" id="btnItemGetAll">Get All</button>
                             </form>
                         </div>
                     </div>
@@ -166,25 +162,25 @@
                             <form>
                                 <div class="row">
                                     <div class="col<div class="mb-3>
-                                        <label for="itemCode" class="form-label">Item Code</label>
-                                        <input type="text" class="form-control" id="itemCode" placeholder="Item Code">
+                                        <label for="txtItemCode" class="form-label">Item Code</label>
+                                        <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="itemName" class="form-label">Item Name</label>
-                                        <input type="text" class="form-control" id="itemName" placeholder="Item Name">
+                                        <label for="txtItemName" class="form-label">Item Name</label>
+                                        <input type="text" class="form-control" id="txtItemName" placeholder="Item Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="itemPrice" class="form-label">Item Price</label>
-                                        <input type="text" class="form-control" id="itemPrice" placeholder="Item Price">
+                                        <label for="txtItemPrice" class="form-label">Item Price</label>
+                                        <input type="text" class="form-control" id="txtItemPrice" placeholder="Item Price">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="itemQty" class="form-label">Item Quantity</label>
-                                        <input type="text" class="form-control" id="itemQty" placeholder="Item Quantity">
+                                        <label for="txtItemQty" class="form-label">Item Quantity</label>
+                                        <input type="text" class="form-control" id="txtItemQty" placeholder="Item Quantity">
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary">Save</button>
-                                <button type="button" class="btn btn-secondary">Update</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-primary" id="btnItemSave">Save</button>
+                                <button type="button" class="btn btn-secondary" id="btnItemUpdate">Update</button>
+                                <button type="button" class="btn btn-danger" id="btnItemDelete">Delete</button>
                             </form>
                         </div>
                     </div>

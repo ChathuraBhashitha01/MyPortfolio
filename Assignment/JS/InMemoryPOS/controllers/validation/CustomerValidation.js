@@ -10,7 +10,6 @@ customerArray.push({field:$("#cusName"), regEx:CUS_NAME_REGEX});
 customerArray.push({field:$("#cusAddress"), regEx:CUS_ADDRESS_REGEX});
 customerArray.push({field:$("#cusSalary"), regEx:CUS_SALARY_REGEX});
 
-console.log(customerArray)
 function clearCustomerInputField(){
     $("#cusId,#cusName,#cusAddress,#cusSalary").val("");
     $("#cusId,#cusName,#cusAddress,#cusSalary").css('border','1px solid #ced4da');

@@ -13,28 +13,48 @@ $("#btnCustomerGetAll").click(function (){
     getAllCustomer();
 });
 
-$("#btnCustomerDelete").click(function (id){
-    for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id==id){
-            customerDB.splice(i,1);
-            return true;
+$("#btnCustomerDelete").click(function (){
+    let id=$("#cusId").val();
+    if (searchCustomer(id) == undefined) {
+        alert("No such Customer..please check the ID");
+    } else {
+        let consent = confirm("Do you really want to Delete this customer.?");
+        if (consent) {
+            for (let i = 0; i < customerDB.length; i++) {
+                if (customerDB[i].id == id) {
+                    customerDB.splice(i, 1);
+                    return true;
+                }
+            }
+            loadCustomerIDs();
+            getAllCustomer();
+            clearAllField();
         }
     }
     return false;
 });
 
-$("#btnCustomerUpdate").click(function (id){
-    let customer=saveCustomer(id);
+$("#btnCustomerUpdate").click(function (){
+    let id=$("#cusId").val();
+    if (searchCustomer(id) == undefined) {
+        alert("No such Customer..please check the ID");
+    } else {
+        let consent = confirm("Do you really want to update this customer.?");
+        if (consent) {
+            let customer = searchCustomer(id);
 
-    let customerName=$("#cusName").val();
-    let customerAddress=$("#cusAddress").val();
-    let customerSalary=$("#cusSalary").val();
+            let customerName = $("#cusName").val();
+            let customerAddress = $("#cusAddress").val();
+            let customerSalary = $("#cusSalary").val();
 
-    customer.name=customerName;
-    customer.address=customerAddress;
-    customer.salary=customerSalary;
+            customer.name = customerName;
+            customer.address = customerAddress;
+            customer.salary = customerSalary;
 
-    getAllCustomer();
+            getAllCustomer();
+            clearAllField();
+        }
+    }
 });
 
 $("#btnCustomerSearch").click(function (){
@@ -65,7 +85,9 @@ function saveCustomer() {
 
         customerDB.push(newCustomer);
         clearCustomerInputField();
+        loadCustomerIDs();
         getAllCustomer();
+        clearAllField();
     }
     else {
         alert("Customer already exits.!");
@@ -112,8 +134,12 @@ function bindTrEvents() {
     });
 }
 function loadCustomerIDs(){
+    $("#cmbCustomerID").empty();
     for (let i = 0; i <customerDB.length ; i++) {
         let id=customerDB[i].id;
         $("#cmbCustomerID").append("<option >"+id +"</option>");
     }
+}
+function clearAllField(){
+    clearCustomerInputField();
 }

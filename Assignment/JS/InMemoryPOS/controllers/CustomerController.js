@@ -96,9 +96,9 @@ function saveCustomer() {
 }
 
 function searchCustomer(id){
-  return customerDB.find(function (customer){
-      return customer.id==id;
-  });
+    return customerDB.find(function (customer){
+        return customer.id==id;
+    });
 }
 
 function getAllCustomer(){

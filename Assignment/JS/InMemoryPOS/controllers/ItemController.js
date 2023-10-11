@@ -96,8 +96,50 @@ function saveItem() {
 }
 
 function searchItem(code){
-    return itemDB.find(function (item){
+    return itemDB.find(function(item){
         return item.code==code;
     });
 }
 
+function getAllItems(){
+    $("#tblItem").empty();
+
+    for (let i = 0; i < itemDB.length; i++) {
+        let code=itemDB[i].code;
+        let name=itemDB[i].name;
+        let price=itemDB[i].unitPrice;
+        let qty=itemDB[i].qtyOnHand;
+
+        let row=`<tr>
+                    <td>${code}</td>
+                    <td>${name}</td>
+                    <td>${price}</td
+                    <td>${qty}</td>
+                </tr>`;
+        $("#tblItem").append(row);
+        bindTrEvents();
+    }
+}
+function bindTrEvents() {
+    $("#tblItem>tr").click(function (){
+        let code=$(this).children().eq(0).text();
+        let name=$(this).children().eq(1).text();
+        let price=$(this).children().eq(2).text();
+        let qty=$(this).children().eq(3).text();
+
+        $("#txtItemCode").val(code)
+        $("#txtItemName").val(name)
+        $("#txtItemPrice").val(price)
+        $("#txtItemQty").val(qty)
+    });
+}
+function loadCustomerIDs(){
+    $("#cmbItemCode").empty();
+    for (let i = 0; i <itemDB.length ; i++) {
+        let code=itemDB[i].code;
+        $("#cmbCustomerID").append("<option >"+code +"</option>");
+    }
+}
+function clearAllField(){
+    clearCustomerInputField();
+}

@@ -6,10 +6,11 @@ const CUS_SALARY_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
 let customerArray = new Array();
 
 customerArray.push({field:$("#cusId"), regEx:CUS_ID_REGEX});
-customerArray.push({field:$("#cusName"), redEx:CUS_NAME_REGEX});
-customerArray.push({field:$("#cusAddress"), redEx:CUS_ADDRESS_REGEX});
-customerArray.push({field:$("#cusSalary"), redEx:CUS_SALARY_REGEX});
+customerArray.push({field:$("#cusName"), regEx:CUS_NAME_REGEX});
+customerArray.push({field:$("#cusAddress"), regEx:CUS_ADDRESS_REGEX});
+customerArray.push({field:$("#cusSalary"), regEx:CUS_SALARY_REGEX});
 
+console.log(customerArray)
 function clearCustomerInputField(){
     $("#cusId,#cusName,#cusAddress,#cusSalary").val("");
     $("#cusId,#cusName,#cusAddress,#cusSalary").css('border','1px solid #ced4da');
@@ -19,7 +20,7 @@ function clearCustomerInputField(){
 
 setBtn();
 
-$("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e){
+$("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e) {
     let indexNo = customerArray.indexOf(customerArray.find((c) => c.field.attr("id") == e.target.id));
 
     if (e.key == "Tab") {
@@ -43,22 +44,16 @@ $("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e){
         }
     }
 });
-function checkAll(){
-    for (let i = 0; i < customerArray.length; i++) {
-        if(!checkValidation(customerArray[i])) return  false;
-    }
-    return true
-}
-function checkValidation(object){
-    if(object.regEx.test(object.field.val())){
-        setBorder(true,object);
+function checkValidation(object) {
+    if (object.regEx.test(object.field.val())) {
+        setBorder(true, object);
         return true;
     }
-    setBorder(false,object);
+    setBorder(false, object)
     return false;
 }
-function setBorder(bool,object){
-    if(bool){
+function setBorder(bol,object){
+    if(bol){
         if (object.field.val().length >= 1) {
             object.field.css("border", "2px solid green");
         } else {
@@ -72,6 +67,12 @@ function setBorder(bool,object){
             object.field.css("border", "1px solid #ced4da");
         }
     }
+}
+function checkAll(){
+    for (let i = 0; i < customerArray.length; i++) {
+        if(!checkValidation(customerArray[i])) return  false;
+    }
+    return true
 }
 function setBtn(){
     $("#btnCustomerUpdate").prop("disabled", true);

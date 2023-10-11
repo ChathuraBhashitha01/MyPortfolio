@@ -39,6 +39,7 @@ $("#btnCustomerUpdate").click(function (id){
 
 function saveCustomer() {
     let customerId = $("#cusId").val();
+
     if (searchCustomer(customerId.trim()) == undefined){
         let customerName = $("#cusName").val();
         let customerAddress = $("#cusAddress").val();

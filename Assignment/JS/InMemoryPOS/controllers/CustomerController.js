@@ -37,6 +37,18 @@ $("#btnCustomerUpdate").click(function (id){
     getAllCustomer();
 });
 
+$("#btnCustomerSearch").click(function (){
+    let id=$("#cmbCustomerID").val();
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id==id){
+            $("#cusId").val(customerDB[i].id)
+            $("#cusName").val(customerDB[i].name)
+            $("#cusAddress").val(customerDB[i].address)
+            $("#cusSalary").val(customerDB[i].salary)
+        }
+    }
+});
+
 function saveCustomer() {
     let customerId = $("#cusId").val();
 

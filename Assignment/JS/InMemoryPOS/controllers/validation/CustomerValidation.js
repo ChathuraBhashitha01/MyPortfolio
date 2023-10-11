@@ -5,16 +5,44 @@ const CUS_SALARY_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
 
 let customerArray = new Array();
 
-customerArray.push({field:$("#cusId"),regEx:CUS_ID_REGEX});
-customerArray.push({field:$("#cusName"),redEx:CUS_NAME_REGEX});
-customerArray.push({field:$("#cusAddress"),redEx:CUS_ADDRESS_REGEX});
-customerArray.push({field:$("#cusSalary"),redEx:CUS_SALARY_REGEX});
+customerArray.push({field:$("#cusId"), regEx:CUS_ID_REGEX});
+customerArray.push({field:$("#cusName"), redEx:CUS_NAME_REGEX});
+customerArray.push({field:$("#cusAddress"), redEx:CUS_ADDRESS_REGEX});
+customerArray.push({field:$("#cusSalary"), redEx:CUS_SALARY_REGEX});
 
 function clearCustomerInputField(){
     $("#cusId,#cusName,#cusAddress,#cusSalary").val("");
     $("#cusId,#cusName,#cusAddress,#cusSalary").css('border','1px solid #ced4da');
     $("#cusId").focus();
+    setBtn();
 }
+
+setBtn();
+
+$("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e){
+    let indexNo = customerArray.indexOf(customerArray.find((c) => c.field.attr("id") == e.target.id));
+
+    if (e.key == "Tab") {
+        e.preventDefault();
+    }
+
+    checkValidation(customerArray[indexNo]);
+
+    setBtn();
+
+    if (e.key == "Enter") {
+
+        if (e.target.id != customerArray[customerArray.length - 1].field.attr("id")) {
+            if (checkValidation(customerArray[indexNo])) {
+                customerArray[indexNo + 1].field.focus();
+            }
+        } else {
+            if (checkValidation(customerArray[indexNo])) {
+                saveCustomer();
+            }
+        }
+    }
+});
 function checkAll(){
     for (let i = 0; i < customerArray.length; i++) {
         if(!checkValidation(customerArray[i])) return  false;
@@ -22,7 +50,7 @@ function checkAll(){
     return true
 }
 function checkValidation(object){
-    if(object.redEx.test(object.field.val())){
+    if(object.regEx.test(object.field.val())){
         setBorder(true,object);
         return true;
     }

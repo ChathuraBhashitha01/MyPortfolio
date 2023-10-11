@@ -1,7 +1,12 @@
 getAllCustomer();
 
 $("#btnSaveCustomer").click(function (){
-    saveCustomer();
+    if (checkAll()) {
+        saveCustomer();
+    }
+    else {
+        alert("Faild Saved");
+    }
 });
 
 $("#btnCustomerGetAll").click(function (){
@@ -32,20 +37,27 @@ $("#btnCustomerUpdate").click(function (id){
     getAllCustomer();
 });
 
-function saveCustomer(){
-    let customerId=$("#cusId").val();
-    let customerName=$("#cusName").val();
-    let customerAddress=$("#cusAddress").val();
-    let customerSalary=$("#cusSalary").val();
+function saveCustomer() {
+    let customerId = $("#cusId").val();
+    if (searchCustomer(customerId.trim()) == undefined){
+        let customerName = $("#cusName").val();
+        let customerAddress = $("#cusAddress").val();
+        let customerSalary = $("#cusSalary").val();
 
-    let newCustomer=Object.assign({},customer);
-    newCustomer.id=customerId;
-    newCustomer.name=customerName;
-    newCustomer.address=customerAddress;
-    newCustomer.salary=customerSalary;
+        let newCustomer = Object.assign({}, customer);
+        newCustomer.id = customerId;
+        newCustomer.name = customerName;
+        newCustomer.address = customerAddress;
+        newCustomer.salary = customerSalary;
 
-    customerDB.push(newCustomer);
-    getAllCustomer();
+        customerDB.push(newCustomer);
+        clearCustomerInputField();
+        getAllCustomer();
+    }
+    else {
+        alert("Customer already exits.!");
+        clearCustomerInputField();
+    }
 }
 
 function searchCustomer(id){

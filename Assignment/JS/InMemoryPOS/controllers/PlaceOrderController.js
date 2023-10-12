@@ -1,5 +1,5 @@
 loadCustomerIDs();
-$("#cusId").on("", function () {
+$("#cusId").on("keyup", function () {
     let id=$("#cusId").val();
     for (let i = 0; i < customerDB.length; i++) {
        if (customerDB[i].id==id){

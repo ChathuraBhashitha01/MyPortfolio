@@ -17,3 +17,9 @@ $("#txtOrderId").keyup(function (e) {
     }
 
 });
+//const inputChangeEvent = new Event('input', { bubbles: true });
+
+// function setAndTriggerValue($element, value) {
+//     $element.val(value);
+//     $element[0].dispatchEvent(inputChangeEvent);
+// }

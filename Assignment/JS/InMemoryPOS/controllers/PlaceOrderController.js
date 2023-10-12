@@ -1,19 +1,5 @@
 loadCustomerIDs();
-$("#cusId").on("keyup", function () {
-    let id=$("#cusId").val();
-    for (let i = 0; i < customerDB.length; i++) {
-       if (customerDB[i].id==id){
-           let customerId=customerDB[i].id;
-           let customerName=customerDB[i].name;
-           let customerAddress=customerDB[i].address;
-           let customerSalary=customerDB[i].salary;
 
-           $("#txtCustomerName").val(customerName);
-           $("#txtCustomerSalary").val(customerSalary);
-           $("#txtCustomerAddress").val(customerAddress);
-       }
-    }
-});
 function loadCustomerIDs(){
     $("#cmbCustomer").empty();
     for (let i = 0; i <customerDB.length ; i++) {
@@ -21,3 +7,11 @@ function loadCustomerIDs(){
         $("#cmbCustomer").append("<option >"+id +"</option>");
     }
 }
+$("#cmbCustomer").change(function () {
+    $(this).val($(this).val());
+    var customer = searchCustomer($(this).val());
+    $("#txtCustomerName").val(customer.name);
+    $("#txtCustomerAddress").val(customer.address);
+    $("#txtCustomerSalary").val(customer.salary);
+
+});

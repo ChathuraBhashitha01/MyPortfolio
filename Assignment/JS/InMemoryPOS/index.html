@@ -204,7 +204,7 @@
         <div class="container-fluid text-center">
             <div class="row justify-content-around">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-10 col-sm-12 col-12 mb-3 bg-body-tertiary rounded">
-                    <div class="card h-90">
+                    <div class="card h-100">
                         <div class="card-header bg-primary">
                             Customer
                         </div>
@@ -290,9 +290,9 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="order_qty" class="form-label">Order Quantity</label>
-                                    <input type="text" class="form-control" id="order_qty" placeholder="Order Quantity">
-                                    <button type="button" class="btn btn-success mt-4">Add Item</button>
+                                    <label for="txtOrderQty" class="form-label">Order Quantity</label>
+                                    <input type="text" class="form-control" id="txtOrderQty" placeholder="Order Quantity">
+                                    <button type="button" class="btn btn-success mt-4" id="btnAddItem">Add Item</button>
                                 </div>
                             </form>
                         </div>
@@ -305,30 +305,50 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <label  class="form-label" style="color: #0a58ca ">Total :</label>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span  style="color: #3d98ef;font-size: 13px;">Total : </span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span id="txtTotal" style="font-size: 30px;color: #3d98ef;">0</span> Rs/=
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span  style="color: #ef5350;font-size: 13px;">SubTotal : </span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span id="txtSubtotal" style="color: #ef5350;font-size: 30px;">0</span> Rs/=
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="row">
 
                                             <div class="mb-3">
-                                                <label for="cash" class="form-label">Cash</label>
-                                                <input type="text" class="form-control" id="cash" placeholder="Cash">
+                                                <label for="txtCash" class="form-label">Cash</label>
+                                                <input type="text" class="form-control" id="txtCash" placeholder="Cash">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="row">
                                             <div class="mb-3">
-                                                <label for="discount" class="form-label">Discount</label>
-                                                <input type="text" class="form-control" id="discount" placeholder="Discount">
+                                                <label for="txtDiscount" class="form-label">Discount</label>
+                                                <input type="text" class="form-control" id="txtDiscount" placeholder="Discount">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="balance" class="form-label">Balance</label>
-                                    <input type="text" class="form-control" id="balance" placeholder="Balance">
-                                    <button type="button" class="btn btn-success mt-4">Purchase</button>
+                                    <label for="txtBalance" class="form-label">Balance</label>
+                                    <input type="text" class="form-control" id="txtBalance" placeholder="Balance">
+                                    <button type="button" class="btn btn-success mt-4" id="btnPurchase">Purchase</button>
                                 </div>
                             </form>
                         </div>
@@ -346,7 +366,7 @@
                 <th scope="col" style="background: #0a58ca">Total</th>
             </tr>
             </thead>
-            <tbody class="table-group-divider">
+            <tbody class="table-group-divider" id="tblPlaceOrder">
 
             </tbody>
         </table>

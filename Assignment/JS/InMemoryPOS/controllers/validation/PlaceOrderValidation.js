@@ -1,4 +1,5 @@
 const ORDER_ID_REGEX = /^(OR00-)[0-9]{3}$/;
+const ITEM_ORDER_QTY_REGEX = /^[0-9]{1,}([.][0-9]{1})?$/;
 
 let placeOrderArray=new Array();
 placeOrderArray.push({field:$("#txtOrderId"), regEx:ORDER_ID_REGEX});
@@ -10,10 +11,11 @@ placeOrderArray.push({field:$("#cmbItemCode"), regEx:ITEM_CODE_REGEX});
 placeOrderArray.push({field:$("#txtGetItemName"), regEx:ITEM_NAME_REGEX});
 placeOrderArray.push({field:$("#txtGetItemPrice"), regEx:ITEM_PRICE_REGEX});
 placeOrderArray.push({field:$("#txtGetQtyOnHand"), regEx:ITEM_QTY_REGEX});
+placeOrderArray.push({field:$("#txtOrderQty"), regEx:ITEM_ORDER_QTY_REGEX});
 
 
 
-$("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand").on("keydown keyup", function (e) {
+$("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").on("keydown keyup", function (e) {
     let indexNo = placeOrderArray.indexOf(placeOrderArray.find((c) => c.field.attr("id") == e.target.id));
 
     if (e.key == "Tab") {

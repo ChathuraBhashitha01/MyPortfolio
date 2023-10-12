@@ -1,5 +1,5 @@
 getAllItems();
-loadCustomerIDs();
+loadItemCodes();
 $("#btnItemSave").click(function (){
     if (checkAll()) {
         saveItem();
@@ -18,7 +18,7 @@ $("#btnItemDelete").click(function (){
     if (searchItem(id) == undefined) {
         alert("No such Customer..please check the ID");
     } else {
-        let consent = confirm("Do you really want to Delete this customer.?");
+        let consent = confirm("Do you really want to Delete this item.?");
         if (consent) {
             for (let i = 0; i < itemDB.length; i++) {
                 if (itemDB[i].code == id) {
@@ -26,7 +26,7 @@ $("#btnItemDelete").click(function (){
                     return true;
                 }
             }
-            loadCustomerIDs();
+            loadItemCodes();
             getAllItems();
             clearAllField();
         }
@@ -39,7 +39,7 @@ $("#btnItemUpdate").click(function (){
     if (searchItem(id) == undefined) {
         alert("No such Customer..please check the ID");
     } else {
-        let consent = confirm("Do you really want to update this customer.?");
+        let consent = confirm("Do you really want to update this item.?");
         if (consent) {
             let item = searchCustomer(id);
 
@@ -47,11 +47,12 @@ $("#btnItemUpdate").click(function (){
             let price = $("#txtItemPrice").val();
             let qty = $("#txtItemQty").val();
 
-            item.name = name;
+            item.description = name;
             item.unitPrice = price;
             item.qtyOnHand = qty;
 
             getAllItems();
+            loadItemCodes();
             clearAllField();
         }
     }
@@ -62,9 +63,9 @@ $("#btnItemSearch").click(function (){
     for (let i = 0; i < itemDB.length; i++) {
         if (itemDB[i].code==code){
             $("#txtItemCode").val(itemDB[i].code)
-            $("#txtItemName").val(itemDB[i].name)
-            $("#cusAddress").val(itemDB[i].unitPrice)
-            $("#cusSalary").val(itemDB[i].qtyOnHand)
+            $("#txtItemName").val(itemDB[i].description)
+            $("#txtItemPrice").val(itemDB[i].unitPrice)
+            $("#txtItemQty").val(itemDB[i].qtyOnHand)
         }
     }
 });
@@ -79,13 +80,13 @@ function saveItem() {
 
         let newItem = Object.assign({}, item);
         newItem.code = code;
-        newItem.name = name;
+        newItem.description = name;
         newItem.unitPrice = price;
         newItem.qtyOnHand = qty;
 
         itemDB.push(newItem);
         clearCustomerInputField();
-        loadCustomerIDs();
+        loadItemCodes();
         getAllItems();
         clearAllField();
     }
@@ -106,14 +107,14 @@ function getAllItems(){
 
     for (let i = 0; i < itemDB.length; i++) {
         let code=itemDB[i].code;
-        let name=itemDB[i].name;
+        let name=itemDB[i].description;
         let price=itemDB[i].unitPrice;
         let qty=itemDB[i].qtyOnHand;
 
         let row=`<tr>
                     <td>${code}</td>
                     <td>${name}</td>
-                    <td>${price}</td
+                    <td>${price}</td>
                     <td>${qty}</td>
                 </tr>`;
         $("#tblItem").append(row);
@@ -133,11 +134,11 @@ function bindTrEvents() {
         $("#txtItemQty").val(qty)
     });
 }
-function loadCustomerIDs(){
+function loadItemCodes(){
     $("#cmbItemCode").empty();
     for (let i = 0; i <itemDB.length ; i++) {
         let code=itemDB[i].code;
-        $("#cmbCustomerID").append("<option >"+code +"</option>");
+        $("#cmbItemCode").append("<option >"+code +"</option>");
     }
 }
 function clearAllField(){

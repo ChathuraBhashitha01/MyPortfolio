@@ -84,7 +84,7 @@ function setBtn(){
         $("#btnItemSave").prop("disabled", true);
     }
 
-    let code = $("#cusId").val();
+    let code = $("#txtItemCode").val();
     if (searchItem(code) == undefined) {
         $("#btnItemUpdate").prop("disabled", true);
         $("#btnItemDelete").prop("disabled", true);

@@ -113,7 +113,7 @@ function getAllCustomer(){
         let row=`<tr>
                     <td>${customerId}</td>
                     <td>${customerName}</td>
-                    <td>${customerAddress}</td
+                    <td>${customerAddress}</td>
                     <td>${customerSalary}</td>
                 </tr>`;
         $("#tblCustomer").append(row);

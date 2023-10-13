@@ -10,4 +10,6 @@ var itemDB = [
     {code:"I00-003",description:"Light Boy",qtyOnHand: 400,unitPrice: 245.00}
 ];
 
-var orderDB = [];
+var orderDB = [
+
+];

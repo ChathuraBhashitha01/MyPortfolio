@@ -1,8 +1,11 @@
 loadCustomerIDs();
 loadItemsCodes();
+genarateOrderIDs();
 
 $("#btnPurchase").click(function (){
-    placeOrder();
+        placeOrder();
+    clearPlaceOrderInputField();
+    genarateOrderIDs();
 })
 
 function loadCustomerIDs(){
@@ -81,43 +84,54 @@ $("#btnAddItem").click(function () {
 
 function placeOrder(){
     let orderId=$("#txtOrderId").val();
-    let cusId=$("#cmbCustomer").val();
-    let date=$("#txtDate").val();
-    let itemName=$("#txtGetItemName").val();
-    let itemQtyOnHand=$("#txtGetQtyOnHand").val();
+    if(searchOrder(orderId.trim()) == undefined){
+        let cusId=$("#cmbCustomer").val();
+        let date=$("#txtDate").val();
+        let itemName=$("#txtGetItemName").val();
+        let itemQtyOnHand=$("#txtGetQtyOnHand").val();
 
-    let code=0;
-    let qty=0;
-    let price=0;
-    $('#tblPlaceOrder>tr').each(function () {
-         code = $(this).children().eq(0).text();
-         qty = $(this).children().eq(3).text();
-         price = $(this).children().eq(2).text();
+        let code=0;
+        let qty=0;
+        let price=0;
+        $('#tblPlaceOrder>tr').each(function () {
+             code = $(this).children().eq(0).text();
+             qty = $(this).children().eq(3).text();
+             price = $(this).children().eq(2).text();
 
-    });
+        });
 
-   let orderDetail= orderDetails={
-        oid: orderId,
-        code: code,
-        qty:  qty,
-        unitPrice:  price
-    };
+       let orderDetail= orderDetails={
+            oid: orderId,
+            code: code,
+            qty:  qty,
+            unitPrice:  price
+        };
 
-   let purchaseOrder= order={
-        oid:orderId,
-        date:date,
-        customerID:cusId,
-        orderDetails: orderDetail
+       let purchaseOrder= order={
+            oid:orderId,
+            date:date,
+            customerID:cusId,
+            orderDetails: orderDetail
+        }
+
+        let item = searchItem(code);
+        item.description=itemName;
+        item.unitPrice=price;
+        item.qtyOnHand=(itemQtyOnHand-qty);
+
+        orderDB.push(purchaseOrder);
+        console.log(orderDB);
     }
-
-    let item = searchItem(code);
-    item.description=itemName;
-    item.unitPrice=price;
-    item.qtyOnHand=(itemQtyOnHand-qty);
-
-    orderDB.push(purchaseOrder);
-    console.log(orderDB);
+    else {
+        alert("Order id already exits.!");
+        clearCustomerInputField();
+    }
 };
+function searchOrder(id){
+    return orderDB.find(function (order){
+        return order.oid==id;
+    });
+}
 
 $("#txtCash").on("keydown keyup input", function () {
     setBalance();
@@ -149,5 +163,21 @@ function setBalance() {
 }
 
 function genarateOrderIDs(){
-
+    let idCounts=1;
+    if (orderDB.length==0){
+        $("#txtOrderId").val("OR00-001");
+    }
+    if (orderDB.length==1 && orderDB.length>10){
+        idCounts++;
+        $("#txtOrderId").val("OR00-00"+idCounts);
+    }
+    if (orderDB.length>=10 && orderDB.length>100){
+        idCounts++;
+        $("#txtOrderId").val("OR00-0"+idCounts);
+    }
+    if (orderDB.length>=100 && orderDB.length>100){
+        idCounts++;
+        $("#txtOrderId").val("OR00-"+idCounts);
+    }
 }
+

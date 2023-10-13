@@ -13,6 +13,12 @@ placeOrderArray.push({field:$("#txtGetItemPrice"), regEx:ITEM_PRICE_REGEX});
 placeOrderArray.push({field:$("#txtGetQtyOnHand"), regEx:ITEM_QTY_REGEX});
 placeOrderArray.push({field:$("#txtOrderQty"), regEx:ITEM_ORDER_QTY_REGEX});
 
+function clearPlaceOrderInputField(){
+    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").val("");
+    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").css('border','1px solid #ced4da');
+    $("#txtOrderId").focus();
+    setBtn();
+}
 
 
 $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").on("keydown keyup", function (e) {

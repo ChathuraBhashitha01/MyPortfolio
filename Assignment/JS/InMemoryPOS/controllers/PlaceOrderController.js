@@ -81,15 +81,18 @@ $("#btnAddItem").click(function () {
     $("#txtTotal").text(allTotal);
     $("#txtSubtotal").text(allTotal);
 });
+
 function placeOrder(){
     let orderId=$("#txtOrderId").val();
     let cusId=$("#cmbCustomer").val();
     let date=$("#txtDate").val();
+    let itemName=$("#txtGetItemName").val();
+    let itemQtyOnHand=$("#txtGetQtyOnHand").val();
 
     let code=0;
     let qty=0;
     let price=0;
-    $('#order-table>tr').each(function () {
+    $('#tblPlaceOrder>tr').each(function () {
          code = $(this).children().eq(0).text();
          qty = $(this).children().eq(3).text();
          price = $(this).children().eq(2).text();
@@ -110,6 +113,11 @@ function placeOrder(){
         orderDetails: orderDetail
     }
 
+    let item = searchItem(code);
+    item.description=itemName;
+    item.unitPrice=price;
+    item.qtyOnHand=(itemQtyOnHand-qty);
+
     orderDB.push(purchaseOrder);
     console.log(orderDB);
 };
@@ -125,6 +133,7 @@ $("#txtDiscount").on("keydown keyup input", function (e){
         let discountMoney = (total/100*discount);
         total -= discountMoney;
         $("#txtSubtotal").text(total);
+        $("#txtBalance").val(total-discount);
     }
 
 });
@@ -136,8 +145,12 @@ function setBalance() {
     let cash = parseFloat(cashText);
     if (!isNaN(newSubtotal) && !isNaN(cash)) {
         let balance = cash - newSubtotal;
-        $("#txtBalance").val(balance.toFixed(2));
+        $("#txtBalance").val(balance);
     } else {
         $("#txtBalance").val("0");
     }
+}
+
+function genarateOrderIDs(){
+
 }

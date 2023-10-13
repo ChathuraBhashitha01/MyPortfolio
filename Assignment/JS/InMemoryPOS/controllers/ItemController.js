@@ -41,7 +41,7 @@ $("#btnItemUpdate").click(function (){
     } else {
         let consent = confirm("Do you really want to update this item.?");
         if (consent) {
-            let item = searchCustomer(id);
+            let item = searchItem(id);
 
             let name = $("#txtItemName").val();
             let price = $("#txtItemPrice").val();

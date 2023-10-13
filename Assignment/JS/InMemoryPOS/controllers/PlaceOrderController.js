@@ -1,7 +1,7 @@
 loadCustomerIDs();
 loadItemsCodes();
 genarateOrderIDs();
-removeTableItems();
+
 setCurrentDate();
 
 $("#navPlaceOrder").click(function (){
@@ -58,31 +58,28 @@ $("#btnAddItem").click(function () {
     let qty = $("#txtOrderQty").val();
     let total = parseFloat(price) * parseFloat(qty);
     let allTotal = 0;
-    let existsItems = false;
 
-    $('#tblPlaceOrder>tr').each(function (e) {
-        let check =$(this).children().eq(0).text();
-        if (id == check){
+    let alreadyAddedId=$('#tblPlaceOrder>tr').children().eq(0).text();
+    if (id==alreadyAddedId){
+        $('#tblPlaceOrder>tr').each(function () {
+            $(this).children().eq(0).text(id);
             $(this).children().eq(1).text(name);
             $(this).children().eq(2).text(price);
             $(this).children().eq(3).text(qty);
             $(this).children().eq(4).text(qty * price);
-            existsItems = true;
-        }
-    });
-
-    if (!existsItems){
+        });
+    }else {
         let row = `<tr>
-                     <td>${id}</td>
-                     <td>${name}</td>
-                     <td>${price}</td>
-                     <td>${qty}</td>
-                     <td>${total}</td>
-                    </tr>`;
+                 <td>${id}</td>
+                 <td>${name}</td>
+                 <td>${price}</td>
+                 <td>${qty}</td>
+                 <td>${total}</td>
+                </tr>`;
 
         $("#tblPlaceOrder").append(row);
     }
-    $('#tblPlaceOrder>tr').each(function (e) {
+    $('#tblPlaceOrder>tr').each(function () {
         let total = $(this).children().eq(4).text();
         allTotal += parseFloat(total);
     });
@@ -190,11 +187,11 @@ function genarateOrderIDs(){
         }
     }
 }
-function removeTableItems(){
-    $('#tblPlaceOrder>tr').on("dblclick",function (){
-        $('#tblPlaceOrder>tr').remove();
-    });
-}
+
+$('#tblPlaceOrder>tr').click(function () {
+    $('#tblPlaceOrder>tr').remove();
+});
+
 function setCurrentDate(){
     let currentdate = new Date();
     let date =currentdate.getDay() + "/" + currentdate.getMonth()

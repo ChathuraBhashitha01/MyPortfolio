@@ -52,16 +52,16 @@ function checkCustomerValidation(object) {
     return false;
 }
 function setCustomerBorder(bol,object){
-    if(bol){
+    if(!bol){
         if (object.field.val().length >= 1) {
-            object.field.css("border", "2px solid green");
+            object.field.css("border", "2px solid red");
         } else {
             object.field.css("border", "1px solid #ced4da");
         }
     }
     else {
         if (object.field.val().length >= 1) {
-            object.field.css("border", "2px solid red");
+            object.field.css("border", "2px solid green");
         } else {
             object.field.css("border", "1px solid #ced4da");
         }

@@ -25,7 +25,6 @@ $("#cmbCustomer").change(function () {
 
 function loadItemsCodes(){
     $("#cmdItems").empty();
-    //$("#cmdItems").append("<option >"+" "+"</option>");
     for (let i = 0; i <itemDB.length ; i++) {
         let id=itemDB[i].code;
         $("#cmdItems").append("<option >"+id +"</option>");
@@ -52,13 +51,11 @@ $("#btnAddItem").click(function () {
 
     $('#tblPlaceOrder>tr').each(function (e) {
         let check =$(this).children().eq(0).text();
-        if (id === check){
-            let liQty = $(this).children().eq(3).text();
-            let upQty = parseInt(liQty)+parseInt(qty);
+        if (id == check){
             $(this).children().eq(1).text(name);
             $(this).children().eq(2).text(price);
-            $(this).children().eq(3).text(upQty);
-            $(this).children().eq(4).text(upQty * parseFloat(price));
+            $(this).children().eq(3).text(qty);
+            $(this).children().eq(4).text(qty * price);
             existsItems = true;
         }
     });

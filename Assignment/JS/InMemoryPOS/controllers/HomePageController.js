@@ -29,4 +29,16 @@ $("#navPlaceOrder").click(function (){
     setView($("#placeOrderPage"))
 });
 
+$("#imgCustomer").click(function (){
+    setView($("#customerPage"))
+});
+
+$("#imgItem").click(function (){
+    setView($("#itemPage"))
+});
+
+$("#imgPlaceOrder").click(function (){
+    setView($("#placeOrderPage"))
+});
+
 

@@ -3,7 +3,7 @@ loadItemsCodes();
 genarateOrderIDs();
 
 $("#btnPurchase").click(function (){
-        placeOrder();
+    placeOrder();
     clearPlaceOrderInputField();
     genarateOrderIDs();
 })
@@ -119,8 +119,9 @@ function placeOrder(){
         item.unitPrice=price;
         item.qtyOnHand=(itemQtyOnHand-qty);
 
-        orderDB.push(purchaseOrder);
+        let isSaved=orderDB.push(purchaseOrder);
         console.log(orderDB);
+        console.log(isSaved);
     }
     else {
         alert("Order id already exits.!");

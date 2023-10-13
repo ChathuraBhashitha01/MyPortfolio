@@ -14,8 +14,16 @@ placeOrderArray.push({field:$("#txtGetQtyOnHand"), regEx:ITEM_QTY_REGEX});
 placeOrderArray.push({field:$("#txtOrderQty"), regEx:ITEM_ORDER_QTY_REGEX});
 
 function clearPlaceOrderInputField(){
-    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").val("");
-    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").css('border','1px solid #ced4da');
+    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty,#txtDate,#txtCash,#txtDiscount,#txtBalance").val("");
+    $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty,#txtDate,#txtCash,#txtDiscount,#txtBalance").css('border','1px solid #ced4da');
+    $("#txtTotal,#txtSubtotal").text("");
+    $('#tblPlaceOrder>tr').each(function (e) {
+        $(this).children().eq(0).text("");
+        $(this).children().eq(1).text("");
+        $(this).children().eq(2).text("");
+        $(this).children().eq(3).text("");
+        $(this).children().eq(4).text("");
+    });
     $("#txtOrderId").focus();
     setBtn();
 }

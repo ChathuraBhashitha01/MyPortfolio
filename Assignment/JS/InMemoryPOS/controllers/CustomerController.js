@@ -1,7 +1,7 @@
 getAllCustomer();
 loadCustomerIDs();
 $("#btnSaveCustomer").click(function (){
-    if (checkAll()) {
+    if (checkCustomerAll()) {
         saveCustomer();
     }
     else {
@@ -67,6 +67,7 @@ $("#btnCustomerSearch").click(function (){
             $("#cusSalary").val(customerDB[i].salary)
         }
     }
+    setBtn();
 });
 
 function saveCustomer() {

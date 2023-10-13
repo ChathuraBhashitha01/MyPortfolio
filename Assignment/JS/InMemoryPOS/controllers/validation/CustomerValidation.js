@@ -14,10 +14,10 @@ function clearCustomerInputField(){
     $("#cusId,#cusName,#cusAddress,#cusSalary").val("");
     $("#cusId,#cusName,#cusAddress,#cusSalary").css('border','1px solid #ced4da');
     $("#cusId").focus();
-    setBtn();
+    setCustomerBtn();
 }
 
-setBtn();
+setCustomerBtn();
 
 $("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e) {
     let indexNo = customerArray.indexOf(customerArray.find((c) => c.field.attr("id") == e.target.id));
@@ -26,32 +26,32 @@ $("#cusId,#cusName,#cusAddress,#cusSalary").on("keydown keyup", function (e) {
         e.preventDefault();
     }
 
-    checkValidation(customerArray[indexNo]);
+    checkCustomerValidation(customerArray[indexNo]);
 
-    setBtn();
+    setCustomerBtn();
 
     if (e.key == "Enter") {
 
         if (e.target.id != customerArray[customerArray.length - 1].field.attr("id")) {
-            if (checkValidation(customerArray[indexNo])) {
+            if (checkCustomerValidation(customerArray[indexNo])) {
                 customerArray[indexNo + 1].field.focus();
             }
         } else {
-            if (checkValidation(customerArray[indexNo])) {
+            if (checkCustomerValidation(customerArray[indexNo])) {
                 saveCustomer();
             }
         }
     }
 });
-function checkValidation(object) {
+function checkCustomerValidation(object) {
     if (object.regEx.test(object.field.val())) {
-        setBorder(true, object);
+        setCustomerBorder(true, object);
         return true;
     }
     setBorder(false, object)
     return false;
 }
-function setBorder(bol,object){
+function setCustomerBorder(bol,object){
     if(bol){
         if (object.field.val().length >= 1) {
             object.field.css("border", "2px solid green");
@@ -67,17 +67,17 @@ function setBorder(bol,object){
         }
     }
 }
-function checkAll(){
+function checkCustomerAll(){
     for (let i = 0; i < customerArray.length; i++) {
-        if(!checkValidation(customerArray[i])) return  false;
+        if(!checkCustomerValidation(customerArray[i])) return  false;
     }
     return true
 }
-function setBtn(){
+function setCustomerBtn(){
     $("#btnCustomerUpdate").prop("disabled", true);
     $("#btnCustomerDelete").prop("disabled", true);
 
-    if (checkAll()){
+    if (checkCustomerAll()){
         $("#btnSaveCustomer").prop("disabled", false);
     }
     else {

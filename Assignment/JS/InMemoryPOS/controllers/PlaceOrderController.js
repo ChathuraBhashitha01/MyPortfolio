@@ -4,6 +4,11 @@ genarateOrderIDs();
 removeTableItems();
 setCurrentDate();
 
+$("#navPlaceOrder").click(function (){
+    loadCustomerIDs();
+    loadItemsCodes();
+});
+
 $("#btnPurchase").click(function (){
     placeOrder();
     clearPlaceOrderInputField();
@@ -142,13 +147,15 @@ $("#txtCash").on("keydown keyup input", function () {
 });
 
 $("#txtDiscount").on("keydown keyup input", function (e){
-    let total = parseFloat($("#txtTotal").text());
+    let total = $("#txtTotal").text();
+    let cash=$("#txtCash").text();
     if(total>0){
         let discount = $(this).val();
         let discountMoney = (total/100*discount);
         total -= discountMoney;
+        let balance=cash-total;
         $("#txtSubtotal").text(total);
-        $("#txtBalance").val(total-discount);
+        setBalance();
     }
 
 });
@@ -156,32 +163,31 @@ $("#txtDiscount").on("keydown keyup input", function (e){
 function setBalance() {
     let subtotal= $("#txtSubtotal").text();
     let cashText = $("#txtCash").val();
-    let newSubtotal = parseFloat(subtotal);
-    let cash = parseFloat(cashText);
-    if (!isNaN(newSubtotal) && !isNaN(cash)) {
-        let balance = cash - newSubtotal;
+    if (!isNaN(cashText)) {
+        let balance = cashText - subtotal;
         $("#txtBalance").val(balance);
     } else {
         $("#txtBalance").val("0");
     }
 }
 
+let idCounts=1;
 function genarateOrderIDs(){
-    let idCounts=1;
     if (orderDB.length==0){
         $("#txtOrderId").val("OR00-001");
-    }
-    if (orderDB.length>0 ){
-        idCounts++;
-        $("#txtOrderId").val("OR00-00"+idCounts);
-    }
-    if (orderDB.length>=10){
-        idCounts++;
-        $("#txtOrderId").val("OR00-0"+idCounts);
-    }
-    if (orderDB.length>=100){
-        idCounts++;
-        $("#txtOrderId").val("OR00-"+idCounts);
+    }else {
+        if (orderDB.length > 0) {
+            idCounts++;
+            $("#txtOrderId").val("OR00-00" + idCounts);
+        }
+        if (orderDB.length >= 10) {
+            idCounts++;
+            $("#txtOrderId").val("OR00-0" + idCounts);
+        }
+        if (orderDB.length >= 100) {
+            idCounts++;
+            $("#txtOrderId").val("OR00-" + idCounts);
+        }
     }
 }
 function removeTableItems(){

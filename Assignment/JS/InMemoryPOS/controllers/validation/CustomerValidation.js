@@ -48,7 +48,7 @@ function checkCustomerValidation(object) {
         setCustomerBorder(true, object);
         return true;
     }
-    setBorder(false, object)
+    setCustomerBorder(false, object)
     return false;
 }
 function setCustomerBorder(bol,object){

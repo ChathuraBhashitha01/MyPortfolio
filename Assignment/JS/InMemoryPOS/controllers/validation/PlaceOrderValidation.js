@@ -18,11 +18,7 @@ function clearPlaceOrderInputField(){
     $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty,#txtDate,#txtCash,#txtDiscount,#txtBalance").css('border','1px solid #ced4da');
     $("#txtTotal,#txtSubtotal").text("");
     $('#tblPlaceOrder>tr').each(function (e) {
-        $(this).children().eq(0).text("");
-        $(this).children().eq(1).text("");
-        $(this).children().eq(2).text("");
-        $(this).children().eq(3).text("");
-        $(this).children().eq(4).text("");
+        $('#tblPlaceOrder>tr').remove();
     });
     $("#txtOrderId").focus();
     setBtn();

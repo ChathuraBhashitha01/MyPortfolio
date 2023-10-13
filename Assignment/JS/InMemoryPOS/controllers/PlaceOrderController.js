@@ -2,11 +2,13 @@ loadCustomerIDs();
 loadItemsCodes();
 genarateOrderIDs();
 removeTableItems();
+setCurrentDate();
 
 $("#btnPurchase").click(function (){
     placeOrder();
     clearPlaceOrderInputField();
     genarateOrderIDs();
+    setCurrentDate();
 })
 
 function loadCustomerIDs(){
@@ -169,28 +171,28 @@ function genarateOrderIDs(){
     if (orderDB.length==0){
         $("#txtOrderId").val("OR00-001");
     }
-    if (orderDB.length>1 && orderDB.length>10){
+    if (orderDB.length>0 ){
         idCounts++;
         $("#txtOrderId").val("OR00-00"+idCounts);
     }
-    if (orderDB.length>=10 && orderDB.length>100){
+    if (orderDB.length>=10){
         idCounts++;
         $("#txtOrderId").val("OR00-0"+idCounts);
     }
-    if (orderDB.length>=100 && orderDB.length>100){
+    if (orderDB.length>=100){
         idCounts++;
         $("#txtOrderId").val("OR00-"+idCounts);
     }
 }
 function removeTableItems(){
     $('#tblPlaceOrder>tr').click(function (){
-        $(this).children().eq(0).text("");
-        $(this).children().eq(1).text("");
-        $(this).children().eq(2).text("");
-        $(this).children().eq(3).text("");
-        $(this).children().eq(4).text("");
-
-       alert("done")
+        $('#tblPlaceOrder>tr').remove();
     });
+}
+function setCurrentDate(){
+    let currentdate = new Date();
+    let date =currentdate.getDay() + "/" + currentdate.getMonth()
+        + "/" + currentdate.getFullYear();
+    $("#txtDate").val(date);
 }
 

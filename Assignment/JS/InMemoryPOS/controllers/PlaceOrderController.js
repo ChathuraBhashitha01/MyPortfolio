@@ -3,8 +3,6 @@ loadItemsCodes();
 
 $("#btnPurchase").click(function (){
     placeOrder();
-    loadItemsCodes();
-    loadCustomerIDs();
 })
 
 function loadCustomerIDs(){
@@ -87,36 +85,33 @@ function placeOrder(){
     let orderId=$("#txtOrderId").val();
     let cusId=$("#cmbCustomer").val();
     let date=$("#txtDate").val();
-    // let code=$("#cmdItems").val();
-    // let qty=$("#txtOrderQty").val();
-    // let price=$("#txtGetItemPrice").val();
 
-    let order = {
-        oid: "",
-        date: "",
-        customerID: "",
-        orderDetails: []
-    };
-
+    let code=0;
+    let qty=0;
+    let price=0;
     $('#order-table>tr').each(function () {
-        let code = $(this).children().eq(0).text();
-        let qty = $(this).children().eq(3).text();
-        let price = $(this).children().eq(2).text();
-        let orderDetails = {
-            oid: orderId,
-            code: code,
-            qty: parseInt(qty),
-            unitPrice: parseFloat(price)
-        };
+         code = $(this).children().eq(0).text();
+         qty = $(this).children().eq(3).text();
+         price = $(this).children().eq(2).text();
 
-        order.orderDetails.push(orderDetails);
-        orderDB.push(orderDetails);
     });
 
-    order.oid = OId;
-    order.date = date;
-    order.customerID = cusId;
-    orderDB.push(order);
+   let orderDetail= orderDetails={
+        oid: orderId,
+        code: code,
+        qty:  qty,
+        unitPrice:  price
+    };
+
+   let purchaseOrder= order={
+        oid:orderId,
+        date:date,
+        customerID:cusId,
+        orderDetails: orderDetail
+    }
+
+    orderDB.push(purchaseOrder);
+    console.log(orderDB);
 };
 
 $("#txtCash").on("keydown keyup input", function () {

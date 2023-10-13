@@ -191,7 +191,7 @@ function genarateOrderIDs(){
     }
 }
 function removeTableItems(){
-    $('#tblPlaceOrder>tr').click(function (){
+    $('#tblPlaceOrder>tr').on("dblclick",function (){
         $('#tblPlaceOrder>tr').remove();
     });
 }
@@ -201,4 +201,3 @@ function setCurrentDate(){
         + "/" + currentdate.getFullYear();
     $("#txtDate").val(date);
 }
-

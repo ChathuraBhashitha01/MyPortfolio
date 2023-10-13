@@ -118,10 +118,10 @@ function getAllCustomer(){
                     <td>${customerSalary}</td>
                 </tr>`;
         $("#tblCustomer").append(row);
-        bindTrEvents();
+        bindCusTrEvents();
     }
 }
-function bindTrEvents() {
+function bindCusTrEvents() {
     $("#tblCustomer>tr").click(function (){
         let id=$(this).children().eq(0).text();
         let name=$(this).children().eq(1).text();

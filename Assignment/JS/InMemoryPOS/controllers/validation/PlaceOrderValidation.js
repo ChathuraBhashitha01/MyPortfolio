@@ -1,5 +1,5 @@
 const ORDER_ID_REGEX = /^(OR00-)[0-9]{3}$/;
-const ITEM_ORDER_QTY_REGEX = /^[0-9]{1,}([.][0-9]{1})?$/;
+const ITEM_ORDER_QTY_REGEX = /^[1-9]{1,}([.][0-9]{1})?$/;
 const CASH_PRICE_REGEX = /^[0-9]{2,}([.][0-9]{})?$/;
 const DISCOUNT_PRICE_REGEX = /^[0-9]{2,}([.][0-9]{})?$/;
 const BALANCE_PRICE_REGEX = /^[0-9]{2,}([.][0-9]{})?$/;
@@ -27,7 +27,6 @@ function clearPlaceOrderInputField(){
         $('#tblPlaceOrder>tr').remove();
     });
     $("#txtOrderId").focus();
-    setBtn();
 }
 
 $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty,#txtCash,#txtDiscount,#txtBalance").on("keydown keyup input", function (e) {
@@ -37,18 +36,30 @@ $("#txtOrderId,#cmbCustomer,#txtCustomerName,#txtCustomerAddress,#txtCustomerSal
         e.preventDefault();
     }
 
-    checkValidation(placeOrderArray[indexNo]);
+    checkOrderValidation(placeOrderArray[indexNo]);
+    //setPurchaseBtn();
 
 });
-function checkValidation(object) {
+$("#cmbItemCode,#txtGetItemName,#txtGetItemPrice,#txtGetQtyOnHand,#txtOrderQty").on("keydown keyup", function (e) {
+    let indexNo = placeOrderArray.indexOf(placeOrderArray.find((c) => c.field.attr("id") == e.target.id));
+
+    if (e.key == "Tab") {
+        e.preventDefault();
+    }
+
+    checkOrderValidation(placeOrderArray[indexNo]);
+    //setAddItemBtn()
+
+});
+function checkOrderValidation(object) {
     if (object.regEx.test(object.field.val())) {
-        setBorder(true, object);
+        setOrderFieldBorder(true, object);
         return true;
     }
     setBorder(false, object)
     return false;
 }
-function setBorder(bol,object){
+function setOrderFieldBorder(bol,object){
     if(bol){
         if (object.field.val().length >= 1) {
             object.field.css("border", "2px solid green");
@@ -64,4 +75,30 @@ function setBorder(bol,object){
         }
     }
 }
+function checksAllOrders(){
+    for (let i = 0; i < customerArray.length; i++) {
+        if(!checkOrderValidation(customerArray[i])) return  false;
+    }
+    return true
+}
+// function setPurchaseBtn(){
+//
+//     if (checksAllOrders()){
+//         $("#btnPurchase").prop("disabled", false);
+//     }
+//     else {
+//         $("#btnPurchase").prop("disabled", true);
+//     }
+//
+// }
+// function setAddItemBtn(){
+//
+//     if (checksAllOrders()){
+//         $("#btnAddItem").prop("disabled", false);
+//     }
+//     else {
+//         $("#btnAddItem").prop("disabled", true);
+//     }
+//
+// }
 

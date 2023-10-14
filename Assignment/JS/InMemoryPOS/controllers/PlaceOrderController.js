@@ -100,6 +100,7 @@ $("#btnAddItem").click(function () {
     });
     $("#txtTotal").text(allTotal);
     $("#txtSubtotal").text(allTotal);
+    $("#txtOrderQty").val(0);
 });
 
 function placeOrder(){

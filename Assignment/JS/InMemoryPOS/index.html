@@ -6,6 +6,28 @@
   <meta name="viewport" content="width=device-width initial-scale=1" >
   <link rel="stylesheet" href="../../../assets/css/8.0.1_normalize.css">
   <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
+    <style>
+        body{
+            position: relative;
+        }
+        #frmOrderDetails{
+            width: 900px;
+            height: 550px;
+            background: white;
+            border: 3px solid #0a58ca;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        #frmOrderDetails>button{
+            margin-left: 825px;
+            margin-top: 15px;
+        }
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -371,6 +393,44 @@
 
             </tbody>
         </table>
+        <section id="frmOrderDetails">
+            <button type="button" class="btn btn-danger" id="btnOrderDetailBack">Back</button>
+            <div class="row justify-content-around ">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 shadow-lg p-3 mb-3 bg-body-tertiary rounded">
+                    <div class="col<div class="mb-3>
+                        <label for="cmbOrderID" class="form-label">Order ID</label>
+                        <select class="form-select" aria-label="Default select example" id="cmbOrderID"> </select>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 shadow-lg p-3 mb-3 bg-body-tertiary rounded">
+                    <div class="col<div class="mb-3>
+                        <label for="txtOrderDate" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="txtOrderDate" placeholder="Customer Name">
+                    </div>
+
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 shadow-lg p-3 mb-3 bg-body-tertiary rounded">
+                    <div class="col<div class="mb-3>
+                        <label for="txtCustomer" class="form-label">Customer Address</label>
+                        <input type="text" class="form-control" id="txtCustomer" placeholder="Customer Address">
+                    </div>
+
+                </div>
+            </div>
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th scope="col" style="background: #0a58ca">Order ID</th>
+                    <th scope="col" style="background: #0a58ca">Item Code</th>
+                    <th scope="col" style="background: #0a58ca">Quantity</th>
+                    <th scope="col" style="background: #0a58ca">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider" id="tblOrderDetails">
+
+                </tbody>
+            </table>
+        </section>
     </section>
 
 <script src="assest/js/jquery-3.6.1.min.js"></script>

@@ -12,6 +12,16 @@ $("#navPlaceOrder").click(function (){
     $("#navItem").css( "font-weight","normal")
     $("#navHome").css( "font-weight","normal")
     $("#btnOrderDetails").css('display','block');
+    $("#frmOrderDetails").css('display','none');
+});
+
+$("#btnOrderDetails").click(function (){
+    $("#frmOrderDetails").css('display','block');
+    loadOrderIDs();
+});
+
+$("#btnOrderDetailBack").click(function (){
+    $("#frmOrderDetails").css('display','none');
 });
 
 $("#btnPurchase").click(function (){
@@ -203,3 +213,35 @@ function setCurrentDate(){
         + "/" + currentdate.getFullYear();
     $("#txtDate").val(date);
 }
+
+function loadOrderIDs(){
+    $("#cmbOrderID").empty();
+    for (let i = 0; i <orderDB.length ; i++) {
+        let id=orderDB[i].oid;
+        $("#cmbOrderID").append("<option >"+id +"</option>");
+    }
+}
+$("#cmbOrderID").change(function () {
+    let orderID=$("#cmbOrderID").val();
+    $("#tblOrderDetails>tr").remove();
+    for (let i = 0; i < orderDB.length; i++) {
+        if (orderDB[i].oid==orderID){
+            let date=orderDB[i].date;
+            let id=orderDB[i].customerID;
+            let code=orderDB[i].orderDetails.code;
+            let qty=orderDB[i].orderDetails.qty;
+            let price=orderDB[i].orderDetails.unitPrice;
+
+            $("#txtOrderDate").val(date);
+            $("#txtCustomer").val(id);
+
+            let row=`<tr>
+                    <td>${orderID}</td>
+                    <td>${code}</td>
+                    <td>${qty}</td>
+                    <td>${price}</td>
+                    </tr>`
+            $("#tblOrderDetails").append(row);
+        }
+    }
+});

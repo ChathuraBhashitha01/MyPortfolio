@@ -113,25 +113,27 @@ function placeOrder(){
         let code=0;
         let qty=0;
         let price=0;
+        let orderDetailArray=[];
+
         $('#tblPlaceOrder>tr').each(function () {
              code = $(this).children().eq(0).text();
              qty = $(this).children().eq(3).text();
              price = $(this).children().eq(2).text();
 
+            let orderDetail= orderDetails={
+                oid: orderId,
+                code: code,
+                qty:  qty,
+                unitPrice:  price
+            };
+            orderDetailArray.push(orderDetail)
         });
-
-       let orderDetail= orderDetails={
-            oid: orderId,
-            code: code,
-            qty:  qty,
-            unitPrice:  price
-        };
 
        let purchaseOrder= order={
             oid:orderId,
             date:date,
             customerID:cusId,
-            orderDetails: orderDetail
+            orderDetails: orderDetailArray
         }
 
         let item = searchItem(code);
@@ -225,23 +227,26 @@ $("#cmbOrderID").change(function () {
     let orderID=$("#cmbOrderID").val();
     $("#tblOrderDetails>tr").remove();
     for (let i = 0; i < orderDB.length; i++) {
-        if (orderDB[i].oid==orderID){
-            let date=orderDB[i].date;
-            let id=orderDB[i].customerID;
-            let code=orderDB[i].orderDetails.code;
-            let qty=orderDB[i].orderDetails.qty;
-            let price=orderDB[i].orderDetails.unitPrice;
+        if (orderDB[i].oid==orderID) {
+            let date = orderDB[i].date;
+            let id = orderDB[i].customerID;
 
             $("#txtOrderDate").val(date);
             $("#txtCustomer").val(id);
 
-            let row=`<tr>
+            for (let j = 0; j < orderDB[i].orderDetails.length; j++) {
+                let code = orderDB[i].orderDetails[j].code;
+                let qty = orderDB[i].orderDetails[j].qty;
+                let price = orderDB[i].orderDetails[j].unitPrice;
+
+                let row = `<tr>
                     <td>${orderID}</td>
                     <td>${code}</td>
                     <td>${qty}</td>
                     <td>${price}</td>
                     </tr>`
-            $("#tblOrderDetails").append(row);
+                $("#tblOrderDetails").append(row);
+            }
         }
     }
 });

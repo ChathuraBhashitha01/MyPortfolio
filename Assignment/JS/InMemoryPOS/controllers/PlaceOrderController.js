@@ -7,6 +7,11 @@ setCurrentDate();
 $("#navPlaceOrder").click(function (){
     loadCustomerIDs();
     loadItemsCodes();
+    $("#navPlaceOrder").css( "font-weight","bold")
+    $("#navCustomer").css( "font-weight","normal")
+    $("#navItem").css( "font-weight","normal")
+    $("#navHome").css( "font-weight","normal")
+    $("#btnOrderDetails").css('display','block');
 });
 
 $("#btnPurchase").click(function (){

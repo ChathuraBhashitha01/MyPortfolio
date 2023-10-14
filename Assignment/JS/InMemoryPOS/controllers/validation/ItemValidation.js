@@ -11,15 +11,15 @@ itemArray.push({field:$("#txtItemPrice"), regEx:ITEM_PRICE_REGEX});
 itemArray.push({field:$("#txtItemQty"), regEx:ITEM_QTY_REGEX});
 
 function clearItemInputField(){
-    $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemPrice").val("");
-    $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemPrice").css('border','1px solid #ced4da');
+    $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").val("");
+    $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").css('border','1px solid #ced4da');
     $("#txtItemCode").focus();
     setBtn();
 }
 
 setBtn();
 
-$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemPrice").on("keydown keyup", function (e) {
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on("keydown keyup", function (e) {
     let indexNo = itemArray.indexOf(itemArray.find((c) => c.field.attr("id") == e.target.id));
 
     if (e.key == "Tab") {

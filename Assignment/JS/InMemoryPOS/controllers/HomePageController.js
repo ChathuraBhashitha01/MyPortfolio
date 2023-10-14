@@ -1,5 +1,17 @@
 initiateUI();
 
+$("#btnOrderDetails").css('display','none');
+
+$("#navHome").css( "font-weight","bold");
+
+$("#navHome").click(function (){
+    $("#navCustomer").css( "font-weight","normal");
+    $("#navPlaceOrder").css( "font-weight","normal");
+    $("#navHome").css( "font-weight","bold");
+    $("#navItem").css( "font-weight","normal");
+    $("#btnOrderDetails").css('display','none');
+});
+
 function initiateUI(){
     clearAll();
     $("#homePage").css('display','block');

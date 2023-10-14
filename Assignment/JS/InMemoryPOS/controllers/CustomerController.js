@@ -1,5 +1,14 @@
 getAllCustomer();
 loadCustomerIDs();
+
+$("#navCustomer").click(function (){
+    $("#navCustomer").css( "font-weight","bold")
+    $("#navPlaceOrder").css( "font-weight","normal")
+    $("#navHome").css( "font-weight","normal")
+    $("#navItem").css( "font-weight","normal")
+    $("#btnOrderDetails").css('display','none');
+});
+
 $("#btnSaveCustomer").click(function (){
     if (checkCustomerAll()) {
         saveCustomer();
@@ -28,7 +37,7 @@ $("#btnCustomerDelete").click(function (){
             }
             loadCustomerIDs();
             getAllCustomer();
-            clearAllField();
+            clearCustomerInputField();
         }
     }
     return false;
@@ -52,7 +61,7 @@ $("#btnCustomerUpdate").click(function (){
             customer.salary = customerSalary;
 
             getAllCustomer();
-            clearAllField();
+            clearCustomerInputField();
         }
     }
 });
@@ -85,10 +94,9 @@ function saveCustomer() {
         newCustomer.salary = customerSalary;
 
         customerDB.push(newCustomer);
-        clearCustomerInputField();
         loadCustomerIDs();
         getAllCustomer();
-        clearAllField();
+        clearCustomerInputField();
     }
     else {
         alert("Customer already exits.!");
@@ -141,6 +149,6 @@ function loadCustomerIDs(){
         $("#cmbCustomerID").append("<option >"+id +"</option>");
     }
 }
-function clearAllField(){
-    clearCustomerInputField();
-}
+// function clearAllField(){
+//     clearCustomerInputField();
+// }

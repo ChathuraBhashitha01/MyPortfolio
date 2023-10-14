@@ -1,5 +1,14 @@
 getAllItems();
 loadItemCodes();
+
+$("#navItem").click(function (){
+    $("#navCustomer").css( "font-weight","normal")
+    $("#navPlaceOrder").css( "font-weight","normal")
+    $("#navHome").css( "font-weight","normal")
+    $("#navItem").css( "font-weight","bold")
+    $("#btnOrderDetails").css('display','none');
+});
+
 $("#btnItemSave").click(function (){
     if (checkAll()) {
         saveItem();
@@ -28,7 +37,7 @@ $("#btnItemDelete").click(function (){
             }
             loadItemCodes();
             getAllItems();
-            clearAllField();
+            clearItemInputField();
         }
     }
     return false;
@@ -53,7 +62,7 @@ $("#btnItemUpdate").click(function (){
 
             getAllItems();
             loadItemCodes();
-            clearAllField();
+            clearItemInputField();
         }
     }
 });
@@ -85,14 +94,13 @@ function saveItem() {
         newItem.qtyOnHand = qty;
 
         itemDB.push(newItem);
-        clearCustomerInputField();
         loadItemCodes();
         getAllItems();
-        clearAllField();
+        clearItemInputField();
     }
     else {
         alert("Item already exits.!");
-        clearCustomerInputField();
+        clearItemInputField();
     }
 }
 
@@ -141,6 +149,6 @@ function loadItemCodes(){
         $("#cmbItemCode").append("<option >"+code +"</option>");
     }
 }
-function clearAllField(){
-    clearCustomerInputField();
-}
+// function clearAllField(){
+//     clearItemInputField();
+// }

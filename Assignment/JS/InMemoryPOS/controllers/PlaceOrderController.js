@@ -73,17 +73,25 @@ $("#btnAddItem").click(function () {
     let qty = $("#txtOrderQty").val();
     let total = parseFloat(price) * parseFloat(qty);
     let allTotal = 0;
+    let exitItem=true;
 
-    let alreadyAddedId=$('#tblPlaceOrder>tr').children().eq(0).text();
-    if (id==alreadyAddedId){
-        $('#tblPlaceOrder>tr').each(function () {
+
+    $('#tblPlaceOrder>tr').each(function () {
+        let alreadyAddedId=$(this).children().eq(0).text();
+        if (id==alreadyAddedId) {
             $(this).children().eq(0).text(id);
             $(this).children().eq(1).text(name);
             $(this).children().eq(2).text(price);
             $(this).children().eq(3).text(qty);
             $(this).children().eq(4).text(qty * price);
-        });
-    }else {
+            exitItem=false;
+        }else {
+
+        }
+    });
+
+
+    if (exitItem) {
         let row = `<tr>
                  <td>${id}</td>
                  <td>${name}</td>
@@ -94,10 +102,12 @@ $("#btnAddItem").click(function () {
 
         $("#tblPlaceOrder").append(row);
     }
+
     $('#tblPlaceOrder>tr').each(function () {
         let total = $(this).children().eq(4).text();
         allTotal += parseFloat(total);
     });
+
     $("#txtTotal").text(allTotal);
     $("#txtSubtotal").text(allTotal);
     $("#txtOrderQty").val(0);

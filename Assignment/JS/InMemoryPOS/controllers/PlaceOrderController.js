@@ -221,10 +221,13 @@ $('#tblPlaceOrder>tr').click(function () {
 });
 
 function setCurrentDate(){
-    let currentdate = new Date();
-    let date =currentdate.getDay() + "/" + currentdate.getMonth()
-        + "/" + currentdate.getFullYear();
-    $("#txtDate").val(date);
+    // let currentdate = new Date();
+    // let date =currentdate.getDay() + "/" + currentdate.getMonth()
+    //     + "/" + currentdate.getFullYear();
+
+    var dateString = new Date(Date.now()).toLocaleString();
+    var todaysDate = dateString.slice(0,3).match(/[0-9]/i) ? dateString.split(' ')[0].split(',')[0] : dateString.split(' ')[1] + " " + dateString.split(' ')[2] + " " + dateString.split(' ')[3];
+    $("#txtDate").val(todaysDate);
 }
 
 function loadOrderIDs(){

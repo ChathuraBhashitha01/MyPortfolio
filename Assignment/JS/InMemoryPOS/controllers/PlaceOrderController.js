@@ -111,6 +111,7 @@ $("#btnAddItem").click(function () {
     $("#txtTotal").text(allTotal);
     $("#txtSubtotal").text(allTotal);
     $("#txtOrderQty").val(0);
+    removeEvent();
 });
 
 function placeOrder(){
@@ -216,9 +217,11 @@ function genarateOrderIDs(){
     }
 }
 
-$('#tblPlaceOrder>tr').click(function () {
-    $('#tblPlaceOrder>tr').remove();
-});
+function removeEvent() {
+    $('#tblPlaceOrder>tr').on('dblclick',function () {
+        $(this).remove();
+    });
+}
 
 function setCurrentDate(){
     // let currentdate = new Date();

@@ -40,7 +40,6 @@ function loadCustomerIDs(){
 }
 
 $("#cmbCustomer").change(function () {
-    $(this).val($(this).val());
     var customer = searchCustomer($(this).val());
     $("#txtCustomerName").val(customer.name);
     $("#txtCustomerAddress").val(customer.address);
@@ -58,7 +57,6 @@ function loadItemsCodes(){
 }
 
 $("#cmdItems").change(function () {
-    $(this).val($(this).val());
     var item = searchItem($(this).val());
     $("#txtGetItemName").val(item.description);
     $("#txtGetItemPrice").val(item.unitPrice);

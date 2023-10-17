@@ -64,6 +64,7 @@ $("#imgPlaceOrder").click(function (){
     $("#navHome").css( "font-weight","normal");
     $("#navItem").css( "font-weight","normal");
     $("#btnOrderDetails").css('display','block');
+    $("#frmOrderDetails").css('display','none');
 });
 
 

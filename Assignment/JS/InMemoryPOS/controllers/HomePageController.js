@@ -42,15 +42,28 @@ $("#navPlaceOrder").click(function (){
 });
 
 $("#imgCustomer").click(function (){
-    setView($("#customerPage"))
+    setView($("#customerPage"));
+    $("#navCustomer").css( "font-weight","bold");
+    $("#navPlaceOrder").css( "font-weight","normal");
+    $("#navHome").css( "font-weight","normal");
+    $("#navItem").css( "font-weight","normal");
 });
 
 $("#imgItem").click(function (){
     setView($("#itemPage"))
+    $("#navCustomer").css( "font-weight","normal");
+    $("#navPlaceOrder").css( "font-weight","normal");
+    $("#navHome").css( "font-weight","normal");
+    $("#navItem").css( "font-weight","bold");
 });
 
 $("#imgPlaceOrder").click(function (){
     setView($("#placeOrderPage"))
+    $("#navCustomer").css( "font-weight","normal");
+    $("#navPlaceOrder").css( "font-weight","bold");
+    $("#navHome").css( "font-weight","normal");
+    $("#navItem").css( "font-weight","normal");
+    $("#btnOrderDetails").css('display','block');
 });
 
 

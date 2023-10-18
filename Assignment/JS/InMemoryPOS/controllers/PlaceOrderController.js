@@ -39,7 +39,7 @@ function loadCustomerIDs(){
     }
 }
 
-$("#cmbCustomer").change(function () {
+$("#cmbCustomer").click(function () {
     var customer = searchCustomer($(this).val());
     $("#txtCustomerName").val(customer.name);
     $("#txtCustomerAddress").val(customer.address);
@@ -56,7 +56,7 @@ function loadItemsCodes(){
     }
 }
 
-$("#cmdItems").change(function () {
+$("#cmdItems").click(function () {
     var item = searchItem($(this).val());
     $("#txtGetItemName").val(item.description);
     $("#txtGetItemPrice").val(item.unitPrice);
@@ -238,7 +238,7 @@ function loadOrderIDs(){
         $("#cmbOrderID").append("<option >"+id +"</option>");
     }
 }
-$("#cmbOrderID").change(function () {
+$("#cmbOrderID").click(function () {
     let orderID=$("#cmbOrderID").val();
     $("#tblOrderDetails>tr").remove();
     for (let i = 0; i < orderDB.length; i++) {

@@ -23,47 +23,16 @@ $("#btnCustomerGetAll").click(function (){
 });
 
 $("#btnCustomerDelete").click(function (){
-    let id=$("#cusId").val();
-    if (searchCustomer(id) == undefined) {
-        alert("No such Customer..please check the ID");
-    } else {
-        let consent = confirm("Do you really want to Delete this customer.?");
-        if (consent) {
-            for (let i = 0; i < customerDB.length; i++) {
-                if (customerDB[i].id == id) {
-                    customerDB.splice(i, 1);
-                    return true;
-                }
-            }
-            loadCustomerIDs();
-            getAllCustomer();
-            clearCustomerInputField();
-        }
-    }
-    return false;
+    deleteCustomer();
+    loadCustomerIDs();
+    getAllCustomer();
+    clearCustomerInputField();
 });
 
 $("#btnCustomerUpdate").click(function (){
-    let id=$("#cusId").val();
-    if (searchCustomer(id) == undefined) {
-        alert("No such Customer..please check the ID");
-    } else {
-        let consent = confirm("Do you really want to update this customer.?");
-        if (consent) {
-            let customer = searchCustomer(id);
-
-            let customerName = $("#cusName").val();
-            let customerAddress = $("#cusAddress").val();
-            let customerSalary = $("#cusSalary").val();
-
-            customer.name = customerName;
-            customer.address = customerAddress;
-            customer.salary = customerSalary;
-
-            getAllCustomer();
-            clearCustomerInputField();
-        }
-    }
+    updateCustomer();
+    getAllCustomer();
+    clearCustomerInputField();
 });
 
 $("#btnCustomerSearch").click(function (){
@@ -149,6 +118,42 @@ function loadCustomerIDs(){
         $("#cmbCustomerID").append("<option >"+id +"</option>");
     }
 }
-// function clearAllField(){
-//     clearCustomerInputField();
-// }
+function deleteCustomer(){
+    let id=$("#cusId").val();
+    if (searchCustomer(id) == undefined) {
+        alert("No such Customer..please check the ID");
+    } else {
+        let consent = confirm("Do you really want to Delete this customer.?");
+        if (consent) {
+            for (let i = 0; i < customerDB.length; i++) {
+                if (customerDB[i].id == id) {
+                    customerDB.splice(i, 1);
+                    return true;
+                }
+            }
+
+        }
+    }
+    return false;
+}
+
+function updateCustomer(){
+    let id=$("#cusId").val();
+    if (searchCustomer(id) == undefined) {
+        alert("No such Customer..please check the ID");
+    } else {
+        let consent = confirm("Do you really want to update this customer.?");
+        if (consent) {
+            let customer = searchCustomer(id);
+
+            let customerName = $("#cusName").val();
+            let customerAddress = $("#cusAddress").val();
+            let customerSalary = $("#cusSalary").val();
+
+            customer.name = customerName;
+            customer.address = customerAddress;
+            customer.salary = customerSalary;
+
+        }
+    }
+}

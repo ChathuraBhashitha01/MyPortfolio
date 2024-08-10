@@ -24,6 +24,7 @@
 <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
 <!--    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Handjet:wght@100&family=Josefin+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="assets/font/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style >
         *{
@@ -433,7 +434,7 @@
             border: 2px solid black;
             position: relative;
             top: 5%;
-            left: 10%;
+            left: 15%;
         }
         body>main>section:nth-child(3)>div:nth-child(3) {
             border: 2px solid black;
@@ -445,15 +446,22 @@
             border: 2px solid black;
             position: relative;
             top: 42%;
-            right: 24%;
+            right: 2%;
 
         }
-        body>main>section:nth-child(3)>svg:nth-child(5){
+        body>main>section:nth-child(3)>div:nth-child(5){
+            border: 2px solid black;
+            position: relative;
+            top: 11%;
+            left: 15%;
+
+        }
+        body>main>section:nth-child(3)>svg:nth-child(6){
             position: absolute;
             right: 100px;
             top: 25px;
         }
-        body>main>section:nth-child(3)>svg:nth-child(6){
+        body>main>section:nth-child(3)>svg:nth-child(7){
             position: absolute;
             left: 60px;
             bottom: 60px;
@@ -464,104 +472,149 @@
             color: white;
             position: relative;
         }
-        body>main>section:nth-child(4)>h2{
+
+        main > section:nth-child(4) {
+            height: 110vh;
+            position: relative;
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+
+        main > section:nth-child(4) > h2 {
             font-size: 60px;
-            margin-left: 100px;
-            margin-top: 0;
+            margin: 0;
             position: relative;
             top: 20px;
         }
-        body>main>section:nth-child(4)>p{
-            font-size: 30px;
-            margin-left: 100px;
-            margin-top: -15px;
-        }
-        body>main>section:nth-child(4)>div{
-            display: inline-block;
-        }
-        body>main>section:nth-child(4)>div:nth-child(3){
-            width: 32%;
-            height: 62%;
-            border: 2px solid black;
-            background: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /*background: #881012 ;*/
-            position: absolute;
-            top: 21%;
-            left: 13%;
-            border-radius: 10%;
-            overflow: hidden;
-        }
-        body>main>section:nth-child(4)>div:nth-child(4){
-            width: 32%;
-            height: 62%;
-            border: 2px solid black;
-            background: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: absolute;
-            top: 21%;
-            right: 13%;
-            border-radius: 10%;
-            overflow: hidden;
 
+        main > section:nth-child(4) > p {
+            font-size: 30px;
+            margin-top: 5%;
         }
-        body>main>section:nth-child(4)>div:nth-child(3):hover div{
-            transition: 2s all;
-            top: 0;
+
+        main > section:nth-child(4) > div:nth-child(3) {
+            width: 80vw;
+            height: 62%;
+            display: inline-block;
+            position: relative;
+            overflow-x: scroll;
+            overflow-y:hidden;
+            white-space: nowrap;
+            padding: 0;
         }
-        body>main>section:nth-child(4)>div:nth-child(4):hover div{
-            transition: 2s all;
-            top: 0;
+        main > section:nth-child(4) > div:nth-child(3) > div {
+            width: 25vw;
+            height: 100%;
+            border: 2px solid black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out;
         }
-        body>main>section:nth-child(4)>div>div{
+
+        main > section:nth-child(4) > div:nth-child(3) > div:hover {
+            transform: scale(1.05);
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div {
             width: 100%;
             height: 100%;
             position: absolute;
-            left: 0;
-            right: 0;
             top: 90%;
-            bottom: 0;
-            margin: auto;
-            background: linear-gradient(0deg,#FD040A,transparent);;
-            transition: 2s all;
+            left: 0;
+            background: linear-gradient(0deg, #FD040A, transparent);
+            transition: top 0.3s ease-in-out;
         }
-        body>main>section:nth-child(4)>div>div>h4:nth-child(1){
-            font-size: 25px;
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(1) {
+            background-image: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(2) {
+            background-image: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(3) {
+            background-image: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(4) {
+            background-image: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(5) {
+            background-image: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+        }
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(6) {
+            background-image: url("assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png");
+        }
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(7) {
+            background-image: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+        }
+        main > section:nth-child(4) > div:nth-child(3) > div:nth-child(8) {
+            background-image: url("assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg");
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:hover {
+            transform: scale(1.05);
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 90%;
+            left: 0;
+            background: linear-gradient(0deg, #FD040A, transparent);
+            transition: top 0.3s ease-in-out;
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div:hover > div {
+            top: 0;
+        }
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div > h4 {
+            font-size: 20px;
             font-weight: bold;
-            display: inline-block;
             position: absolute;
             top: 25%;
-            left: 12%;
+            left: 0%;
         }
-        body>main>section:nth-child(4)>div>div>p:nth-child(2){
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div > p {
             font-size: 15px;
-            display: inline-block;
             position: absolute;
             top: 54%;
             left: 30%;
         }
-        body>main>section:nth-child(4)>div>div>a:nth-child(3){
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div > a {
             font-size: 25px;
             font-weight: bold;
-            display: inline-block;
             position: absolute;
             bottom: 10%;
-            left:  30%;
+            left: 30%;
+            color: #fff;
+            text-decoration: none;
         }
-        body>main>section:nth-child(4)>svg:nth-child(5){
+
+        main > section:nth-child(4) > div:nth-child(3) > div > div > a:hover {
+            text-decoration: underline;
+        }
+
+        main > section:nth-child(4) > svg:nth-of-type(1) {
             position: absolute;
             right: 100px;
             top: 25px;
         }
-        body>main>section:nth-child(4)>svg:nth-child(6){
+
+        main > section:nth-child(4) > svg:nth-of-type(2) {
             position: absolute;
             left: 60px;
             bottom: 60px;
         }
+
         body>main>section:nth-child(5){
             height: 130vh;
             background-color: #191A19;
@@ -5120,9 +5173,9 @@
                 <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
             </svg>
             <section>
-                <h3>Hello, My  Name is</h3>
-                <h2>Bhashitha<span style="#881012: red">Wickramasinghe</span></h2>
-                <h3>I'm Full Stack Developer from Srilanka</h3>
+                <h3 data-aos="fade-right">Hello, My  Name is</h3>
+                <h2 data-aos="fade-right">Bhashitha<span style="#881012: red">Wickramasinghe</span></h2>
+                <h3 data-aos="fade-right">I'm Full Stack Developer from Srilanka</h3>
 
                 <div>
                     <img usemap="#github" width="55" src="assets/img/github.png">
@@ -5156,7 +5209,7 @@
                     </map>
                 </div>
             </section>
-            <aside><img src="assets/img/ch2 (4).png" width="844 " height="781"></aside>
+            <aside data-aos="fade-left"><img src="assets/img/ch2 (4).png" width="844 " height="781"></aside>
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
                 <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
@@ -5168,9 +5221,9 @@
                 <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
             </svg>
             <section>
-                <h4>Read More</h4>
-                <h3>About Me</h3>
-                <div>
+                <h4 data-aos="fade-right">Read More</h4>
+                <h3 data-aos="fade-right">About Me</h3>
+                <div data-aos="fade-right">
                     <svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0.671875C3.85787 0.671875 0.500004 4.02974 0.500004 8.17188C0.500004 12.314 3.85787 15.6719 8 15.6719V0.671875ZM108 0.671875L8 0.671875V15.6719L108 15.6719V0.671875Z" fill="#881012"/>
                         <path d="M92.7568 100.895C92.7568 105.037 96.1147 108.395 100.257 108.395C104.399 108.395 107.757 105.037 107.757 100.895H92.7568ZM92.7568 0.894531L92.7568 100.895H107.757L107.757 0.894531L92.7568 0.894531Z" fill="#881012"/>
@@ -5188,26 +5241,26 @@
                         <path d="M15.2432 8C15.2432 3.85787 11.8853 0.500004 7.74316 0.500004C3.60103 0.500004 0.243164 3.85787 0.243164 8H15.2432ZM15.2432 108L15.2432 8H0.243164L0.243164 108H15.2432Z" fill="#881012"/>
                     </svg>
                 </div>
-                <ul>
+                <ul data-aos="fade-right">
                     <li>Date of Birth :<time datetime="2001-06-13">13/06/2001</time></li>
                     <li>City : Galle</li>
                     <li>Country : Sri Lanka</li>
                     <li>Work : Software Developer</li>
                 </ul>
-                <p>I’m Bhashitha <span style="#881012: red">Wickramasinghe</span> & I’m 22 <br>Years Old. I’m a Full Stack Developer from <br>Southern Province, Srilanka</p>
-                <p>
+                <p data-aos="fade-left">I’m Bhashitha <span style="#881012: red">Wickramasinghe</span> & I’m 22 <br>Years Old. I’m a Full Stack Developer from <br>Southern Province, Srilanka</p>
+                <p data-aos="fade-left">
                     I am a Full Stack Developer.A full stack developer is a software <br>engineer who is proficient in both front-end and back-end
                     <br> development.I can provide clean code and work in Databases. <br>We have the skills and knowledge to work on all layers of a web<br> application, from the user interface to the server-side logic <br>and database interactions.
 
                 </p>
-                <p>
+                <p data-aos="fade-left">
                     Being a full stack developer allows you to work on different parts of <br>a project, from user interface to server infrastructure. I will use my
                     <br>best knowledge to carry out the work given to me in an efficient<br> manner
                 </p>
-                <button  type="submit" formaction="send message"><a  href="" download="Download CV.pdf">Download CV</a></button>
+                <button data-aos="fade-left"  type="submit" formaction="send message"><a  href="" download="Download CV.pdf">Download CV</a></button>
             </section>
-            <h3>Education</h3>
-            <section>
+            <h3 data-aos="fade-right">Education</h3>
+            <section data-aos="fade-right">
                 <div>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
@@ -5246,46 +5299,52 @@
                 </div>
 
             </section>
-            <h3>Skills</h3>
-            <section>
+            <h3 data-aos="fade-left">Skills</h3>
+            <section data-aos="fade-left">
                 <div>
-                    <img width="70" src="assets/img/java%20(1).png" alt="This is java logo png">
-                    <p>The Main Language I work in is <br>JAVA. I can work with java Smoothly <br>and with Good Knowledeg</p>
+<!--                    <img width="70" src="assets/img/software-application.png" alt="This is java logo png">-->
+                    <p>The Main Language <br>JAVA , C# , Phython <br>I work in is Smoothly and with Good Knowledge</p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
                 </div>
                 <div>
-                    <img width="70" src="assets/img/hashtag.png" alt="This is C# logo png">
-                    <p>I can Work with C# Smoothly<br> and with Good Knowledeg</p>
+<!--                    <img width="70" src="assets/img/hashtag.png" alt="This is C# logo png">-->
+                    <p>Database Management Systems
+                        <br>MySQL , MongoDB </p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
                 </div>
                 <div>
-                    <img width="70" src="assets/img/python.png" alt="This is python logo png">
-                    <p>I can Work with Phython <br>Smoothly and with Good<br> Knowledeg</p>
+<!--                    <img width="70" src="assets/img/python.png" alt="This is python logo png">-->
+                    <p>Web Development<br>
+                        HTML , CSS , JS ,TS , React<br>I work in is Smoothly and with Good Knowledge</p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
                 </div>
                 <div>
-                    <img width="70" src="assets/img/html.png" alt="This is html logo png">
-                    <p>I can Work with HTML<br> Smoothly and with Good<br> Knowledeg</p>
+<!--                    <img width="70" src="assets/img/html.png" alt="This is html logo png">-->
+                    <p>API Development<br>
+                        JavaEE , Spring , Spring Boot,
+                        Express.js<br>I work in is Smoothly and with Good Knowledge</p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
                 </div>
                 <div>
-                    <img width="70" src="assets/img/js.png" alt="This is Js logo png">
-                    <p>I can Work with Javascript<br> Smoothly and with Good<br> Knowledeg</p>
+<!--                    <img width="70" src="assets/img/js.png" alt="This is Js logo png">-->
+                    <p>ORM Tools Hibernate<br> Project Management Tool
+                        Maven <br> Version control system Git</p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
                 </div>
                 <div>
-                    <img width="70" src="assets/img/css-3.png" alt="This is css logo png">
-                    <p>I can Work with CSS Smoothly<br> and with Good Knowledeg</p>
+<!--                    <img width="70" src="assets/img/css-3.png" alt="This is css logo png">-->
+                    <p>Mobile Application Development
+                        <br>React Native </p>
                     <svg width="450" height="4" viewBox="0 0 450 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="2" x2="450.001" y2="2" stroke="#881012" stroke-width="4"/>
                     </svg>
@@ -5295,7 +5354,7 @@
                 <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
                 <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
             </svg>
-            <svg width="35" height="815" viewBox="0 0 35 815" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg  width="35" height="815" viewBox="0 0 35 815" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="15" y1="814.005" x2="15" y2="0.973572" stroke="url(#paint0_linear_17_64)" stroke-width="10"/>
                 <circle cx="17.5" cy="59.4998" r="17.5" fill="#D9D9D9"/>
                 <circle cx="17.5" cy="59.4998" r="14.5" fill="#070707"/>
@@ -5336,22 +5395,29 @@
 
         </section>
         <section id="service">
-            <h2>Services</h2>
-            <div>
+            <h2 data-aos="fade-right">Services</h2>
+            <div data-aos="flip-left">
                 <img width="70" src="assets/img/software-application.png" alt="This is Software development  png">
                 <h4>Software Developer</h4>
                 <p>As a software developer, one<br> plays a critical role in <br>designing, building and <br>maintaining various software<br> applications and systems</p>
             </div>
-            <div>
+            <div data-aos="flip-right">
                 <img width="70" src="assets/img/code.png" alt="This is  web development  png">
                 <h4>Web Developer</h4>
                 <p>As a web developer, I am<br> involved in creating websites<br> and web applications that can <br>be accessed through browsers<br> on various devices.</p>
             </div>
-            <div>
+            <div data-aos="fade-left">
                 <img width="70" src="assets/img/web-design.png" alt="This is  web designing  png">
                 <h4>Web Design</h4>
                 <p>As a web designer, I primarily<br> focus on creating visually<br> appealing and user-friendly<br> websites.</p>
             </div>
+
+            <div data-aos="fade-right">
+                <img width="70" src="assets/img/web-design.png" alt="This is  web designing  png">
+                <h4>Web Design</h4>
+                <p>As a web designer, I primarily<br> focus on creating visually<br> appealing and user-friendly<br> websites.</p>
+            </div>
+
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
                 <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
@@ -5362,40 +5428,76 @@
             </svg>
         </section>
         <section id="works">
-            <h2>My Works</h2>
+            <h2 data-aos="fade-left">My Works</h2>
 
-            <p>Those are my recently created Projects.These applications use software <br>architectures,design patterns, database and database connectivity.</p>
+            <p data-aos="fade-left">Those are my recently created Projects.These applications use software <br>architectures,design patterns, database and database connectivity.</p>
 
-            <div>
-<!--                <img width="450" height="510" src="assets/img/videoblocks-freelancer-people-using-laptop-computer-in-coworking-cafe_b-lcepdprl_thumbnail-1080_01.png">-->
+            <div data-aos="fade-up">
                 <div>
-                <h4>Pet Care Center Management System</h4>
-                <p>This software is used to <br>manage all aspects of the pet<br> care center. The language<br> used is java and the database<br> used is mysql. Layered <br>Architecture is used in this<br> software</p>
-                <a href="https://github.com/ChathuraBhashitha01/petCareCenterLayredArchitecture">Go to Github</a>
+                    <div>
+                        <h4>Pet Care Center Management System</h4>
+                        <p>This software is used to <br>manage all aspects of the pet<br> care center. The language<br> used is java and the database<br> used is mysql. Layered <br>Architecture is used in this<br> software</p>
+                        <a href="https://github.com/ChathuraBhashitha01/petCareCenterLayredArchitecture">Go to Github</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-<!--                <img width="450" height="510" src="assets/img/photo-of-a-person-using-a-gray-laptop-computer-2874782.jpg">-->
                 <div>
-                <h4>Chat Application</h4>
-                <p>This software is Chat <br>Application. The language<br> used is java.</p>
-                <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
+                    <div>
+                        <h4>Chat Application</h4>
+                        <p>This software is a chat <br>application implemented using<br> Java and socket <br>programming.</p>
+                        <a href="https://github.com/ChathuraBhashitha01/Live_Chat_Application">Go to Github</a>
+                    </div>
                 </div>
+                <div>
+                    <div>
+                        <h4>Hostel Management System</h4>
+                        <p>This is Hostel Management System. <br>application implemented using<br> Java , MySQL and<br> Hibernate Framework</p>
+                        <a href="https://github.com/ChathuraBhashitha01/Hibernate-hostel-management-system">Go to Github</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>Shoe Shop Management System</h4>
+                        <p>This Management Application.<br> Used Spring Boot, MySQL, Hibernate,<br> and JWT for the backend, and <br>HTML, CSS, Bootstrap, and <br>JavaScript for the frontend..</p>
+                        <a href="https://github.com/ChathuraBhashitha01/Shoe_shop_management_system">Go to Github</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>Point Of Sale System</h4>
+                        <p>This isPoint Of Sale System. <br>application implemented using<br> JavaEE , MySQL and<br> Hibernate Framework</p>
+                        <a href="https://github.com/ChathuraBhashitha01/AAD-Assignment-JavaEE">Go to Github</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>Highway Ticket Management System<br> Back-end</h4>
+                        <p>This back-end system is a Highway<br> Ticket Management System<br> implemented using Spring<br> Boot and follows a<br> microservices architecture<br>programming.</p>
+                        <a href="https://github.com/ChathuraBhashitha01/Highway_Ticket_Management_System">Go to Github</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>E-commerce Book Application</h4>
+                        <p>This is an e-commerce<br> web application developed<br> using the MERN stack<br> and TypeScript.</p>
+                        <a href="https://github.com/ChathuraBhashitha01/book_shop_application">Go to Github</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>Facebook Clone</h4>
+                        <p>This is a mobile app <br>designed as a clone <br>of Facebook, built using <br>React Native.</p>
+                        <a href="https://github.com/ChathuraBhashitha01/social-media-frontend-react-native">Go to Github</a>
+                    </div>
+                </div>
+
             </div>
-            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 0.5C4.47715 0.5 -4.41074e-06 4.97715 -4.41074e-06 10.5C-4.41074e-06 16.0228 4.47715 20.5 10 20.5V0.5ZM135 0.5L10 0.5V20.5L135 20.5V0.5Z" fill="#881012"/>
-                <path d="M114.5 125C114.5 130.523 118.977 135 124.5 135C130.023 135 134.5 130.523 134.5 125H114.5ZM114.5 0L114.5 125H134.5L134.5 0L114.5 0Z" fill="#881012"/>
-            </svg>
-            <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M125 134.5C130.523 134.5 135 130.023 135 124.5C135 118.977 130.523 114.5 125 114.5V134.5ZM0 134.5H125V114.5H0V134.5Z" fill="#881012"/>
-                <path d="M20.5 10C20.5 4.47715 16.0228 -4.41074e-06 10.5 -4.41074e-06C4.97715 -4.41074e-06 0.5 4.47715 0.5 10H20.5ZM20.5 135L20.5 10H0.5L0.5 135H20.5Z" fill="#881012"/>
-            </svg>
+
         </section>
         <section id="assignment">
-            <h2>Assignment</h2>
+            <h2 data-aos="fade-right">Assignment</h2>
 
             <section>
-                    <div>
+                    <div data-aos="fade-down">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 01</h4>
@@ -5407,7 +5509,7 @@
                             <button ><a href="Assignment/CSS/Case1/index.html">View</a></button>
                         </hgroup>
                     </div>
-                    <div>
+                    <div data-aos="fade-down">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 02</h4>
@@ -5420,7 +5522,7 @@
                             <button><a href="Assignment/CSS/Case2/index.html">View</a></button>
                         </hgroup>
                     </div>
-                    <div>
+                    <div data-aos="fade-down">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 03</h4>
@@ -5432,7 +5534,7 @@
                             <button><a href="Assignment/CSS/Case3/index.html">View</a></button>
                         </hgroup>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 04</h4>
@@ -5444,7 +5546,7 @@
                             <button><a href="Assignment/CSS/Case4/index.html">View</a></button>
                         </hgroup>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 05</h4>
@@ -5456,7 +5558,7 @@
                             <button><a href="Assignment/CSS/Case5/index.html">View</a></button>
                         </hgroup>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <img width="100" src="assets/img/approve.png" alt="This is  Assignment  png">
                         <hgroup>
                             <h4>Assingment 06</h4>
@@ -5663,7 +5765,7 @@
         <!--                    </ul>-->
         <!--                </hgroup>-->
         <!--            </div>-->
-                <button><a href="Assignment_page/index.html">See More -></a></button>
+                <button data-aos="fade-left><a href="Assignment_page/index.html">See More -></a></button>
             </section>
 
             <svg width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5676,8 +5778,8 @@
             </svg>
         </section>
         <section id="gallery">
-            <h2>Gallery</h2>
-            <section>
+            <h2 data-aos="fade-right">Gallery</h2>
+            <section data-aos="fade-right">
             <div>
 <!--                <img width="571"  src="assets/img/WhatsApp Image 2023-06-28 at 2.18.34 PM.jpeg">-->
             </div>
@@ -5780,5 +5882,7 @@
     <script src="assets/bootstrap/js/jquery-3.7.1.min.js"></script>
     <script src="assets/bootstrap/js/portfolioController.js"></script>
     <script src="assets/bootstrap/js/portfolioValidation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
